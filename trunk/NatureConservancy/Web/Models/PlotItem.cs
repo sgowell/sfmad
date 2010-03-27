@@ -1,6 +1,6 @@
 ﻿namespace Web.Models
 {
-    public class PlotSpecies
+    public class PlotItem
     {
         public Plot Plot
         {
