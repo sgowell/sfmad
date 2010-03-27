@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NatureConservatory
 {
-    class EcoRegion
+    public class EcoRegion
     {
         public int RegionNumber { get; set; }
         public string Name { get; set; }

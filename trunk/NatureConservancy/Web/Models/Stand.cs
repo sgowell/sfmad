@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NatureConservatory
 {
-    class Stand
+    public class Stand
     {
         public int StandNumber { get; set; } //Unique number
         public string SiteNumber { get; set; } //The site this stand belongs to

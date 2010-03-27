@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NatureConservatory
 {
-    class Site
+    public class Site
     {
         public int SiteNumber { get; set; }
         public string SiteName { get; set; }
