@@ -2,15 +2,28 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel;
 
 namespace NatureConservatory
 {
     public class Survey
     {
+        [Required]
+        [DisplayName("Bearing")]
+        [Range(0, 360)]
         public int Bearing { get; set; } //Degrees zero to 360
+
+        [DisplayName("Stand")]
+        [RegularExpression("^[A-G]")]
         public string TransectClass { get; set; } //A-G
+
+        [DisplayName("Number")]
         public int TransectNumber { get; set; }
 
+        [DataType(DataType.DateTime)]
+        [DisplayName("Survey Start")]
+        [DisplayFormat(DataFormatString="From:{0}")]
         public DateTime SurveyStartTime
         {
             get
@@ -22,6 +35,9 @@ namespace NatureConservatory
             }
         }
 
+        [DataType(DataType.DateTime)]
+        [DisplayName("Survey End")]
+        [DisplayFormat(DataFormatString = "To:{0}")]
         public DateTime SurveyEndTime
         {
             get
