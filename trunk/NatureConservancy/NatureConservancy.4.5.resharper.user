@@ -1,0 +1,50 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="t" priority="0" />
+      <Item value="namespace" priority="0" />
+      <Item value="NatureConservatory" priority="0" />
+      <Item value="public" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="B346D6DE-08EE-4440-8CCA-CC3199105952/f:Class1.cs" caret="0" fromTop="0" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Cover.cs" caret="0" fromTop="0" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="226" fromTop="6" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="1031" fromTop="17" />
+      <File id="d:&amp;/f:StringExtensions.cs/l:C!?code?trunk?NatureConservancy?Web?Extensions?StringExtensions.cs" caret="15" fromTop="1" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Cover.cs" caret="0" fromTop="0" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="281" fromTop="13" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1031" fromTop="38" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1050" fromTop="29" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1083" fromTop="40" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1115" fromTop="29" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1130" fromTop="29" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="42" fromTop="2" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="106" fromTop="4" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="111" fromTop="6" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="3647" fromTop="58" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="3262" fromTop="71" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="3294" fromTop="71" />
+      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="1031" fromTop="9" />
+      <File id="d:&amp;/f:StringExtensions.cs/l:C!?code?trunk?NatureConservancy?Web?Extensions?StringExtensions.cs" caret="398" fromTop="14" />
+      <File id="d:&amp;/f:StringExtensions.cs/l:C!?code?trunk?NatureConservancy?Web?Extensions?StringExtensions.cs" caret="15" fromTop="1" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+</Configuration>
