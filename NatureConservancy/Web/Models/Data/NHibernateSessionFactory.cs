@@ -5,10 +5,14 @@ using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
 using NHibernate;
 using NHibernate.Cfg;
+using Web.Models;
 using Web.Models.Mappings;
 
 namespace Web.Data
 {
+
+
+
     public interface ISessionFactoryFactory
     {
         ISessionFactory GetSessionFactory();

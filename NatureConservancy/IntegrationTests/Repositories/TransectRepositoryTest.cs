@@ -5,6 +5,7 @@ using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
 using Web.Data;
 using Web.Models;
+using Web.Services;
 
 namespace IntegrationTests.Repositories
 {
@@ -40,6 +41,27 @@ namespace IntegrationTests.Repositories
                 .CheckProperty(x=>x.Latitude, 34.343)
                 .CheckProperty(x => x.Longitude, 44.343)
                 .VerifyTheMappings();
+        }
+
+        [Test]
+        public void can_retrieve_from_repository()
+        {
+            var transect = TransectFixture.Create();
+            var repository = Container.Resolve<ITransectRepository>();
+
+            repository.Save(transect);
+            var transectId = transect.Id;
+            transect = repository.Load(transect.Id);
+            transect.Id.ShouldEqual(transectId);
+            
+        }
+    }
+
+    public static class TransectFixture
+    {
+        public static Transect Create()
+        {
+            return new Transect();
         }
     }
 }
