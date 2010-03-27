@@ -84,7 +84,8 @@
     <Compile Include="Models\Survey.cs" />
     <Compile Include="Models\Transect.cs" />
     <Compile Include="Models\UnderstorySection.cs" />
-    <Compile Include="Models\WoodyDrebis.cs" />
+    <Compile Include="Models\UnderstorySpecies.cs" />
+    <Compile Include="Models\WoodyDebris.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

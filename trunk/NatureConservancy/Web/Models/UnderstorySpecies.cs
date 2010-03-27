@@ -1,6 +1,11 @@
-﻿namespace Web.Models
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Web.Models
 {
-    public class Overstory
+    public class UnderstorySpecies : Species
     {
         public Species Species
         {
@@ -8,7 +13,7 @@
             set;
         }
 
-        public double DiameterBreastHeight
+        public int Tally
         {
             get;
             set;
@@ -20,4 +25,4 @@
             set;
         }
     }
-}
+ }

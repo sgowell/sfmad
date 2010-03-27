@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel;
-using Web.Models;
 
 namespace Web.Models
 {
@@ -55,7 +54,7 @@ namespace Web.Models
             set;
         }
 
-        public IList<WoodyDrebis> WoodyDebries
+        public IList<WoodyDebris> WoodyDebris
         {
             get;
             set;
@@ -85,7 +84,7 @@ namespace Web.Models
             set;
         }
 
-        public IList<UnderStorySpecies> UnderStorySpecies
+        public IList<UnderstorySpecies> UnderStorySpecies
         {
             get;
             set;

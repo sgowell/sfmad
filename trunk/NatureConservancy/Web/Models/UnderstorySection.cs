@@ -6,7 +6,7 @@ using Web.Models;
 
 namespace Web.Models
 {
-    public class UnderStorySection
+    public class UnderstorySection
     {
         public Survey Survey
         {
@@ -19,7 +19,7 @@ namespace Web.Models
             }
         }
 
-        public IList<UnderStorySpecies> UnderstorySpecies
+        public IList<UnderstorySpecies> UnderstorySpecies
         {
             get
             {
