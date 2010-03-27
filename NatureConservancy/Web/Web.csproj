@@ -67,6 +67,26 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Cover.cs" />
+    <Compile Include="Models\DecayClass.cs" />
+    <Compile Include="Models\DeerHerbivory.cs" />
+    <Compile Include="Models\EcoRegion.cs" />
+    <Compile Include="Models\Microtopography.cs" />
+    <Compile Include="Models\MicrotopographyAmount.cs" />
+    <Compile Include="Models\Overstory.cs" />
+    <Compile Include="Models\Plot.cs" />
+    <Compile Include="Models\Plot_Species.cs" />
+    <Compile Include="Models\Site.cs" />
+    <Compile Include="Models\Snag.cs" />
+    <Compile Include="Models\Snags.cs" />
+    <Compile Include="Models\Species.cs" />
+    <Compile Include="Models\Stand.cs" />
+    <Compile Include="Models\Survey.cs" />
+    <Compile Include="Models\Surveyor.cs" />
+    <Compile Include="Models\Surveyors.cs" />
+    <Compile Include="Models\Transect.cs" />
+    <Compile Include="Models\UnderstorySection.cs" />
+    <Compile Include="Models\WoodyDrebis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -97,6 +117,9 @@
     <Content Include="Views\Shared\LogOnUserControl.ascx" />
     <Content Include="Views\Shared\Site.Master" />
     <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\NatureConservancy.cd" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
