@@ -16,7 +16,7 @@
                 Bearing
             </th>
             <th>
-                TransectClass
+                Transect
             </th>
             <th>
                 TransectNumber
