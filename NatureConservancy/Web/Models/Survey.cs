@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NatureConservatory
 {
-    class Survey
+    public class Survey
     {
         public int Bearing { get; set; } //Degrees zero to 360
         public string TransectClass { get; set; } //A-G

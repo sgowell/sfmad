@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NatureConservatory
 {
-    class Species
+    public class Species
     {
         public int SpeciesID
         {

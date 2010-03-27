@@ -5,7 +5,7 @@ using System.Text;
 
 namespace NatureConservatory
 {
-    class Transect
+    public class Transect
     {
         public string TransectClass { get; set; } //A-G
         public int TransectNumber { get; set; }

@@ -78,7 +78,6 @@
     <Compile Include="Models\Plot_Species.cs" />
     <Compile Include="Models\Site.cs" />
     <Compile Include="Models\Snag.cs" />
-    <Compile Include="Models\Snags.cs" />
     <Compile Include="Models\Species.cs" />
     <Compile Include="Models\Stand.cs" />
     <Compile Include="Models\Survey.cs" />
