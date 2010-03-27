@@ -2,14 +2,14 @@
 
 namespace Web.Models
 {
-    public class Site
+    public class Site : Entity
     {
-        public int SiteNumber { get; set; }
-        public string SiteName { get; set; }
-        public int RegionNumber { get; set; }
-        public IList<Stand> Stands { get; set; }
+        public virtual int SiteNumber { get; set; }
+        public virtual string SiteName { get; set; }
+        public virtual int RegionNumber { get; set; }
+        public virtual IList<Stand> Stands { get; set; }
 
-        public EcoRegion EcoRegion
+        public virtual EcoRegion EcoRegion
         {
             get; set;
         }
