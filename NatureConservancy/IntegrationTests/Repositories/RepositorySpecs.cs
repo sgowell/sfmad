@@ -82,15 +82,6 @@ namespace IntegrationTests.Repositories
         }
 
         [Test]
-        public void can_persist_Cover()
-        {
-            new PersistenceSpecification<Cover>(GetSession())
-                .CheckProperty(x => x.Class, "Shrub")
-                .CheckProperty(x => x.Description, "White Berry")
-                .VerifyTheMappings();
-        }
-        
-        [Test]
         public void can_persist_EcoRegion()
         {
             new PersistenceSpecification<EcoRegion>(GetSession())
