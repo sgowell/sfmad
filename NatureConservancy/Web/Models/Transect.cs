@@ -8,11 +8,6 @@ namespace Web.Models
     public class Transect : Entity
     {
         [Required(ErrorMessage = "Please enter a {0}")]
-        [DisplayName("Stand")]
-        [RegularExpression("^[A-G]", ErrorMessage = "Please enter a valid {0}. (A-G)")]
-        public virtual string TransectClass { get; set; } //A-G
-
-        [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Transect Number")]
         [Range(1,Int32.MaxValue, ErrorMessage = "Please enter a positive value")]
         public virtual int Number { get; set; }
