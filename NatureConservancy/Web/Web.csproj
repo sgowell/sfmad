@@ -98,7 +98,7 @@
     <Compile Include="Models\Stand.cs" />
     <Compile Include="Models\Survey.cs" />
     <Compile Include="Models\Transect.cs" />
-    <Compile Include="Models\UnderstorySection.cs" />
+    <Compile Include="Models\Understory.cs" />
     <Compile Include="Models\UnderstorySpecies.cs" />
     <Compile Include="Models\WoodyDebris.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -108,9 +108,9 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Views\Survey\Create.aspx" />
+    <Content Include="Views\Survey\CreateOverstory.aspx" />
+    <Content Include="Views\Survey\CreateSnags.aspx" />
     <Content Include="Views\Survey\CreateWoodyDebris.aspx" />
-    <Content Include="Views\Survey\Delete.aspx" />
-    <Content Include="Views\Survey\Details.aspx" />
     <Content Include="Views\Survey\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />

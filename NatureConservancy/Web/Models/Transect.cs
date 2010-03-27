@@ -16,13 +16,7 @@ namespace Web.Models
 
         public virtual Stand Stands
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
 
         public virtual Double Latitude

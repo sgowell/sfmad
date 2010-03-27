@@ -84,7 +84,7 @@ namespace Web.Models
             set;
         }
 
-        public IList<UnderstorySpecies> UnderStorySpecies
+        public IList<Understory> Understory
         {
             get;
             set;
