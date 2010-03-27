@@ -90,6 +90,7 @@
     <Compile Include="Models\Microtopography.cs" />
     <Compile Include="Models\MicrotopographyAmount.cs" />
     <Compile Include="Models\Overstory.cs" />
+    <Compile Include="Models\OverstoryItem.cs" />
     <Compile Include="Models\Plot.cs" />
     <Compile Include="Models\PlotSpecies.cs" />
     <Compile Include="Models\Site.cs" />
@@ -99,6 +100,7 @@
     <Compile Include="Models\Survey.cs" />
     <Compile Include="Models\Transect.cs" />
     <Compile Include="Models\Understory.cs" />
+    <Compile Include="Models\UnderstoryItem.cs" />
     <Compile Include="Models\UnderstorySpecies.cs" />
     <Compile Include="Models\WoodyDebris.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
