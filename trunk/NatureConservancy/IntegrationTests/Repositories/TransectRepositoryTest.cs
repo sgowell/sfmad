@@ -1,5 +1,7 @@
 ﻿using System;
 using FluentNHibernate.Testing;
+using NatureConservancy;
+using NatureConservatory;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
@@ -7,7 +9,7 @@ using NUnit.Framework;
 namespace IntegrationTests.Repositories
 {
     [TestFixture]
-    public class CountyRepositorySpecs
+    public class TransectRepositorySpecs
     {
         protected ISession GetSession()
         {
@@ -28,16 +30,16 @@ namespace IntegrationTests.Repositories
             };
             var sessionFactory = factory.GetSessionFactory();
         }
+
         [Test]
         public void can_persist()
         {
-            new PersistenceSpecification<County>(GetSession())
-                .CheckProperty(x => x.Name, "Luzene")
+            new PersistenceSpecification<Transect>(GetSession())
+                .CheckProperty(x => x.TransectNumber, 234)
+                .CheckProperty(x=>x.TransectClass, "Pretttty")
+                .CheckProperty(x=>x.Latitude, 34.343)
+                .CheckProperty(x => x.Longitude, 44.343)
                 .VerifyTheMappings();
         }
-
-
-
-
     }
 }
