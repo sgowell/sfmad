@@ -54,9 +54,14 @@
                 <%= Html.ValidationMessageFor(model => model.SurveyEndTime) %>
             </div>
             
-            <div>
-            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.Surveyors) %>
             </div>
+            <div class="editor-field">
+                <%= Html.TextAreaFor(model => model.Surveyors) %>
+                <%= Html.ValidationMessageFor(model => model.Surveyors) %>
+            </div>
+            
             <p>
                 <input type="submit" value="Create" />
             </p>

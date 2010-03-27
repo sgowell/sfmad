@@ -82,8 +82,6 @@
     <Compile Include="Models\Species.cs" />
     <Compile Include="Models\Stand.cs" />
     <Compile Include="Models\Survey.cs" />
-    <Compile Include="Models\Surveyor.cs" />
-    <Compile Include="Models\Surveyors.cs" />
     <Compile Include="Models\Transect.cs" />
     <Compile Include="Models\UnderstorySection.cs" />
     <Compile Include="Models\WoodyDrebis.cs" />

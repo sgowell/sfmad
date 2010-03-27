@@ -49,16 +49,8 @@ namespace NatureConservatory
             }
         }
 
-        public IList<Surveyors> Surveyors
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        [DisplayName("Surveyors:")]
+        public string Surveyors { get; set; }
 
         public Transect Transect
         {
