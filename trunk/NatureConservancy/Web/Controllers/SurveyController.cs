@@ -30,6 +30,83 @@ namespace Web.Controllers
         }
 
         public ActionResult CreateWoodyDebris() { return View(); }
+        [HttpPost]
+        public ActionResult CreateWoodyDebris(FormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction("CreateOverstory");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult CreateOverstory() { return View(); }
+        [HttpPost]
+        public ActionResult CreateOverstory(FormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction("CreateSnags");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult CreateSnags() { return View(); }
+        [HttpPost]
+        public ActionResult CreateSnags(FormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction("CreateMicrotopography");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult CreateMicrotopography() { return View(); }
+        [HttpPost]
+        public ActionResult CreateMicrotopography(FormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction("CreateUnderstory");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult CreateUnderstory() { return View(); }
+        [HttpPost]
+        public ActionResult CreateUnderstory(FormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction("CreateDeerHerbivory");
+            }
+            catch
+            {
+                return View();
+            }
+        }
+        public ActionResult CreateDeerHerbivory() { return View(); }
+        [HttpPost]
+        public ActionResult CreateDeerHerbivory(FormCollection collection)
+        {
+            try
+            {
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return View();
+            }
+        }
 
 
         //
@@ -40,17 +117,17 @@ namespace Web.Controllers
         {
             try
             {
-                    return RedirectToAction("Index");
+                return RedirectToAction("CreateWoodyDebris");
             }
             catch
             {
                 return View();
             }
         }
-        
+
         //
         // GET: /Survey/Edit/5
- 
+
         public ActionResult Edit(int id)
         {
             return View();
@@ -65,7 +142,7 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add update logic here
- 
+
                 return RedirectToAction("Index");
             }
             catch
@@ -76,7 +153,7 @@ namespace Web.Controllers
 
         //
         // GET: /Survey/Delete/5
- 
+
         public ActionResult Delete(int id)
         {
             return View();
@@ -91,7 +168,7 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add delete logic here
- 
+
                 return RedirectToAction("Index");
             }
             catch
