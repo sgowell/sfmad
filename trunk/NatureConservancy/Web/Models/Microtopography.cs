@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
@@ -38,6 +39,7 @@ namespace Web.Models
         }
 
         [Required(ErrorMessage = "Please select the {0}")]
+        [DisplayName("Development Intensity")]
         public MicrotopographyAmount DevelopmentIntensity
         {
             get; set;
