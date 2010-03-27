@@ -11,7 +11,6 @@ namespace Web.Models.Mappings
             Map(x => x.TransectClass);
             Map(x => x.Longitude);
             Map(x => x.Latitude);
-            
         }
     }
 }
