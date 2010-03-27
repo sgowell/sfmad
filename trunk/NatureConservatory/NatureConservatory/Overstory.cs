@@ -52,9 +52,9 @@ namespace NatureConservatory
         }
     }
 
-    public class UnderStory
+    public class UnderStorySpecies
     {
-        public int id
+        public int ID
         {
             get
             {

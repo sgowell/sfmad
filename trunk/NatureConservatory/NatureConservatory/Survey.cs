@@ -99,17 +99,6 @@ namespace NatureConservatory
             }
         }
 
-        public IList<UnderStory> Understory
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         public IList<Snag> Snags
         {
             get
@@ -122,6 +111,17 @@ namespace NatureConservatory
         }
 
         public IList<DeerHerbivory> DeerHerbivory
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public IList<UnderStorySpecies> UnderStorySpecies
         {
             get
             {
