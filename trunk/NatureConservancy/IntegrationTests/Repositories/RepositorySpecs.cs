@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using FluentNHibernate.Testing;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
@@ -32,15 +33,15 @@ namespace IntegrationTests.Repositories
             var sessionFactory = factory.GetSessionFactory();
         }
 
-        [Test]
         public void can_persist_transect()
         {
             new PersistenceSpecification<Transect>(GetSession())
                 .CheckProperty(x => x.Number, 234)
-                .CheckProperty(x=>x.TransectClass, "Pretttty")
-                .CheckProperty(x=>x.Latitude, 34.343)
+                .CheckProperty(x => x.TransectClass, "Pretttty")
+                .CheckProperty(x => x.Latitude, 34.343)
                 .CheckProperty(x => x.Longitude, 44.343)
                 .CheckReference(x => x.Stand, new Stand())
+                .CheckList(x => x.Surveys, new List<Survey> {new Survey()})
                 .VerifyTheMappings();
         }
 
@@ -51,6 +52,14 @@ namespace IntegrationTests.Repositories
         {
             new PersistenceSpecification<Stand>(GetSession())
                 .CheckProperty(x => x.Number, 234)
+                .VerifyTheMappings();
+        }
+
+        [Test]
+        public void can_persist_survey()
+        {
+            new PersistenceSpecification<Survey>(GetSession())
+                .CheckProperty(x => x.Bearing, 234)
                 .VerifyTheMappings();
         }
 

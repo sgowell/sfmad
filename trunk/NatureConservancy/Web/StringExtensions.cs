@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Web
 {
@@ -12,6 +13,17 @@ namespace Web
         public static int ToInt(this string item)
         {
             return Int32.Parse(item);
+        }
+    }
+
+    public static class EnumerableExtensions
+    {
+        public static void Each<T>(this IEnumerable<T> items, Action<T> action)
+        {
+            foreach (var item in items)
+            {
+                action(item);
+            }
         }
     }
     public static class Check
