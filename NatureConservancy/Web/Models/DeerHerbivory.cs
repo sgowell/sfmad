@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using Web.Models;
@@ -10,53 +11,36 @@ namespace Web.Models
     public class DeerHerbivory
     {
         [DisplayName("Species")]
+        [Required(ErrorMessage = "Please select a {0}")]
         public Species Species
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public int Id
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         [DisplayName("Browsed")]
+        [Required(ErrorMessage = "Please enter a {0} Amount")]
         public int Browsed
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         [DisplayName("Unbrowsed")]
+        [Required(ErrorMessage = "Please enter a {0} Amount")]
         public int Unbrowsed
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
-        
-        public Understory UnderStory { get; set; }
+
+        public Understory Understory { get; set; }
     }
 }
