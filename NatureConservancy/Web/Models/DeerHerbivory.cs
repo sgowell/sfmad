@@ -8,7 +8,7 @@ using Web.Models;
 
 namespace Web.Models
 {
-    public class DeerHerbivory
+    public class DeerHerbivory : Entity
     {
         [DisplayName("Species")]
         [Required(ErrorMessage = "Please select a {0}")]
@@ -17,13 +17,13 @@ namespace Web.Models
             get;
             set;
         }
-
         public int Id
         {
             get;
             set;
         }
 
+        public virtual Boolean Browsed
         [DisplayName("Browsed")]
         [Required(ErrorMessage = "Please enter a {0} Amount")]
         public int Browsed
