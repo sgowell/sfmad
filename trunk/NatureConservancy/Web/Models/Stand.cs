@@ -1,30 +1,54 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
     public class Stand : Entity
     {
-        public virtual int Number { get; set; } //Unique number
-        public virtual string SiteNumber { get; set; } //The site this stand belongs to
-        
-        public virtual string EcoSystem { get; set; } 
-        public virtual string TreatmentType{get;set;} //Lookup
-        public virtual IList<Transect> Transects { get; set; }
+        [Required(ErrorMessage = "You must have a parent {0} record")]
+        [DisplayName("Site")]
+        public virtual Site Site { get; set; }
 
-        public virtual Site Site
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Stand Name")]
+        public virtual string Name { get; set; }
+
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Ecosystem")]
+        public virtual string EcoSystem { get; set; }
+
+        public enum TreatmentType
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            /// <summary>
+            /// Control (no harvest)
+            /// </summary>
+            ControlNoHarvest,
+            /// <summary>
+            /// Single tree selection harvest
+            /// </summary>
+            SingleTreeSelection,
+            /// <summary>
+            /// 60-ft gaps
+            /// </summary>
+            Gaps60,
+            /// <summary>
+            /// 90-ft gaps
+            /// </summary>
+            Gaps90,
+            /// <summary>
+            /// 120-ft gaps
+            /// </summary>
+            Gaps120,
         }
 
+        [Required(ErrorMessage = "Please select a {0}")]
+        [DisplayName("Treatment")]
+        public virtual TreatmentType Treatment { get; set; }
 
+        [Required(ErrorMessage = "Please add at least one {0}")]
+        [DisplayName("Transect")]
+        public virtual IList<Transect> Transects { get; set; }
     }
 }

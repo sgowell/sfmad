@@ -7,12 +7,12 @@ namespace Web.Models
     public class Microtopography : Entity
     {
         [Required]
-        public int MicrotopographyId
+        public int Id
         {
             get; set;
         }
 
-        public virtual String Comments
+        public String Comments
         {
             get; set;
         }

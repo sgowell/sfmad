@@ -22,5 +22,6 @@ namespace Web.Models
         }
         public IList<Snag> Snags{get;set;}
         public Microtopography Microtopography { get; set; }
+        public Survey Survey { get; set; }
     }
 }

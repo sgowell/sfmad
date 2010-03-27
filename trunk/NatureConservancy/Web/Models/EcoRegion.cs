@@ -14,6 +14,8 @@ namespace Web.Models
         [DisplayName("Region Name")]
         public string Name { get; set; }
 
+        [Required(ErrorMessage = "You must have at least one {0} record")]
+        [DisplayName("Site")]
         public IList<Site> Sites { get; set; }
     }
 }

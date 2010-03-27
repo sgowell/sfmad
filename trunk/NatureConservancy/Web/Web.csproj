@@ -84,6 +84,7 @@
     <Compile Include="Models\DecayClass.cs" />
     <Compile Include="Models\DeerHerbivory.cs" />
     <Compile Include="Models\EcoRegion.cs" />
+    <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\GroundCover.cs" />
     <Compile Include="Models\Mappings\TransectMapping.cs" />
     <Compile Include="Models\Microtopography.cs" />

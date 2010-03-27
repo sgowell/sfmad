@@ -1,49 +1,34 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
-    public class Entity
-    {
-        public virtual int Id { get; set; }
-
-        public override string ToString()
-        {
-            return GetType().Name + " [" + Id + "]";
-        }
-
-
-        /// <summary>
-        /// If two objects are the same type and their Ids are equal, then they are equal.
-        /// </summary>
-        /// <param name="obj"></param>
-        /// <returns></returns>
-        public override bool Equals(object obj)
-        {
-            // todo: check equality taking into account 
-            // nhibernate proxies
-            //if (obj.GetType() != GetType()) return false;
-
-            return (obj as Entity).Id.Equals(this.Id);
-        }
-    }
-
     public class Transect : Entity
     {
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Stand")]
+        [RegularExpression("^[A-G]", ErrorMessage = "Please enter a valid {0}. (A-G)")]
         public virtual string TransectClass { get; set; } //A-G
+
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Transect Number")]
         public virtual int Number { get; set; }
+
         public virtual IList<Survey> Surveys { get; set; }
 
-        public virtual Stand Stand
-        { get; set; }
+        [Required(ErrorMessage = "You must have a parent {0} record")]
+        [DisplayName("Stand")]
+        public virtual Stand Stand { get; set; }
 
-        public virtual Double Latitude
-        { get; set; }
+        [Required(ErrorMessage = "Please enter a {0} value for this record")]
+        [DoubleAttribute(MinimumValue = 0.00, MaximumValue = 90.00, ErrorMessage = "Please enter a valid {0}")]
+        public virtual Double Latitude { get; set; }
 
-        public virtual Double Longitude
-        {
-            get; set;
-        }
-        
+        [Required(ErrorMessage = "Please enter a {0} value for this record")]
+        [DoubleAttribute(MinimumValue = 0.00, MaximumValue = 180.00, ErrorMessage = "Please enter a valid {0}")]
+        public virtual Double Longitude { get; set; }
+
     }
 }

@@ -13,15 +13,6 @@ namespace Web.Models
         public virtual int Bearing { get; set; } //Degrees zero to 360
 
         [Required(ErrorMessage = "Please enter a {0}")]
-        [DisplayName("Stand")]
-        [RegularExpression("^[A-G]", ErrorMessage = "Please enter a valid {0}. (A-G)")]
-        public virtual string TransectClass { get; set; } //A-G
-
-        [Required(ErrorMessage = "Please enter a {0}")]
-        [DisplayName("Transect Number")]
-        public virtual int TransectNumber { get; set; }
-
-        [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Survey Start Time")]
         public virtual DateTime SurveyStartTime
         {
@@ -39,13 +30,15 @@ namespace Web.Models
         [DisplayName("Surveyors")]
         public virtual string Surveyors { get; set; }
 
+        [Required(ErrorMessage = "You must have a parent {0} record")]
+        [DisplayName("Transect")]
         public virtual Transect Transect
         {
             get;
             set;
         }
 
-        public virtual IList<Plot> Plots
+        public virtual GroundCover GroundCover
         {
             get;
             set;
@@ -63,7 +56,7 @@ namespace Web.Models
             set;
         }
 
-        public virtual IList<Overstory> Overstory
+        public virtual IList<Overstory> Overstories
         {
             get;
             set;
@@ -81,7 +74,7 @@ namespace Web.Models
             set;
         }
 
-        public virtual IList<Understory> Undertories
+        public virtual IList<Understory> Understories
         {
             get;
             set;
