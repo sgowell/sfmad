@@ -12,8 +12,9 @@ namespace Web.Models
         public virtual Site Site { get; set; }
 
         [Required(ErrorMessage = "Please enter a {0}")]
-        [DisplayName("Stand Name")]
-        public virtual string Name { get; set; }
+        [DisplayName("Stand")]
+        [RegularExpression("^[A-G]", ErrorMessage = "Please enter a valid {0}. (A-G)")]
+        public virtual string Name { get; set; } //A-G
 
         [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Ecosystem")]

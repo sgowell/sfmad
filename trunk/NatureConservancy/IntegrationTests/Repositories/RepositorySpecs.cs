@@ -37,7 +37,6 @@ namespace IntegrationTests.Repositories
         {
             new PersistenceSpecification<Transect>(GetSession())
                 .CheckProperty(x => x.Number, 234)
-                .CheckProperty(x => x.TransectClass, "Pretttty")
                 .CheckProperty(x => x.Latitude, 34.343)
                 .CheckProperty(x => x.Longitude, 44.343)
                 .CheckReference(x => x.Stand, new Stand())

@@ -36,7 +36,6 @@ namespace Web.Models.Mappings
         {
             Id(x => x.Id);
             Map(x => x.Number);
-            Map(x => x.TransectClass);
             Map(x => x.Longitude);
             Map(x => x.Latitude);
             //HasOne(x => x.Stand);
