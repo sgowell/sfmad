@@ -52,10 +52,11 @@ namespace Web.Services
             _SetLineContainsData();
         }
 
-        public void Dispose()
+        public virtual void Dispose()
         {
             if (Writer != null)
             {
+                Writer.Flush();
                 Writer.Dispose();
                 Writer = null;
             }
@@ -74,7 +75,7 @@ namespace Web.Services
 
         private static string _EscapeQuotes(string value)
         {
-            return value.Replace("\"", "\"\"");
+            return value.Replace("\"", "\\\"");
         }
 
         private void _WriteWithOutQuotes(string value)
@@ -104,6 +105,26 @@ namespace Web.Services
         public StringCsvWriter()
         {
             base.Writer = new StringWriter();
+        }
+    }
+
+    public class StreamCsvWriter : BaseCsvWriter
+    {
+        public StreamCsvWriter(Stream outputStream)
+        {
+            if (outputStream == null)
+                throw new ArgumentNullException("outputStream");
+
+            base.Writer = new StreamWriter(outputStream);
+        }
+
+        public override void Dispose()
+        {
+            // do not dispose writer because that will close the stream
+            if (Writer != null)
+            {
+                Writer.Flush();
+            }
         }
     }
 }
