@@ -108,10 +108,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Views\Survey\AddWoodyDebris.ascx" />
     <Content Include="Views\Survey\Create.aspx" />
-    <Content Include="Views\Survey\CreateOverstory.aspx" />
     <Content Include="Views\Survey\CreateSnags.aspx" />
     <Content Include="Views\Survey\CreateWoodyDebris.aspx" />
+    <Content Include="Views\Survey\Edit.aspx" />
     <Content Include="Views\Survey\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
