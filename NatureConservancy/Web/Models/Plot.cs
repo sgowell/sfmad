@@ -52,7 +52,7 @@ namespace Web.Models
             }
         }
 
-        public IList<PlotSpecies> Plot_Species
+        public IList<PlotItem> Plot_Species
         {
             get
             {
