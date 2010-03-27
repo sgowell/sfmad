@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using Web.Data;
 
 namespace Web
 {
@@ -29,6 +30,23 @@ namespace Web
         {
             AreaRegistration.RegisterAllAreas();
             RegisterRoutes(RouteTable.Routes);
+            ControllerBuilder.Current.SetControllerFactory(new ControllerFactory());
+        }
+
+        public void Application_EndRequest()
+        {
+            Web.Services.Container.Resolve<ISessionFactoryFactory>().EndSession();
+        }
+        public class ControllerFactory : DefaultControllerFactory
+        {
+            protected override IController GetControllerInstance(RequestContext requestContext, Type controllerType)
+            {             
+                if (controllerType != null)
+                {
+                    return (IController)Web.Services.Container.Resolve(controllerType);
+                }
+                return null;
+            }
         }
     }
 }
