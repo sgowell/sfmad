@@ -4,4 +4,4 @@ obj
 *.user
 _ReSharp*
 *.resharper
- 
+*.orig
