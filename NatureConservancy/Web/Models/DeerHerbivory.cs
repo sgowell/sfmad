@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Web.Models;
@@ -8,6 +9,7 @@ namespace Web.Models
 {
     public class DeerHerbivory
     {
+        [DisplayName("Species")]
         public Species Species
         {
             get
@@ -30,7 +32,8 @@ namespace Web.Models
             }
         }
 
-        public Boolean Browsed
+        [DisplayName("Browsed")]
+        public int Browsed
         {
             get
             {
@@ -41,7 +44,8 @@ namespace Web.Models
             }
         }
 
-        public Survey Survey
+        [DisplayName("Unbrowsed")]
+        public int Unbrowsed
         {
             get
             {
@@ -51,5 +55,8 @@ namespace Web.Models
             {
             }
         }
+
+        
+        public Understory UnderStory { get; set; }
     }
 }
