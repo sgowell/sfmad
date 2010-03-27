@@ -3,104 +3,232 @@
     <string />
     <integer />
     <boolean>
+      <setting name="livetemplates.csharp.usevar">True</setting>
       <setting name="SolutionAnalysisEnabled">False</setting>
     </boolean>
   </SettingsComponent>
   <NAntValidationSettings>
     <NAntPath value="" />
   </NAntValidationSettings>
+  <CompletionStatisticsManager>
+    <ItemStatistics item="Default">
+      <Item value="t" priority="8" />
+      <Item value="namespace" priority="1" />
+      <Item value="NatureConservatory" priority="0" />
+      <Item value="public" priority="24" />
+      <Item value="AcceptVerbs" priority="1" />
+      <Item value="HttpVerbs" priority="1" />
+      <Item value="NatureConservancy" priority="1" />
+      <Item value="Transect" priority="8" />
+      <Item value="ClassMap" priority="2" />
+      <Item value="TransectMapping" priority="2" />
+      <Item value="xVal" priority="0" />
+      <Item value="T" priority="2" />
+      <Item value="SetUpFixtureAttribute" priority="0" />
+      <Item value="new" priority="9" />
+      <Item value="DoSomething" priority="0" />
+      <Item value="where" priority="0" />
+      <Item value="IDisposable" priority="0" />
+      <Item value="void" priority="4" />
+      <Item value="MyType" priority="0" />
+      <Item value="IdentityGenerationStrategyBuilder" priority="0" />
+      <Item value="Id" priority="2" />
+      <Item value="x" priority="11" />
+      <Item value="class" priority="9" />
+      <Item value="int" priority="2" />
+      <Item value="Map" priority="4" />
+      <Item value="Models" priority="0" />
+      <Item value="static" priority="2" />
+      <Item value="return" priority="0" />
+      <Item value="TransectFixture" priority="0" />
+      <Item value="transect" priority="1" />
+      <Item value="var" priority="0" />
+      <Item value="transectId" priority="0" />
+      <Item value="ITransectRepository" priority="1" />
+      <Item value="interface" priority="2" />
+      <Item value="Data" priority="0" />
+      <Item value="IRepository" priority="4" />
+      <Item value="i" priority="1" />
+      <Item value="TransactionRepository" priority="0" />
+      <Item value="throw" priority="0" />
+      <Item value="SessionFactoryFactory" priority="0" />
+      <Item value="Stand" priority="3" />
+      <Item value="StandMapping" priority="1" />
+      <Item value="XmlExtensions" priority="0" />
+      <Item value="m" priority="1" />
+      <Item value="typeof" priority="3" />
+      <Item value="RepositoryBase" priority="1" />
+      <Item value="IStandRepository" priority="0" />
+      <Item value="HasOne" priority="0" />
+      <Item value="Survey" priority="5" />
+      <Item value="Entity" priority="0" />
+      <Item value="SurveyMapping" priority="0" />
+      <Item value="System" priority="0" />
+      <Item value="Threading" priority="0" />
+      <Item value="Thread" priority="0" />
+      <Item value="is" priority="0" />
+      <Item value="this" priority="0" />
+      <Item value="TimeZoneNotFoundException" priority="0" />
+      <Item value="Action" priority="0" />
+      <Item value="action" priority="1" />
+      <Item value="foreach" priority="0" />
+      <Item value="allEntityTypes" priority="0" />
+      <Item value="IClassMap" priority="0" />
+      <Item value="as" priority="0" />
+      <Item value="SurveyController" priority="0" />
+      <Item value="Services" priority="1" />
+      <Item value="override" priority="1" />
+      <Item value="ICsvWriter" priority="1" />
+      <Item value="string" priority="1" />
+      <Item value="Stream" priority="2" />
+      <Item value="abstract" priority="0" />
+      <Item value="BaseCsvWriter" priority="0" />
+      <Item value="writer" priority="3" />
+      <Item value="StringCsvWriter" priority="0" />
+      <Item value="StringWriter" priority="0" />
+      <Item value="TextWriter" priority="1" />
+      <Item value="Assert" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.HttpVerbs">
+      <Item value="Post" priority="0" />
+      <Item value="Put" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NatureConservatory.Transect">
+      <Item value="TransectNumber" priority="2" />
+      <Item value="TransectClass" priority="1" />
+      <Item value="Latitude" priority="1" />
+      <Item value="Longitude" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntegrationTests.Repositories.TransectRepositorySpecs+DoSomething`1">
+      <Item value="MyType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Testing.PersistenceSpecification`1">
+      <Item value="CheckProperty" priority="1" />
+      <Item value="CheckReference" priority="0" />
+      <Item value="VerifyTheMappings" priority="0" />
+      <Item value="CheckList" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Indexer" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@IntegrationTests.Repositories.TransectFixture">
+      <Item value="Create" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Int32">
+      <Item value="ShouldEqual" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.Transect">
+      <Item value="Id" priority="0" />
+      <Item value="Stands" priority="1" />
+      <Item value="Stand" priority="0" />
+      <Item value="Surveys" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.IInitializationExpression">
+      <Item value="ForRequestedType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Configuration.DSL.Expressions.CreatePluginFamilyExpression`1">
+      <Item value="TheDefault" priority="0" />
+      <Item value="TheDefaultIsConcreteType" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Configuration.DSL.Expressions.IsExpression`1">
+      <Item value="Is" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.Configuration.DSL.Expressions.IInstanceExpression`1">
+      <Item value="ConstructedBy" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:StructureMap.IContext">
+      <Item value="GetInstance" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.Stand">
+      <Item value="StandNumber" priority="0" />
+      <Item value="Id" priority="0" />
+      <Item value="Number" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Cfg.MappingConfiguration">
+      <Item value="FluentMappings" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Cfg.FluentMappingsContainer">
+      <Item value="Add" priority="0" />
+      <Item value="AddFromAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Models.Survey">
+      <Item value="Bearing" priority="1" />
+      <Item value="Id" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Threading.Thread">
+      <Item value="CurrentThread" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Threading.Thread">
+      <Item value="GetApartmentState" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Reflection.Assembly">
+      <Item value="GetExecutingAssembly" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Reflection.Assembly">
+      <Item value="GetTypes" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Collections.Generic.List`1">
+      <Item value="FindAll" priority="0" />
+      <Item value="Each" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.Type">
+      <Item value="IsSubclassOf" priority="0" />
+      <Item value="GetInterface" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Console">
+      <Item value="WriteLine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Controllers.SurveyController">
+      <Item value="ShouldNotBeNull" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.StringCsvWriter">
+      <Item value="AddCell" priority="1" />
+      <Item value="EndLine" priority="0" />
+      <Item value="Stream" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:Web.Services.BaseCsvWriter">
+      <Item value="Stream" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.IO.TextWriter">
+      <Item value="ToString" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@NUnit.Framework.Assert">
+      <Item value="Ignore" priority="0" />
+    </ItemStatistics>
+  </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:AccountModels.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:MicrotopographyAmount.cs" caret="122" fromTop="6" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:DecayClass.cs" caret="1044" fromTop="34" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Cover.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:EcoRegion.cs" caret="95" fromTop="5" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:UnderstorySpecies.cs" caret="228" fromTop="11" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Site.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:WoodyDebris.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Snag.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Views/d:Survey/f:Index.aspx" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Microtopography.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:DeerHerbivory.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Plot.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="546" fromTop="28" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:UnderstorySection.cs" caret="243" fromTop="12" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Survey.cs" caret="176" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Overstory.cs" caret="148" fromTop="7" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="906" fromTop="8" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Views/d:Survey/f:Create.aspx" caret="3211" fromTop="10" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Views/d:Survey/f:CreateOverstory.aspx" caret="448" fromTop="11" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Views/d:Survey/f:CreateWoodyDebris.aspx" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="3074" fromTop="11" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Views/d:Survey/f:CreateSnags.aspx" caret="1123" fromTop="8" />
+      <File id="d:&amp;/f:IoCTests.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?IoC?IoCTests.cs" caret="390" fromTop="8" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="437" fromTop="2" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="831" fromTop="38" />
+      <File id="166C7FC7-11BD-43ED-BE42-5956D39FA5AB/f:Class1.cs" caret="590" fromTop="13" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="422" fromTop="12" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="332" fromTop="4" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="513" fromTop="2" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Survey.cs" caret="2062" fromTop="14" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Survey.cs" caret="1846" fromTop="5" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="5363" fromTop="17" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="5788" fromTop="21" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="2047" fromTop="18" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="2735" fromTop="13" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="756" fromTop="8" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="855" fromTop="12" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="996" fromTop="16" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="3695" fromTop="13" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="1329" fromTop="9" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Species.cs" caret="4857" fromTop="11" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="4262" fromTop="21" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="980" fromTop="13" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="1345" fromTop="21" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="1712" fromTop="19" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="2094" fromTop="20" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="2469" fromTop="21" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="2661" fromTop="12" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="2836" fromTop="21" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="871" fromTop="7" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="1236" fromTop="8" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="1603" fromTop="6" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="1985" fromTop="7" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="2360" fromTop="14" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="3074" fromTop="11" />
+      <File id="d:&amp;/f:IoCTests.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?IoC?IoCTests.cs" caret="319" fromTop="9" />
+      <File id="d:&amp;/f:IoCTests.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?IoC?IoCTests.cs" caret="390" fromTop="8" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="1581" fromTop="10" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="1472" fromTop="6" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="1353" fromTop="6" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="1340" fromTop="4" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="1061" fromTop="7" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="964" fromTop="6" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Global.asax.cs" caret="13" fromTop="0" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="1514" fromTop="48" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="1631" fromTop="1" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="1863" fromTop="5" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="403" fromTop="10" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="510" fromTop="5" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="528" fromTop="0" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="597" fromTop="9" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="310" fromTop="9" />
+      <File id="166C7FC7-11BD-43ED-BE42-5956D39FA5AB/f:Class1.cs" caret="314" fromTop="13" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="469" fromTop="6" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="255" fromTop="3" />
+      <File id="d:&amp;/f:CsvWriter.cs/l:C!?code?trunk?NatureConservancy?Web?Services?CsvWriter.cs" caret="831" fromTop="38" />
+      <File id="166C7FC7-11BD-43ED-BE42-5956D39FA5AB/f:Class1.cs" caret="587" fromTop="13" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
     <Providers />
   </UnitTestRunner>
-  <CompletionStatisticsManager>
-    <ItemStatistics item="Default">
-      <Item value="UnderstorySection" priority="0" />
-      <Item value="public" priority="8" />
-      <Item value="Enum" priority="1" />
-      <Item value="enum" priority="0" />
-      <Item value="string" priority="4" />
-      <Item value="IList" priority="1" />
-      <Item value="Species" priority="6" />
-      <Item value="SpeciesType" priority="2" />
-      <Item value="new" priority="2" />
-      <Item value="Predicate&lt;Species&gt;" priority="3" />
-      <Item value="s" priority="2" />
-      <Item value="Predicate" priority="1" />
-      <Item value="NewsStyleUriParser" priority="0" />
-      <Item value="List" priority="1" />
-      <Item value="AllSpecies" priority="0" />
-      <Item value="Initialize" priority="0" />
-      <Item value="private" priority="0" />
-      <Item value="List&lt;Species&gt;" priority="0" />
-    </ItemStatistics>
-    <ItemStatistics item="Qualified:Web.Models.Species">
-      <Item value="Physiogonomy" priority="1" />
-    </ItemStatistics>
-    <ItemStatistics item="Qualified:@Web.Models.Species+SpeciesType">
-      <Item value="ATree" priority="0" />
-      <Item value="AShrub" priority="0" />
-    </ItemStatistics>
-    <ItemStatistics item="Qualified:System.Predicate`1">
-      <Item value="BeginInvoke" priority="0" />
-    </ItemStatistics>
-  </CompletionStatisticsManager>
 </Configuration>

@@ -103,6 +103,7 @@
     <Compile Include="Models\WoodyDebris.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Container.cs" />
+    <Compile Include="Services\CsvWriter.cs" />
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
