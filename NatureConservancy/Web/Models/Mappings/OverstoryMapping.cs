@@ -7,9 +7,9 @@ namespace Web.Models.Mappings
         public OverstoryMapping()
         {
             Id(x => x.Id);
-            HasOne(x => x.Species);
-            Map(x => x.DiameterBreastHeight);
-            HasOne(x => x.Survey);
+            ////HasOne(x => x.Species);
+            //Map(x => x.DiameterBreastHeight);
+            //HasOne(x => x.Survey);
         }
 
     }

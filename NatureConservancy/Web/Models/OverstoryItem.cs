@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
-    public class OverstoryItem
+    public class OverstoryItem : Entity
     {
         [DisplayName("Species")]
         [Required(ErrorMessage = "Please select a {0}")]

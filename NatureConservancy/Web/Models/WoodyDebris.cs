@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
-    public class WoodyDebris
+    public class WoodyDebris : Entity
     {
         [Required(ErrorMessage="Please enter a value for {0} in meters.")]
         [DisplayName("Total Length")]

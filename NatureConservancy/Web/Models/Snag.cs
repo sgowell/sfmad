@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
-    public class Snag
+    public class Snag : Entity
     {
         public int SnagId
         {

@@ -9,8 +9,8 @@ namespace Web.Models.Mappings
             Id(x => x.Id);
             Map(x => x.MicrotopographyId);
             Map(x => x.Comments);
-            HasOne(x => x.DevelopmentIntensity);
-            HasOne(x => x.Survey);
+            //HasOne(x => x.DevelopmentIntensity);
+            //HasOne(x => x.Survey);
         }
     }
 }
