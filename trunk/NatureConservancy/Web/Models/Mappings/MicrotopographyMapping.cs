@@ -2,17 +2,6 @@
 
 namespace Web.Models.Mappings
 {
-    public class MicrotopographyAmountMapping : ClassMap<MicrotopographyAmount>
-    { 
-        public MicrotopographyAmountMapping()
-        {
-            Id(x => x.Id);
-            Map(x => x.Description);
-        }
-    }
-        
-    
-    
     public class MicrotopographyMapping : ClassMap<Microtopography>
     {
         public MicrotopographyMapping()
