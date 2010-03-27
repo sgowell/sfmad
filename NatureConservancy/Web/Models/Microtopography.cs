@@ -1,55 +1,32 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Web.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
     public class Microtopography
     {
+        [Required]
         public int MicrotopographyId
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
 
+        [Required(ErrorMessage="Please enter {0}")]
         public String Comments
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
 
+        [Required(ErrorMessage = "Please enter the {0}")]
         public MicrotopographyAmount DevelopmentIntensity
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
 
+        [Required]
         public Survey Survey
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
     }
 }
