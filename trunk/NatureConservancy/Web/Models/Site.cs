@@ -6,7 +6,7 @@ namespace Web.Models
 {
     public class Site : Entity
     {
-        [Required(ErrorMessage = "Please specity your {0} for this survey")]
+        [Required(ErrorMessage = "Please specify your {0} for this survey")]
         [DefaultValue("Two-Hearted River")]
         [DisplayName("Site Name")]
         public virtual string Name { get; set; }

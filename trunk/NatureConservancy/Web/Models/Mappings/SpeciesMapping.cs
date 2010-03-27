@@ -8,7 +8,6 @@ namespace Web.Models.Mappings
         public SpeciesMapping()
         {
             Id(x => x.Id);
-            Map(x => x.Physiogonomy);
             Map(x => x.SpeciesAcronym);
             Map(x => x.ScientificName);
             Map(x => x.CommonName);

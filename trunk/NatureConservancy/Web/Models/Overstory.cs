@@ -11,7 +11,7 @@ namespace Web.Models
     {
         [DisplayName("Notes")]
         [UIHint("TextArea")]
-        public virtual String Notes{ get; set;}
+        public virtual string Notes{ get; set;}
 
         public virtual IList<OverstoryItem> OverstoryItems { get; set; }
 
