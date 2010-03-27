@@ -1,5 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using FluentNHibernate.Mapping;
+using Web.Models;
+using Web.Services;
 
 namespace Web
 {
@@ -26,6 +29,15 @@ namespace Web
             }
         }
     }
+
+    public static class TransectExtensions
+    {
+        public static void ToCsv(this IEnumerable<Transect> transects, ICsvWriter writer)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
     public static class Check
     {
         /// <summary>
