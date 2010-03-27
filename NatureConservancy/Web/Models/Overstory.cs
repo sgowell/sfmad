@@ -12,5 +12,6 @@ namespace Web.Models
         public String Notes{ get; set;}
         public IList<OverstoryItem> OverStoryItems { get; set; }
         public IList<Snag> Snags{get;set;}
+        public Microtopography Microtopography { get; set; }
     }
 }
