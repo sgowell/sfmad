@@ -14,11 +14,11 @@
             </div>
                         
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.DBH) %>
+                <%= Html.LabelFor(model => model.DiameterBreastHeight)%>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.DBH) %>
-                <%= Html.ValidationMessageFor(model => model.DBH) %>
+                <%= Html.TextBoxFor(model => model.DiameterBreastHeight)%>
+                <%= Html.ValidationMessageFor(model => model.DiameterBreastHeight)%>
             </div>
             
             <div class="editor-label">
