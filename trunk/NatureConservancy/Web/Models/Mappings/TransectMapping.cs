@@ -2,6 +2,16 @@
 
 namespace Web.Models.Mappings
 {
+
+//    public class SurveyMapping : ClassMap<Survey>
+//    {
+//        public SurveyMapping()
+//        {
+//            Id(x => x.Id);
+//            Map(x => x.Bearing);
+//        }
+//    }
+
     public class StandMapping : ClassMap<Stand>
     {
         public StandMapping()
@@ -19,6 +29,7 @@ namespace Web.Models.Mappings
             Map(x => x.Bearing);
         }
     }
+	
     public class TransectMapping : ClassMap<Transect>
     {
         public TransectMapping()
@@ -28,7 +39,7 @@ namespace Web.Models.Mappings
             Map(x => x.TransectClass);
             Map(x => x.Longitude);
             Map(x => x.Latitude);
-            HasOne(x => x.Stand);
+            //HasOne(x => x.Stand);
             //Map(x => x.Stands, new Stand());
         }
     }

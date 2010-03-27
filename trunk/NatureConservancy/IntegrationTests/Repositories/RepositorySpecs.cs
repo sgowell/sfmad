@@ -78,9 +78,12 @@ namespace IntegrationTests.Repositories
         {
             new PersistenceSpecification<DeerHerbivory>(GetSession())
                 .CheckReference(x => x.Species, new Species())
+                .CheckProperty(x => x.Browsed, 12)
+                .CheckProperty(x => x.Unbrowsed, 8)
                 //.CheckProperty(x => x.Id, "SPEC1")
                 .CheckProperty(x => x.Browsed, true)
                 .CheckReference(x => x.Understory, new Understory())
+
                 .VerifyTheMappings();
         }
 
@@ -101,6 +104,7 @@ namespace IntegrationTests.Repositories
             new PersistenceSpecification<Microtopography>(GetSession())
                 .CheckProperty(x => x.Id, 13)
                 .CheckProperty(x => x.Comments, "Micro generates few comments")
+                //.CheckReference(x => x.DevelopmentIntensity, new MicrotopographyAmount())
                 .CheckReference(x => x.DevelopmentIntensity, new Microtopography.MicrotopographyAmount())
                 .CheckReference(x => x.Survey, new Survey())
                 .VerifyTheMappings();
@@ -110,6 +114,7 @@ namespace IntegrationTests.Repositories
         public void can_persist_Overstory()
         {
             new PersistenceSpecification<Overstory>(GetSession())
+
                 .CheckReference(x => x.OverstoryItems, new List<OverstoryItem>())
                 .CheckReference(x => x.Survey, new Survey())
                 .CheckReference(x => x.Notes, string.Empty)

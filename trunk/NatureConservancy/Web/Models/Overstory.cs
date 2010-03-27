@@ -11,16 +11,16 @@ namespace Web.Models
     {
         [DisplayName("Notes")]
         [UIHint("TextArea")]
-        public String Notes{ get; set;}
+        public virtual String Notes{ get; set;}
 
-        public IList<OverstoryItem> OverstoryItems { get; set; }
+        public virtual IList<OverstoryItem> OverstoryItems { get; set; }
 
         public virtual Survey Survey
         {
             get;
             set;
         }
-        public IList<Snag> Snags{get;set;}
-        public Microtopography Microtopography { get; set; }
+        public virtual IList<Snag> Snags { get; set; }
+        public virtual Microtopography Microtopography { get; set; }
     }
 }

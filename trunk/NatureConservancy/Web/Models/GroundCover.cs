@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
-    public class GroundCover
+    public class GroundCover : Entity
     {
         public int Id { get; set; }
 

@@ -5,10 +5,10 @@ using System.Web.DynamicData;
 
 namespace Web.Models
 {
-    public class Understory
+    public class Understory : Entity
     {
         
-        public Survey Survey
+        public virtual Survey Survey
         {
             get; set;
         }

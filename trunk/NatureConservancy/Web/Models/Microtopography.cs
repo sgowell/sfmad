@@ -7,7 +7,7 @@ namespace Web.Models
     public class Microtopography : Entity
     {
         [Required]
-        public int Id
+        public virtual int MicrotopographyId
         {
             get; set;
         }
@@ -40,13 +40,13 @@ namespace Web.Models
 
         [Required(ErrorMessage = "Please select the {0}")]
         [DisplayName("Development Intensity")]
-        public MicrotopographyAmount DevelopmentIntensity
+        public virtual MicrotopographyAmount DevelopmentIntensity
         {
             get; set;
         }
 
         [Required]
-        public Survey Survey
+        public virtual Survey Survey
         {
             get; set;
         }

@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Web.Models
 {
-    public class UnderstoryItem
+    public class UnderstoryItem : Entity
     {
         [DisplayName("Species")]
         public Species Species
