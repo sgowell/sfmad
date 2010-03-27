@@ -30,7 +30,10 @@ namespace Web.Controllers
         public ActionResult Create()
         {
             return View();
-        } 
+        }
+
+        public ActionResult CreateWoodyDebris() { return View(); }
+
 
         //
         // POST: /Survey/Create

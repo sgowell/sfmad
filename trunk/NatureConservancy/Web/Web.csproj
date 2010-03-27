@@ -90,6 +90,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Views\Survey\Create.aspx" />
+    <Content Include="Views\Survey\CreateWoodyDebris.aspx" />
     <Content Include="Views\Survey\Delete.aspx" />
     <Content Include="Views\Survey\Details.aspx" />
     <Content Include="Views\Survey\Index.aspx" />
