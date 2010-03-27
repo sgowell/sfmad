@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NatureConservatory.EcoRegion">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>EcoRegion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Sites" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Site">
+    <Position X="2.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABIAAAAACAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Site.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EcoRegion" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Stands" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Species">
+    <Position X="9.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Species.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NatureConservatory.Stand">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAgAEAgAAAAAAAAAAAAAAAAAAEAAAQAAAAAAA=</HashCode>
+      <FileName>Stand.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Site" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Transects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Survey">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAEAIKAAAAAAAAgAQCAAAAABAEAAABAQAAQAAAAgAA=</HashCode>
+      <FileName>Survey.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Transect" />
+      <Property Name="Microtopography" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Surveyors" />
+      <Property Name="Plots" />
+      <Property Name="WoodyDebries" />
+      <Property Name="Overstory" />
+      <Property Name="Understory" />
+      <Property Name="Snags" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Transect">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAECAAAAAAAAABAAgCA=</HashCode>
+      <FileName>Transect.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Stands" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Surveys" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Surveyor">
+    <Position X="13.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAg=</HashCode>
+      <FileName>Surveyor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NatureConservatory.Surveyors">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Surveyors.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="SurveyorName" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Plot">
+    <Position X="13.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAgAAAAAAAQAAAAAAAACAAAAAAIA=</HashCode>
+      <FileName>Plot.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Survey" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="Plot_Species" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Cover">
+    <Position X="18.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Cover.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NatureConservatory.Plot_Species">
+    <Position X="15.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAA=</HashCode>
+      <FileName>Plot_Species.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cover" />
+      <Property Name="Plot" />
+      <Property Name="Species" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NatureConservatory.WoodyDrebis">
+    <Position X="11.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAMAAAAAAAAAAAAAgIAAAAABAAAAAAAABCAAAAAAAA=</HashCode>
+      <FileName>WoodyDrebis.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Species" />
+      <Property Name="DecayClass" />
+      <Property Name="Survey" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NatureConservatory.woodyDebrisDecayClass">
+    <Position X="12.25" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAIA=</HashCode>
+      <FileName>DecayClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NatureConservatory.Microtopography">
+    <Position X="2.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAACAAAAAAAAAAAACAAAAAIAA=</HashCode>
+      <FileName>Microtopography.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="DevelopmentIntensity" />
+      <Property Name="Survey" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NatureConservatory.MicrotopographyAmount">
+    <Position X="0.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MicrotopographyAmount.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NatureConservatory.Overstory">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAhA=</HashCode>
+      <FileName>Overstory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Species" />
+      <Property Name="Survey" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NatureConservatory.UnderStory">
+    <Position X="10" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAACAAAAAAgA=</HashCode>
+      <FileName>Overstory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Species" />
+      <Property Name="Survey" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NatureConservatory.Snag">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAABAAAAAAAAAIAACAAAAAAAAAAAACAAAAAABA=</HashCode>
+      <FileName>Snags.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Species" />
+      <Property Name="SnagDecayClass" />
+      <Property Name="Survey" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="NatureConservatory.SnagDecayClass">
+    <Position X="6" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAIA=</HashCode>
+      <FileName>DecayClass.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NatureConservatory.DeerHerbivory">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAA=</HashCode>
+      <FileName>DeerHerbivory.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Species" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
