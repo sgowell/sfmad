@@ -18,7 +18,7 @@ namespace Web.Models
         public virtual string TransectClass { get; set; } //A-G
 
         [Required(ErrorMessage = "Please enter a {0}")]
-        [DisplayName("Transact Number")]
+        [DisplayName("Transect Number")]
         public virtual int TransectNumber { get; set; }
 
         [Required(ErrorMessage = "Please enter a {0}")]
