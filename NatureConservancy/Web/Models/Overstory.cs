@@ -1,23 +1,16 @@
-﻿namespace Web.Models
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
+using System.Web;
+
+namespace Web.Models
 {
-    public class Overstory
+    public class OverStory
     {
-        public Species Species
-        {
-            get;
-            set;
-        }
-
-        public double DiameterBreastHeight
-        {
-            get;
-            set;
-        }
-
-        public Survey Survey
-        {
-            get;
-            set;
-        }
+        [DisplayName("Notes")]
+        public String Notes{ get; set;}
+        public IList<OverstoryItem> OverStoryItems { get; set; }
+        public IList<Snag> Snags{get;set;}
     }
 }
