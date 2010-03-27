@@ -36,6 +36,17 @@ namespace Web.Data
 
     }
 
+    public class StandRepository : RepositoryBase<Stand>, IStandRepository
+    {
+        public StandRepository(ISession session) : base(session)
+        {
+        }
+    }
+
+    public interface IStandRepository : IRepository<Stand>
+    {
+    }
+
     public class TransactionRepository : RepositoryBase<Transect>, ITransectRepository, IRepository
     {
         public TransactionRepository(ISession session) : base(session)

@@ -42,6 +42,8 @@ namespace Web.Services
 
                 i.ForRequestedType<ITransectRepository>()
                     .TheDefaultIsConcreteType<TransactionRepository>();
+                i.ForRequestedType<IStandRepository>()
+                    .TheDefaultIsConcreteType<StandRepository>();
 //                i.Scan(x =>
 //                {
 //                    x.Assembly("Web");
