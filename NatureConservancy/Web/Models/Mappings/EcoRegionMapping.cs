@@ -2,19 +2,6 @@
 
 namespace Web.Models.Mappings
 {
-    public class StandMapping : ClassMap<Stand>
-    {
-        public StandMapping()
-        {
-            Id(x => x.Id);
-            Map(x => x.Number);
-            Map(x => x.SiteNumber);
-            Map(x => x.EcoSystem);
-            Map(x => x.TreatmentType);
-        }
-
-    }
-    
     public class SiteMapping : ClassMap<Site>
     {
         public SiteMapping()
