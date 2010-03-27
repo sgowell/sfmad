@@ -26,7 +26,6 @@ namespace Web.Models
             set;
         }
 
-        [DisplayName("Notes")]
-        public String Notes { get; set; }
+   
     }
 }
