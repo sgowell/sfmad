@@ -76,7 +76,7 @@
     <Compile Include="Models\MicrotopographyAmount.cs" />
     <Compile Include="Models\Overstory.cs" />
     <Compile Include="Models\Plot.cs" />
-    <Compile Include="Models\Plot_Species.cs" />
+    <Compile Include="Models\PlotSpecies.cs" />
     <Compile Include="Models\Site.cs" />
     <Compile Include="Models\Snag.cs" />
     <Compile Include="Models\Species.cs" />

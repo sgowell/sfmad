@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Web.Models;
 
-namespace NatureConservatory
+namespace Web.Models
 {
     public class Plot
     {
@@ -51,7 +52,7 @@ namespace NatureConservatory
             }
         }
 
-        public IList<Plot_Species> Plot_Species
+        public IList<PlotSpecies> Plot_Species
         {
             get
             {
