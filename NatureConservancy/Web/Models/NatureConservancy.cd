@@ -4,7 +4,7 @@
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EcoRegion.cs</FileName>
+      <FileName>Models\EcoRegion.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="Sites" />
@@ -14,7 +14,7 @@
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABIAAAAACAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=</HashCode>
-      <FileName>Site.cs</FileName>
+      <FileName>Models\Site.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="EcoRegion" />
@@ -25,16 +25,23 @@
   </Class>
   <Class Name="Web.Models.Species">
     <Position X="9.75" Y="12" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Web.Models.Species.SpeciesType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Models\Species.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Species.cs</FileName>
+      <HashCode>IAAAAAARAAAAIAAAAAIAAAAQEQICAAAhAAABAAAIAAA=</HashCode>
+      <FileName>Models\Species.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Web.Models.Stand">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAgAEAgAAAAAAAAAAAAAAAAAAEAAAQAAAAAAA=</HashCode>
-      <FileName>Stand.cs</FileName>
+      <FileName>Models\Stand.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Site" />
@@ -46,28 +53,25 @@
   <Class Name="Web.Models.Survey">
     <Position X="10" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AIAEAIKAAAAAAAAgAQCAAAAABAECAABAAAAQAAAAgAA=</HashCode>
-      <FileName>Survey.cs</FileName>
+      <HashCode>AIAEAIKAAAAAAAAwAQCAAAAABAEAAAAAQAAQAAAAgAA=</HashCode>
+      <FileName>Models\Survey.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Transect" />
       <Property Name="Microtopography" />
     </ShowAsAssociation>
     <ShowAsCollectionAssociation>
-      <Property Name="Surveyors" />
       <Property Name="Plots" />
-      <Property Name="WoodyDebries" />
       <Property Name="Overstory" />
       <Property Name="Snags" />
-      <Property Name="UnderStorySpecies" />
       <Property Name="DeerHerbivory" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Web.Models.Transect">
     <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAECAAAAAAAAABAAgCA=</HashCode>
-      <FileName>Transect.cs</FileName>
+      <HashCode>AAAAAAAAAEAAAAAAAAAIAAAAAAECAAAAAAAAABAAgAA=</HashCode>
+      <FileName>Models\Transect.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Stands" />
@@ -97,7 +101,7 @@
     <Position X="13.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAgAAAAAAAQAAAAAAAACAAAAAAIA=</HashCode>
-      <FileName>Plot.cs</FileName>
+      <FileName>Models\Plot.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Survey" />
@@ -109,15 +113,15 @@
   <Class Name="Web.Models.Cover">
     <Position X="14.25" Y="10" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
-      <FileName>Cover.cs</FileName>
+      <HashCode>AAAAAAAAAAAgAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Cover.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Web.Models.Plot_Species">
+  <Class Name="Web.Models.PlotSpecies">
     <Position X="13" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAA=</HashCode>
-      <FileName>Plot_Species.cs</FileName>
+      <FileName>Models\PlotSpecies.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Plot" />
@@ -125,14 +129,13 @@
       <Property Name="Cover" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Web.Models.WoodyDrebis">
+  <Class Name="Web.Models.WoodyDebris">
     <Position X="15.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAMAAAAAAAAAAAAAgIAAAAABAAAAAAAABCAAAAAAAA=</HashCode>
-      <FileName>WoodyDrebis.cs</FileName>
+      <FileName>Models\WoodyDebris.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="DecayClass" />
       <Property Name="Species" />
       <Property Name="Survey" />
     </ShowAsAssociation>
@@ -148,7 +151,7 @@
     <Position X="2.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAAAAAAAAAAAACAAAAAAAAAAAACAAAAAIAA=</HashCode>
-      <FileName>Microtopography.cs</FileName>
+      <FileName>Models\Microtopography.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="DevelopmentIntensity" />
@@ -159,25 +162,25 @@
     <Position X="2.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MicrotopographyAmount.cs</FileName>
+      <FileName>Models\MicrotopographyAmount.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Web.Models.Overstory">
     <Position X="4.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAhA=</HashCode>
-      <FileName>Overstory.cs</FileName>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAAAA=</HashCode>
+      <FileName>Models\Overstory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Species" />
       <Property Name="Survey" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Web.Models.UnderStorySpecies">
-    <Position X="10.75" Y="6.5" Width="1.75" />
+  <Class Name="Web.Models.UnderstorySpecies">
+    <Position X="11.25" Y="5.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAgAAAAAAEAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
-      <FileName>Overstory.cs</FileName>
+      <HashCode>AAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Models\UnderstorySpecies.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Species" />
@@ -188,7 +191,7 @@
     <Position X="6.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAABAAAAAAAAAIAACAAAAAAAAAAAACAAAAAABA=</HashCode>
-      <FileName>Snag.cs</FileName>
+      <FileName>Models\Snag.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Species" />
@@ -199,20 +202,27 @@
   <Class Name="Web.Models.SnagDecayClass">
     <Position X="6" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAIA=</HashCode>
-      <FileName>DecayClass.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\DecayClass.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Web.Models.DeerHerbivory">
     <Position X="8.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAAAA=</HashCode>
-      <FileName>DeerHerbivory.cs</FileName>
+      <FileName>Models\DeerHerbivory.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Species" />
       <Property Name="Survey" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="Web.Models.Understory" Collapsed="true">
+    <Position X="15.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAACAAAEAAAA=</HashCode>
+      <FileName>Models\Understory.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
