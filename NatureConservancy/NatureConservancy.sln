@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web", "Web\Web.csproj", "{E83DFD17-A8FC-487E-A4CF-9556AF434594}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationTests", "IntegrationTests\IntegrationTests.csproj", "{B346D6DE-08EE-4440-8CCA-CC3199105952}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{E83DFD17-A8FC-487E-A4CF-9556AF434594}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E83DFD17-A8FC-487E-A4CF-9556AF434594}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E83DFD17-A8FC-487E-A4CF-9556AF434594}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B346D6DE-08EE-4440-8CCA-CC3199105952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B346D6DE-08EE-4440-8CCA-CC3199105952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B346D6DE-08EE-4440-8CCA-CC3199105952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B346D6DE-08EE-4440-8CCA-CC3199105952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
