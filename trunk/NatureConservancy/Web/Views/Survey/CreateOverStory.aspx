@@ -9,11 +9,11 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <form id="form1" runat="server">
+   
 
     <h2>CreateOverStory</h2>
 
-   
+    <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
@@ -41,13 +41,13 @@
     <uc2:AddMicrotopography ID="AddMicrotopography1" runat="server" />
 
 </div>
-   
+   <% } %>
 
     <div>
         <%= Html.ActionLink("Back to List", "Index") %>
     </div>
 
-    </form>
+    
 
 </asp:Content>
 
