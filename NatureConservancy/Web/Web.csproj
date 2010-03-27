@@ -108,16 +108,17 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Views\Survey\AddDeerHerbivory.ascx" />
-    <Content Include="Views\Survey\AddMicrotopography.ascx" />
     <Content Include="Views\Survey\AddSnags.ascx" />
     <Content Include="Views\Survey\AddUnderstoryItem.ascx" />
     <Content Include="Views\Survey\AddWoodyDebris.ascx" />
     <Content Include="Views\Survey\Create.aspx" />
+    <Content Include="Views\Survey\CreateMicrotopography.aspx" />
     <Content Include="Views\Survey\CreateOverStory.aspx" />
     <Content Include="Views\Survey\CreateUnderstory.aspx" />
     <Content Include="Views\Survey\CreateWoodyDebris.aspx" />
     <Content Include="Views\Survey\Edit.aspx" />
     <Content Include="Views\Survey\Index.aspx" />
+    <Content Include="Views\Survey\ListSnags.ascx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.4.1.js" />
