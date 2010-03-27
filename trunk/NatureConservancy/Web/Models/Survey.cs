@@ -63,7 +63,7 @@ namespace Web.Models
             set;
         }
 
-        public virtual IList<OverStory> Overstory
+        public virtual IList<Overstory> Overstory
         {
             get;
             set;

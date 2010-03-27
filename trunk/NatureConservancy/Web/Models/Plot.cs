@@ -1,66 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Web.Models;
+﻿using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
     public class Plot
     {
-        public int PlotId
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public int Id { get; set; }
 
-        public Survey Survey
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        [Required(ErrorMessage="Please enter a {0}")]
+        [DisplayName("Plot Name")]
+        public string Name { get; set; }
 
-        public int CoverId
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        [DisplayName("Plot Description")]
+        public string Description { get; set; }
 
-        public int PlotCategoryId
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        [Required(ErrorMessage="You must have a parent {0} record")]
+        [DisplayName("Ground Cover")]
+        public GroundCover GroundCover { get; set; }
 
-        public IList<PlotItem> Plot_Species
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        [Required(ErrorMessage = "You must have at least one {0} record")]
+        [DisplayName("Plot Item")]
+        public IList<PlotItem> PlotItems { get; set; }
     }
 }
