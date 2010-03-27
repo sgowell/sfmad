@@ -1,19 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Web.DynamicData;
 
 namespace Web.Models
 {
     public class Understory : Entity
     {
         
+        [Required(ErrorMessage = "You must have a parent {0} record.")]
+        [DisplayName("Survey")]
         public virtual Survey Survey
         {
             get; set;
         }
 
-        public IList<UnderstoryItem> UnderstorySpecies
+        [Required(ErrorMessage = "You must have at least one {0} record.")]
+        [DisplayName("UnderstoryItem")]
+        public IList<UnderstoryItem> UnderstoryItems
         {
             get; set;
         }

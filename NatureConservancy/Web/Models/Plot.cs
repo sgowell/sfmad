@@ -6,8 +6,6 @@ namespace Web.Models
 {
     public class Plot : Entity
     {
-        public virtual int Id { get; set; }
-
         [Required(ErrorMessage="Please enter a {0}")]
         [DisplayName("Plot Name")]
         public virtual string Name { get; set; }
