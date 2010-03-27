@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Web.Models.Snag>" %>
 
-    <% using (Html.BeginForm()) {%>
+    <% using (Html.BeginForm("AddSnags","Survey")) {%>
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
