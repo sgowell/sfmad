@@ -64,6 +64,86 @@ namespace IntegrationTests.Repositories
         }
 
         [Test]
+        public void can_persist_WoodyDebrisDecayClass()
+        {
+            new PersistenceSpecification<WoodyDebrisDecayClass>(GetSession())
+                .CheckProperty(x => x.Description, "Punky")
+                .CheckProperty(x => x.Class, "Tree")
+                .VerifyTheMappings();
+        }
+
+        [Test]
+        public void can_persist_SnagDecayClass()
+        {
+            new PersistenceSpecification<SnagDecayClass>(GetSession())
+                .CheckProperty(x => x.DecayDescription, "Punky")
+                .CheckProperty(x => x.DecayClass, "Tree")
+                .VerifyTheMappings();
+        }
+
+        [Test]
+        public void can_persist_Cover()
+        {
+            new PersistenceSpecification<Cover>(GetSession())
+                .CheckProperty(x => x.Class, "Shrub")
+                .CheckProperty(x => x.Description, "White Berry")
+                .VerifyTheMappings();
+        }
+        
+        [Test]
+        public void can_persist_EcoRegion()
+        {
+            new PersistenceSpecification<EcoRegion>(GetSession())
+                .CheckProperty(x => x.RegionNumber, 13)
+                .CheckProperty(x => x.Name, "Northern Fen")
+                .VerifyTheMappings();
+        }
+
+        //todo fix this test
+        [Test]
+        public void can_persist_DeerHerbivory()
+        {
+            new PersistenceSpecification<DeerHerbivory>(GetSession())
+                .CheckReference(x => x.Species, new Species())
+                //.CheckProperty(x => x.Id, "SPEC1")
+                .CheckProperty(x => x.Browsed, true)
+                .CheckReference(x => x.Survey, new Survey())
+                .VerifyTheMappings();
+        }
+
+        [Test]
+        public void can_persist_Species()
+        {
+            new PersistenceSpecification<Species>(GetSession())
+                .CheckProperty(x => x.SpeciesAcronym, "ABBABB")
+                .CheckProperty(x => x.ScientificName, "SPEC1")
+                .CheckProperty(x => x.CommonName, "White Pine")
+                .VerifyTheMappings();
+        }
+
+
+        [Test]
+        public void can_persist_Microtopography()
+        {
+            new PersistenceSpecification<Microtopography>(GetSession())
+                .CheckProperty(x => x.MicrotopographyId, 13)
+                .CheckProperty(x => x.Comments, "Micro generates few comments")
+                .CheckReference(x => x.DevelopmentIntensity, new MicrotopographyAmount())
+                .CheckReference(x => x.Survey, new Survey())
+                .VerifyTheMappings();
+        }
+
+        [Test]
+        public void can_persist_Overstory()
+        {
+            new PersistenceSpecification<Overstory>(GetSession())
+                .CheckReference(x => x.Species, new Species())
+                .CheckProperty(x => x.DiameterBreastHeight, 47.123)
+                .CheckReference(x => x.Survey, new Survey())
+                .VerifyTheMappings();
+        }
+
+        [Test]
         public void can_retrieve_from_repository()
         {
             var transect = TransectFixture.Create();
