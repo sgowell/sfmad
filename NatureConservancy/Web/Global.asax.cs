@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -27,7 +28,6 @@ namespace Web
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
-
             RegisterRoutes(RouteTable.Routes);
         }
     }
