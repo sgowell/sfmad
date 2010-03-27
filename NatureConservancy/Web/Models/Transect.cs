@@ -2,17 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using Web.Models;
+using FluentNHibernate.Data;
 
-namespace Web.Models
+namespace NatureConservatory
 {
-    public class Transect
+    public class Entity
     {
-        public string TransectClass { get; set; } //A-G
-        public int TransectNumber { get; set; }
-        public IList<Survey> Surveys { get; set; }
+        public virtual int Id { get; set; }
+    }
 
-        public Stand Stands
+    public class Transect : Entity
+    {
+        public virtual string TransectClass { get; set; } //A-G
+        public virtual int TransectNumber { get; set; }
+        public virtual IList<Survey> Surveys { get; set; }
+
+        public virtual Stand Stands
         {
             get
             {
@@ -23,26 +28,14 @@ namespace Web.Models
             }
         }
 
-        public Double GPSLocationLatitude
+        public virtual Double Latitude
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
 
-        public Double GPSLocationLongitude
+        public virtual Double Longitude
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
         
     }
