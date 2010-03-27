@@ -11,13 +11,33 @@ namespace Web.Models
             get; set;
         }
 
-        [Required(ErrorMessage="Please enter {0}")]
         public String Comments
         {
             get; set;
         }
 
-        [Required(ErrorMessage = "Please enter the {0}")]
+        public enum MicrotopographyAmount
+        {
+            /// <summary>
+            /// None
+            /// </summary>
+            None,
+            /// <summary>
+            /// Minor - Less than 10%
+            /// </summary>
+            Minor,
+            /// <summary>
+            /// Moderate - 10-50%
+            /// </summary>
+            Moderate,
+            /// <summary>
+            /// Major - Greater than 50%
+            /// </summary>
+            Major,
+
+        }
+
+        [Required(ErrorMessage = "Please select the {0}")]
         public MicrotopographyAmount DevelopmentIntensity
         {
             get; set;
