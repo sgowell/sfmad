@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="NatureConservatory.EcoRegion">
+  <Class Name="Web.Models.EcoRegion">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAACAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -10,7 +10,7 @@
       <Property Name="Sites" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="NatureConservatory.Site">
+  <Class Name="Web.Models.Site">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABIAAAAACAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAAAA=</HashCode>
@@ -23,14 +23,14 @@
       <Property Name="Stands" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="NatureConservatory.Species">
+  <Class Name="Web.Models.Species">
     <Position X="9.75" Y="12" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Species.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NatureConservatory.Stand">
+  <Class Name="Web.Models.Stand">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAgAEAgAAAAAAAAAAAAAAAAAAEAAAQAAAAAAA=</HashCode>
@@ -43,7 +43,7 @@
       <Property Name="Transects" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="NatureConservatory.Survey">
+  <Class Name="Web.Models.Survey">
     <Position X="10" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAEAIKAAAAAAAAgAQCAAAAABAECAABAAAAQAAAAgAA=</HashCode>
@@ -63,7 +63,7 @@
       <Property Name="DeerHerbivory" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="NatureConservatory.Transect">
+  <Class Name="Web.Models.Transect">
     <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAECAAAAAAAAABAAgCA=</HashCode>
@@ -76,14 +76,14 @@
       <Property Name="Surveys" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="NatureConservatory.Surveyor">
+  <Class Name="Web.Models.Surveyor">
     <Position X="18.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAg=</HashCode>
       <FileName>Surveyor.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NatureConservatory.Surveyors">
+  <Class Name="Web.Models.Surveyors">
     <Position X="17" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAQAAAAAAAAAAAAIAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
@@ -93,7 +93,7 @@
       <Property Name="SurveyorName" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NatureConservatory.Plot">
+  <Class Name="Web.Models.Plot">
     <Position X="13.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAgAAAAAAAQAAAAAAAACAAAAAAIA=</HashCode>
@@ -106,14 +106,14 @@
       <Property Name="Plot_Species" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="NatureConservatory.Cover">
+  <Class Name="Web.Models.Cover">
     <Position X="14.25" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAACAAAAAAAAAAAAgAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>Cover.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NatureConservatory.Plot_Species">
+  <Class Name="Web.Models.Plot_Species">
     <Position X="13" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAA=</HashCode>
@@ -125,7 +125,7 @@
       <Property Name="Cover" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NatureConservatory.WoodyDrebis">
+  <Class Name="Web.Models.WoodyDrebis">
     <Position X="15.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAMAAAAAAAAAAAAAgIAAAAABAAAAAAAABCAAAAAAAA=</HashCode>
@@ -137,14 +137,14 @@
       <Property Name="Survey" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NatureConservatory.woodyDebrisDecayClass">
+  <Class Name="Web.Models.woodyDebrisDecayClass">
     <Position X="17.5" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAIA=</HashCode>
       <FileName>DecayClass.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NatureConservatory.Microtopography">
+  <Class Name="Web.Models.Microtopography">
     <Position X="2.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAAAAAAAAAAAACAAAAAAAAAAAACAAAAAIAA=</HashCode>
@@ -155,14 +155,14 @@
       <Property Name="Survey" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NatureConservatory.MicrotopographyAmount">
+  <Class Name="Web.Models.MicrotopographyAmount">
     <Position X="2.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MicrotopographyAmount.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NatureConservatory.Overstory">
+  <Class Name="Web.Models.Overstory">
     <Position X="4.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAhA=</HashCode>
@@ -173,7 +173,7 @@
       <Property Name="Survey" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NatureConservatory.UnderStorySpecies">
+  <Class Name="Web.Models.UnderStorySpecies">
     <Position X="10.75" Y="6.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAgAAAAAAEAAAAAAAAAAAAAACAAAAAAAA=</HashCode>
@@ -184,7 +184,7 @@
       <Property Name="Survey" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NatureConservatory.Snag">
+  <Class Name="Web.Models.Snag">
     <Position X="6.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAABAAAAAAAAAIAACAAAAAAAAAAAACAAAAAABA=</HashCode>
@@ -196,14 +196,14 @@
       <Property Name="Survey" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="NatureConservatory.SnagDecayClass">
+  <Class Name="Web.Models.SnagDecayClass">
     <Position X="6" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAACAAAAAAAAAAIA=</HashCode>
       <FileName>DecayClass.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="NatureConservatory.DeerHerbivory">
+  <Class Name="Web.Models.DeerHerbivory">
     <Position X="8.5" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAQAAAAA=</HashCode>

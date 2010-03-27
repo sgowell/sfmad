@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace NatureConservatory
+namespace Web.Models
 {
     public class Site
     {
@@ -14,13 +11,7 @@ namespace NatureConservatory
 
         public EcoRegion EcoRegion
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
     }
 }
