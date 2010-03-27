@@ -2,7 +2,12 @@
 {
     public enum WoodyDebrisDecayClass
     {
-        }
+        /// <summary>
+        /// 
+        /// </summary>
+        Class1,
+        /// <summary>
+        /// 
         /// </summary>
         Class2,
         /// <summary>
@@ -15,6 +20,7 @@
         Class4,
     }
 
+    public enum SnagDecayClass
     {
         /// <summary>
         /// I - bark intact, small branches present

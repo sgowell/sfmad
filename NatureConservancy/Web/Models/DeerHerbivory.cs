@@ -12,11 +12,6 @@ namespace Web.Models
             get;
             set;
         }
-        public int Id
-        {
-            get;
-            set;
-        }
 
         [DisplayName("Browsed")]
         [Required(ErrorMessage = "Please enter a {0} Amount")]
