@@ -70,7 +70,6 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
-    <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
@@ -80,15 +79,14 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Cover.cs" />
     <Compile Include="Models\Data\NHibernateSessionFactory.cs" />
     <Compile Include="Models\Data\TransactionRepository.cs" />
     <Compile Include="Models\DecayClass.cs" />
     <Compile Include="Models\DeerHerbivory.cs" />
     <Compile Include="Models\EcoRegion.cs" />
+    <Compile Include="Models\GroundCover.cs" />
     <Compile Include="Models\Mappings\TransectMapping.cs" />
     <Compile Include="Models\Microtopography.cs" />
-    <Compile Include="Models\MicrotopographyAmount.cs" />
     <Compile Include="Models\Overstory.cs" />
     <Compile Include="Models\OverstoryItem.cs" />
     <Compile Include="Models\Plot.cs" />
