@@ -6,15 +6,15 @@
     //III – solid or decayed cwd, leaves absent, solid or punky wood, round or oval; 
     //IV – decayed cwd, leaves absent, punky wood, oval; and V – very decayed cwd, leaves absent, punky wood, oval or collapsed shape (Tyrell and Crow 1994).                                  
 
-    public class WoodyDebrisDecayClass
+    public class WoodyDebrisDecayClass : Entity
     {
-        public string Description
+        public virtual string Description
         {
             get;
             set;
         }
 
-        public string Class
+        public virtual string Class
         {
             get;
             set;
@@ -27,15 +27,15 @@
     //III - little to no bark, sapwood degradation; 
     //IV - no bark, extensive sapwood degradation.
 
-    public class SnagDecayClass
+    public class SnagDecayClass : Entity
     {
-        public string DecayDescription
+        public virtual string DecayDescription
         {
             get;
             set;
         }
 
-        public string DecayClass
+        public virtual string DecayClass
         {
             get;
             set;
