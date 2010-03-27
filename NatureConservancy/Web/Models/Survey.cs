@@ -7,39 +7,36 @@ namespace Web.Models
 {
     public class Survey : Entity
     {
-        [Required(ErrorMessage = "Please enter a bearing!")]
+        [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Bearing")]
-        [Range(0, 360)]
+        [Range(0, 360, ErrorMessage = "Please enter a valid {0}. (0-360)")]
         public virtual int Bearing { get; set; } //Degrees zero to 360
 
-        [Required(ErrorMessage = "Please enter a Stand")]
+        [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Stand")]
-        [RegularExpression("^[A-G]")]
+        [RegularExpression("^[A-G]", ErrorMessage = "Please enter a valid {0}. (A-G)")]
         public virtual string TransectClass { get; set; } //A-G
 
-        [Required(ErrorMessage = "Please enter a Transact Number")]
-        [DisplayName("Number")]
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Transact Number")]
         public virtual int TransectNumber { get; set; }
 
-        [Required(ErrorMessage = "Enter a Start Time")]
-        [DataType(DataType.DateTime)]
-        [DisplayName("Survey Start")]
-        [DisplayFormat(DataFormatString = "From:{0}")]
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Survey Start Time")]
         public virtual DateTime SurveyStartTime
         {
             get; set;
         }
 
-        [DataType(DataType.DateTime)]
-        [DisplayName("Survey End")]
-        [DisplayFormat(DataFormatString = "To:{0}")]
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Survey End Time")]
         public virtual DateTime SurveyEndTime
         {
             get;
             set;
         }
-
-        [DisplayName("Surveyors:")]
+        [Required(ErrorMessage = "Please enter the {0}")]
+        [DisplayName("Surveyors")]
         public virtual string Surveyors { get; set; }
 
         public virtual Transect Transect

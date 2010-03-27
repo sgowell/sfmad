@@ -1,5 +1,6 @@
 ﻿
 using System.Web.Mvc;
+using Web.Models;
 
 namespace Web.Controllers
 {
@@ -28,6 +29,40 @@ namespace Web.Controllers
         {
             return View();
         }
+
+        //
+        // POST: /Survey/Create
+
+        [HttpPost]
+        public ActionResult Create(Survey survey)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+
+                    return RedirectToAction("CreateWoodyDebris");
+                }                
+            }
+            catch
+            {
+                return View(survey);
+            }
+            return View(survey);
+        }
+
+        public ActionResult AddWoodyDebris()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult AddWoodyDebris(WoodyDebris woodyDebris)
+        {
+            
+            return RedirectToAction("CreateWoodyDebris");
+        }
+
 
         public ActionResult CreateWoodyDebris() { return View(); }
         [HttpPost]
@@ -70,11 +105,15 @@ namespace Web.Controllers
         }
         public ActionResult CreateMicrotopography() { return View(); }
         [HttpPost]
-        public ActionResult CreateMicrotopography(FormCollection collection)
+        public ActionResult CreateMicrotopography(Microtopography microtopography)
         {
             try
             {
-                return RedirectToAction("CreateUnderstory");
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("CreateUnderstory");    
+                }
+                return View(microtopography);
             }
             catch
             {
@@ -100,24 +139,7 @@ namespace Web.Controllers
         {
             try
             {
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-
-        //
-        // POST: /Survey/Create
-
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                return RedirectToAction("CreateWoodyDebris");
+                return RedirectToAction("CreateGroundCoverSpeciesAbundance");
             }
             catch
             {

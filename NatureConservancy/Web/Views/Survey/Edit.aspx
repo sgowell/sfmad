@@ -1,16 +1,16 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Survey>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Create
+	Edit
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Create</h2>
+    <h2>Edit</h2>
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
-
+        
         <fieldset>
             <legend>Fields</legend>
             
@@ -42,7 +42,7 @@
                 <%= Html.LabelFor(model => model.SurveyStartTime) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.SurveyStartTime) %>
+                <%= Html.TextBoxFor(model => model.SurveyStartTime, String.Format("{0:g}", Model.SurveyStartTime)) %>
                 <%= Html.ValidationMessageFor(model => model.SurveyStartTime) %>
             </div>
             
@@ -50,7 +50,7 @@
                 <%= Html.LabelFor(model => model.SurveyEndTime) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.SurveyEndTime) %>
+                <%= Html.TextBoxFor(model => model.SurveyEndTime, String.Format("{0:g}", Model.SurveyEndTime)) %>
                 <%= Html.ValidationMessageFor(model => model.SurveyEndTime) %>
             </div>
             
@@ -63,7 +63,7 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Save" />
             </p>
         </fieldset>
 
