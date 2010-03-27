@@ -16,16 +16,16 @@
         <tr>
             <th></th>
             <th>
-                TotalLength
+                Total Length
             </th>
             <th>
-                IntersectDiameter
+                Intersect Diameter
             </th>
             <th>
-                LargeEndDiameter
+                Large End Diameter
             </th>
             <th>
-                SmallEndDiameter
+                Small End Diameter
             </th>
         </tr>
 

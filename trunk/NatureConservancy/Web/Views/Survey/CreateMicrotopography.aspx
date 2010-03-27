@@ -6,7 +6,7 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>CreateMicrotopography</h2>
+    <h2>Create Microtopography</h2>
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
@@ -14,13 +14,7 @@
         <fieldset>
             <legend>Fields</legend>
             
-            <div class="editor-label">
-                <%= Html.LabelFor(model => model.MicrotopographyId) %>
-            </div>
-            <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.MicrotopographyId) %>
-                <%= Html.ValidationMessageFor(model => model.MicrotopographyId) %>
-            </div>
+            
             
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Comments) %>
@@ -28,6 +22,13 @@
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.Comments) %>
                 <%= Html.ValidationMessageFor(model => model.Comments) %>
+            </div>
+             <div class="editor-label">
+                <%= Html.LabelFor(model => model.DevelopmentIntensity ) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(model => model.DevelopmentIntensity ) %>
+                <%= Html.ValidationMessageFor(model => model.DevelopmentIntensity ) %>
             </div>
             
             <p>
