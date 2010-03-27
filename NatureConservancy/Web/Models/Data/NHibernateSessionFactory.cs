@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Linq;
+using System.Reflection;
 using System.Threading;
 using System.Web;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using FluentNHibernate.Mapping;
 using NHibernate;
 using NHibernate.Cfg;
 using Web.Models;
@@ -35,15 +38,14 @@ namespace Web.Data
                 .MsSql2005.ConnectionString(c => c.Is("ConnectionString".AppSetting()));
 
             config.ShowSql();
-
+            var allEntityTypes = Assembly.GetExecutingAssembly().GetTypes().ToList().FindAll(t => t.GetInterface("IClassMap") !=null);
+            allEntityTypes.Each(Console.WriteLine);
             sessionFactory = Fluently.Configure()
                 .Database(config)
-                .Mappings(m => {
-                                   m.FluentMappings.Add(typeof (TransectMapping));
-                                   m.FluentMappings.Add(typeof (StandMapping));
-                }
-
-
+                .Mappings(m =>
+                              {
+                                allEntityTypes.Each(t => m.FluentMappings.Add(t));
+                              }
                 )
                 .ExposeConfiguration(OnFactoryCreation)
                 .BuildSessionFactory();

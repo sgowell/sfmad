@@ -10,6 +10,15 @@ namespace Web.Models.Mappings
             Map(x => x.Number);
         }
     }
+
+    public class SurveyMapping : ClassMap<Survey>
+    {
+        public SurveyMapping()
+        {
+            Id(x => x.Id);
+            Map(x => x.Bearing);
+        }
+    }
     public class TransectMapping : ClassMap<Transect>
     {
         public TransectMapping()

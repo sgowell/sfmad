@@ -44,6 +44,8 @@ namespace Web.Services
                     .TheDefaultIsConcreteType<TransactionRepository>();
                 i.ForRequestedType<IStandRepository>()
                     .TheDefaultIsConcreteType<StandRepository>();
+                i.ForRequestedType<ISurveyRepository>()
+                    .TheDefaultIsConcreteType<SurveyRepository>();
 //                i.Scan(x =>
 //                {
 //                    x.Assembly("Web");

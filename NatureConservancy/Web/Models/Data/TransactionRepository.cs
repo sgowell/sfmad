@@ -47,6 +47,18 @@ namespace Web.Data
     {
     }
 
+    public interface ISurveyRepository : IRepository<Survey>
+    {
+        
+    }
+
+    public class SurveyRepository : RepositoryBase<Survey>, ISurveyRepository
+    {
+        public SurveyRepository(ISession session) : base(session)
+        {
+        }
+    }
+
     public class TransactionRepository : RepositoryBase<Transect>, ITransectRepository, IRepository
     {
         public TransactionRepository(ISession session) : base(session)
