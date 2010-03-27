@@ -55,8 +55,6 @@
   <ItemGroup>
     <Compile Include="base_test.cs" />
     <Compile Include="CsvWriterTests.cs" />
-    <Compile Include="ObjectCsvWriterTest.cs" />
-    <Compile Include="ObjectToDictionaryTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Transect_to_csv_test.cs" />
   </ItemGroup>
