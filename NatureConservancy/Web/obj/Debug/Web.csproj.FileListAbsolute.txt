@@ -1,1 +1,5 @@
-Z:\code\givecamp\trunk\NatureConservancy\Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\sfmad\NatureConservancy\Web\obj\Debug\ResolveAssemblyReference.cache
+C:\Projects\sfmad\NatureConservancy\Web\bin\Web.dll
+C:\Projects\sfmad\NatureConservancy\Web\bin\Web.pdb
+C:\Projects\sfmad\NatureConservancy\Web\obj\Debug\Web.dll
+C:\Projects\sfmad\NatureConservancy\Web\obj\Debug\Web.pdb
