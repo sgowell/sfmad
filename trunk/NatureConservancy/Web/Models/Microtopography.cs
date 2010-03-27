@@ -39,8 +39,9 @@ namespace Web.Models
             get; set;
         }
 
-        [Required]
-        public virtual Survey Survey
+        [Required(ErrorMessage = "You must have a parent {0} record.")]
+        [DisplayName("Overstory")]
+        public virtual Overstory Overstory
         {
             get; set;
         }

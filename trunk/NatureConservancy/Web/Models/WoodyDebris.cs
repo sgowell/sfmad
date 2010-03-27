@@ -55,7 +55,8 @@ namespace Web.Models
             set;
         }
 
-
+        [Required(ErrorMessage = "You must have a parent {0} record.")]
+        [DisplayName("Survey")]
         public Survey Survey
         {
             get;
