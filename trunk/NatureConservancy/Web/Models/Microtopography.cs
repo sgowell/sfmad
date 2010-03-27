@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
-    public class Microtopography
+    public class Microtopography : Entity
     {
         [Required]
         public int MicrotopographyId
@@ -12,7 +12,7 @@ namespace Web.Models
             get; set;
         }
 
-        public String Comments
+        public virtual String Comments
         {
             get; set;
         }

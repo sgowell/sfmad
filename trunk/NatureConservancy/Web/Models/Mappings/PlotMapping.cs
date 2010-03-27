@@ -1,11 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using FluentNHibernate.Mapping;
+
 
 namespace Web.Models.Mappings
 {
-    public class PlotMapping
+    public class PlotMapping : ClassMap<Plot>
     {
+        PlotMapping()
+        {
+            Id(x => x.Id);
+        }
     }
 }

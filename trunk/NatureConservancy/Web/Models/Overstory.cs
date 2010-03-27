@@ -7,7 +7,7 @@ using System.Web;
 
 namespace Web.Models
 {
-    public class Overstory
+    public class Overstory : Entity
     {
         [DisplayName("Notes")]
         [UIHint("TextArea")]
@@ -15,6 +15,11 @@ namespace Web.Models
 
         public IList<OverstoryItem> OverstoryItems { get; set; }
 
+        public virtual Survey Survey
+        {
+            get;
+            set;
+        }
         public IList<Snag> Snags{get;set;}
         public Microtopography Microtopography { get; set; }
     }

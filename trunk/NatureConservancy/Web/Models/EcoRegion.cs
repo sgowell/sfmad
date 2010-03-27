@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
-    public class EcoRegion
+    public class EcoRegion : Entity
     {
         [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Region Number")]
@@ -15,6 +15,5 @@ namespace Web.Models
         public string Name { get; set; }
 
         public IList<Site> Sites { get; set; }
-
     }
 }

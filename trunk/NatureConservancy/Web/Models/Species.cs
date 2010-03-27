@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Web.Models
 {
-    public class Species
+    public class Species : Entity
     {
         public enum SpeciesType
         {
@@ -23,25 +23,25 @@ namespace Web.Models
             NSedge
         }
 
-        public SpeciesType Physiogonomy { get; set; }
-        public string SpeciesAcronym { get; set; }
-        public string ScientificName { get; set; }
-        public string CommonName { get; set; }
-        public List<Species> AllSpecies = new List<Species>();
+        public virtual SpeciesType Physiogonomy { get; set; }
+        public virtual string SpeciesAcronym { get; set; }
+        public virtual string ScientificName { get; set; }
+        public virtual string CommonName { get; set; }
+        List<Species> AllSpecies = new List<Species>();
 
-        public List<Species> OverstorySpecies
+        public virtual List<Species> OverstorySpecies
         {
             get { return AllSpecies.FindAll(Or(_overstorySpeciesFilter)); }
         }
-        public List<Species> SnagSpecies
+        public virtual List<Species> SnagSpecies
         {
             get { return AllSpecies.FindAll(Or(_snagsSpeciesFilter)); }
         }
-        public List<Species> UnderstorySpecies
+        public virtual List<Species> UnderstorySpecies
         {
             get { return AllSpecies.FindAll(Or(_understorySpeciesFilter)); }
         }
-        public List<Species> DeerHerbevorySpecies
+        public virtual List<Species> DeerHerbevorySpecies
         {
             get { return AllSpecies.FindAll(Or(_deerHerbevorySpeciesFilter)); }
         }
