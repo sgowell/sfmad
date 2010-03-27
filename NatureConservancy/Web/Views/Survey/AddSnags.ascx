@@ -31,14 +31,12 @@
             </div>
             
             <p>
-                <input type="submit" value="Create" />
+                <input type="submit" value="Add" />
             </p>
         </fieldset>
 
     <% } %>
 
-    <div>
-        <%= Html.ActionLink("Back to List", "Index") %>
-    </div>
+ 
 
 

@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.OverStory>" %>
 
 <%@ Register src="AddSnags.ascx" tagname="AddSnags" tagprefix="uc1" %>
-<%@ Register src="AddMicrotopography.ascx" tagname="AddMicrotopography" tagprefix="uc2" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	CreateOverStory
@@ -41,6 +40,7 @@
 
     <div>
         <%= Html.ActionLink("Back to List", "Index") %>
+        <%= Html.ActionLink("Create Microtopography","CreateMicrotopography") %>
     </div>
 
     
