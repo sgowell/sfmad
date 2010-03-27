@@ -39,5 +39,16 @@ namespace NatureConservatory
             {
             }
         }
+
+        public Survey Survey
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }
