@@ -1,10 +1,10 @@
 ﻿using System;
 using FluentNHibernate.Testing;
-using NatureConservancy;
-using NatureConservatory;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
+using Web.Data;
+using Web.Models;
 
 namespace IntegrationTests.Repositories
 {
