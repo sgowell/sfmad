@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.OverStory>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Overstory>" %>
 
 <%@ Register src="AddSnags.ascx" tagname="AddSnags" tagprefix="uc1" %>
 
@@ -12,13 +12,13 @@
 
    
 
-    <form id="form1" runat="server">
+   <form id="form1" runat="server">
 
    
 
     <h2>CreateOverStory</h2>
 
-    <% using (Html.BeginForm()) {%>
+    
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
@@ -46,18 +46,12 @@
 
 </div>
 
-   <% } %>
 
     <div>
         <%= Html.ActionLink("Back to List", "Index") %>
         <%= Html.ActionLink("Create Microtopography","CreateMicrotopography") %>
                 <input type="submit" value="Create" /></div>
 
-    
-
-    </form>
-
-    
-
+</form>
 </asp:Content>
 

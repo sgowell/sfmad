@@ -1,12 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Microtopography>" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Stand>" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	CreateMicrotopography
+	CreateStand
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Create Microtopography</h2>
+    <form id="form1" runat="server">
+
+    <h2>Create Stand</h2>
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
@@ -14,21 +17,20 @@
         <fieldset>
             <legend>Fields</legend>
             
-            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.EcoSystem) %>
+            </div>
+            <div class="editor-field">
+                <%= Html.TextBoxFor(model => model.EcoSystem) %>
+                <%= Html.ValidationMessageFor(model => model.EcoSystem) %>
+            </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.Comments) %>
+                <%= Html.LabelFor(model => model.Treatment) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.Comments) %>
-                <%= Html.ValidationMessageFor(model => model.Comments) %>
-            </div>
-             <div class="editor-label">
-                <%= Html.LabelFor(model => model.DevelopmentIntensity ) %>
-            </div>
-            <div class="editor-field">
-                <%= Html.TextBoxFor( model => model.DevelopmentIntensity ) %>
-                <%= Html.ValidationMessageFor(model => model.DevelopmentIntensity ) %>
+                <%= Html.TextBoxFor(model => model.Treatment) %>
+                <%= Html.ValidationMessageFor(model => model.Treatment) %>
             </div>
             
             <p>
@@ -41,6 +43,10 @@
     <div>
         <%= Html.ActionLink("Back to List", "Index") %>
     </div>
+    
+  
+
+    </form>
 
 </asp:Content>
 

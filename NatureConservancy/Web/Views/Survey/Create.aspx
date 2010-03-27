@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Survey>" %>
+<%@ Import Namespace="Web.Models"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Create
@@ -13,29 +14,36 @@
 
         <fieldset>
             <legend>Fields</legend>
-            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.Transect.Stand.Site.EcoRegion ) %>
+                 <%= Html.ActionLink("New", "CreateEcoRegion") %>
+            </div>
+            <div class="editor-field">
+                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.EcoRegion.Name, new List<SelectListItem>())%>
+                <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.EcoRegion.Name )%>
+            </div>
+             <div class="editor-label">
+                <%= Html.LabelFor(model => model.Transect.Stand.Site ) %>
+                 <%= Html.ActionLink("New", "CreateSite") %>
+            </div>
+            <div class="editor-field">
+                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.Name, new List<SelectListItem>())%>
+                <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.Name)%>
+            </div>
+             <div class="editor-label">
+                <%= Html.LabelFor(model => model.Transect.Stand ) %>
+                 <%= Html.ActionLink("New", "CreateStand") %>
+            </div>
+            <div class="editor-field">
+                <%= Html.DropDownListFor(model => model.Transect.Stand.Name,new List<SelectListItem>() )%>
+                <%= Html.ValidationMessageFor(model => model.Transect.Stand.Name )%>
+            </div>
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Bearing) %>
             </div>
             <div class="editor-field">
                 <%= Html.TextBoxFor(model => model.Bearing) %>
                 <%= Html.ValidationMessageFor(model => model.Bearing) %>
-            </div>
-            
-            <div class="editor-label">
-                <%= Html.LabelFor(model => model.TransectClass) %>
-            </div>
-            <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.TransectClass) %>
-                <%= Html.ValidationMessageFor(model => model.TransectClass) %>
-            </div>
-            
-            <div class="editor-label">
-                <%= Html.LabelFor(model => model.TransectNumber) %>
-            </div>
-            <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.TransectNumber) %>
-                <%= Html.ValidationMessageFor(model => model.TransectNumber) %>
             </div>
             
             <div class="editor-label">
@@ -58,7 +66,7 @@
                 <%= Html.LabelFor(model => model.Surveyors) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.Surveyors) %>
+                <%= Html.TextAreaFor( model => model.Surveyors,6,100,null) %>
                 <%= Html.ValidationMessageFor(model => model.Surveyors) %>
             </div>
             
