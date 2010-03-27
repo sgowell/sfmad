@@ -9,18 +9,21 @@ namespace NatureConservatory
 {
     public class Survey
     {
-        [Required]
+        [Required(ErrorMessage="Please enter a bearing!")]
         [DisplayName("Bearing")]
         [Range(0, 360)]
         public int Bearing { get; set; } //Degrees zero to 360
 
+        [Required(ErrorMessage="Please enter a Stand")]
         [DisplayName("Stand")]
         [RegularExpression("^[A-G]")]
         public string TransectClass { get; set; } //A-G
 
+        [Required(ErrorMessage = "Please enter a Transact Number")]
         [DisplayName("Number")]
         public int TransectNumber { get; set; }
 
+        [Required(ErrorMessage = "Enter a Start Time")]
         [DataType(DataType.DateTime)]
         [DisplayName("Survey Start")]
         [DisplayFormat(DataFormatString="From:{0}")]
