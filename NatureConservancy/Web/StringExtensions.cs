@@ -13,5 +13,18 @@ namespace Web
         {
             return Int32.Parse(item);
         }
-    }  
+    }
+    public static class Check
+    {
+        /// <summary>
+        /// Ensure A property is not null.
+        /// </summary>
+        /// <param name="property"></param>
+        /// <param name="message"></param>
+        public static void Require(object property, string message)
+        {
+            if (property == null)
+                throw new ArgumentNullException(message);
+        }
+    }
 }
