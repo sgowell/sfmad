@@ -7,15 +7,9 @@ namespace Web.Models
 {
     public class Species
     {
-        public int SpeciesID
+        public int SpeciesId
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get; set;
         }
     }
 }

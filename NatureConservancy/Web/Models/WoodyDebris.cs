@@ -6,7 +6,7 @@ using Web.Models;
 
 namespace Web.Models
 {
-    public class WoodyDrebis
+    public class WoodyDebris
     {
         public double TotalLength
         {
