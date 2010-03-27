@@ -16,13 +16,15 @@ namespace Web.Models
 
         [Required(ErrorMessage = "Please enter the {0} for this species.")]
         [DisplayName("DBH (Diameter Breast Height)")]
-        [DiameterBreastHeightAttribute(MinimumValue = 10.00, ErrorMessage = "Please enter a {0} greater than 10cm")]
+        [DoubleAttribute(MinimumValue = 10.00, ErrorMessage = "Please enter a {0} greater than 10cm")]
         public double DiameterBreastHeight
         {
             get;
             set;
         }
 
+        [Required(ErrorMessage = "You must have an {0} parent record.")]
+        [DisplayName("Overstory")]
         public Overstory Overstory 
         {
             get;
@@ -30,9 +32,10 @@ namespace Web.Models
         }
     }
 
-    public class DiameterBreastHeightAttribute : ValidationAttribute
+    public class DoubleAttribute : ValidationAttribute
     {
         public double MinimumValue { get; set; }
+        public double MaximumValue { get; set; }
 
         public override bool IsValid(object value)
         {
@@ -40,12 +43,18 @@ namespace Web.Models
             {
                 return true;
             }
-            var dbh = (double)value;
-            if (dbh < MinimumValue)
-            {
-                return false;
-            }
+            var dval = (double)value;
 
+                if (dval < MinimumValue)
+                {
+                    return false;
+                }
+          
+                if (dval > MaximumValue)
+                {
+                    return false;
+                }    
+           
             return true;
         }
     }

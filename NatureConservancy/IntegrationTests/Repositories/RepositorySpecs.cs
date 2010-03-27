@@ -51,7 +51,7 @@ namespace IntegrationTests.Repositories
         public void can_persist_stand()
         {
             new PersistenceSpecification<Stand>(GetSession())
-                .CheckProperty(x => x.Number, 234)
+                .CheckProperty(x => x.Name, "A")
                 .VerifyTheMappings();
         }
 

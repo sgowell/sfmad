@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace Web.Models
 {
@@ -23,11 +25,22 @@ namespace Web.Models
             NSedge
         }
 
-        public virtual SpeciesType Physiogonomy { get; set; }
-        public virtual string SpeciesAcronym { get; set; }
-        public virtual string ScientificName { get; set; }
-        public virtual string CommonName { get; set; }
-        List<Species> AllSpecies = new List<Species>();
+        [Required(ErrorMessage = "Please select a {0}")]
+        [DisplayName("Physiognomy")]
+        public SpeciesType Physiognomy { get; set; }
+
+        [Required(ErrorMessage = "Please enter an {0}")]
+        [DisplayName("Acronym")]
+        public string SpeciesAcronym { get; set; }
+
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Scientific Name")]
+        public string ScientificName { get; set; }
+
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("Common Name")]
+        public string CommonName { get; set; }
+        public List<Species> AllSpecies = new List<Species>();
 
         public virtual List<Species> OverstorySpecies
         {
@@ -47,40 +60,32 @@ namespace Web.Models
         }
 
 
-        private readonly Predicate<Species>[] _overstorySpeciesFilter = new Predicate<Species>[]
+        private readonly Predicate<Species>[] _overstorySpeciesFilter = new []
                                                                    {
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.ATree),
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.NTree),
+                                                                       s => s.Physiognomy == SpeciesType.ATree,
+                                                                       new Predicate<Species>(s => s.Physiognomy == SpeciesType.NTree)
                                                                    };
 
-        private readonly Predicate<Species>[] _snagsSpeciesFilter = new Predicate<Species>[]
+        private readonly Predicate<Species>[] _snagsSpeciesFilter = new []
                                                                    {
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.ATree),
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.NTree),
+                                                                       s => s.Physiognomy == SpeciesType.ATree,
+                                                                       new Predicate<Species>(s => s.Physiognomy == SpeciesType.NTree)
                                                                    };
-        private readonly Predicate<Species>[] _understorySpeciesFilter = new Predicate<Species>[]
+        private readonly Predicate<Species>[] _understorySpeciesFilter = new []
                                                                    {
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.ATree),
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.NTree),
-                                                                       new Predicate<Species>(s => s.Physiogonomy == SpeciesType.AShrub),
-                                                                       new Predicate<Species>(s => s.Physiogonomy == SpeciesType.NShrub),
+                                                                       s => s.Physiognomy == SpeciesType.ATree,
+                                                                       s => s.Physiognomy == SpeciesType.NTree,
+                                                                       s => s.Physiognomy == SpeciesType.AShrub,
+                                                                       new Predicate<Species>(s => s.Physiognomy == SpeciesType.NShrub)
                                                                    };
-        private readonly Predicate<Species>[] _deerHerbevorySpeciesFilter = new Predicate<Species>[]
+        private readonly Predicate<Species>[] _deerHerbevorySpeciesFilter = new []
                                                                    {
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.ATree),
-                                                                       new Predicate<Species>(
-                                                                           s => s.Physiogonomy == SpeciesType.NTree),
-                                                                       new Predicate<Species>(s => s.Physiogonomy == SpeciesType.AShrub),
-                                                                       new Predicate<Species>(s => s.Physiogonomy == SpeciesType.NShrub),
-                                                                                                                                             new Predicate<Species>(s => s.Physiogonomy == SpeciesType.AVine),
-                                                                       new Predicate<Species>(s => s.Physiogonomy == SpeciesType.NVine),
+                                                                       s => s.Physiognomy == SpeciesType.ATree,
+                                                                       s => s.Physiognomy == SpeciesType.NTree,
+                                                                       s => s.Physiognomy == SpeciesType.AShrub,
+                                                                       s => s.Physiognomy == SpeciesType.NShrub,
+                                                                       s => s.Physiognomy == SpeciesType.AVine,
+                                                                       new Predicate<Species>(s => s.Physiognomy == SpeciesType.NVine)
                                                                    };
 
 

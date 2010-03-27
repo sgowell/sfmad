@@ -2,6 +2,15 @@
 
 namespace Web.Models.Mappings
 {
+    public class StandMapping : ClassMap<Stand>
+    {
+        public StandMapping()
+        {
+            Id(x => x.Id);
+            Map(x => x.Name);
+        }
+    }
+
     public class SurveyMapping : ClassMap<Survey>
     {
         public SurveyMapping()

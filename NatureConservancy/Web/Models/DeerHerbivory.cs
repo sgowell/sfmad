@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using Web.Models;
 
 namespace Web.Models
 {
@@ -32,14 +27,15 @@ namespace Web.Models
         }
 
         [DisplayName("Unbrowsed")]
-        [Required(ErrorMessage = "Please enter a {0} Amount")]
+        [Required(ErrorMessage = "Please enter an {0} Amount")]
         public int Unbrowsed
         {
             get;
             set;
         }
 
-
+        [Required(ErrorMessage = "You must have a parent {0} record.")]
+        [DisplayName("Understory")]
         public Understory Understory { get; set; }
     }
 }
