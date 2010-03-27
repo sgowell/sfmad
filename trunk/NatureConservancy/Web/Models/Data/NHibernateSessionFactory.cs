@@ -3,13 +3,11 @@ using System.Threading;
 using System.Web;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using NatureConservancy;
-using NatureConservatory;
 using NHibernate;
 using NHibernate.Cfg;
 using Web.Models.Mappings;
 
-namespace NatureConservancy
+namespace Web.Data
 {
     public interface ISessionFactoryFactory
     {

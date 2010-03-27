@@ -1,5 +1,4 @@
 ﻿using FluentNHibernate.Mapping;
-using NatureConservatory;
 
 namespace Web.Models.Mappings
 {

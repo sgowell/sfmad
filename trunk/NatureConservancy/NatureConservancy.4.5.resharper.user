@@ -11,37 +11,95 @@
   </NAntValidationSettings>
   <CompletionStatisticsManager>
     <ItemStatistics item="Default">
-      <Item value="t" priority="0" />
+      <Item value="t" priority="1" />
       <Item value="namespace" priority="0" />
       <Item value="NatureConservatory" priority="0" />
-      <Item value="public" priority="0" />
+      <Item value="public" priority="6" />
+      <Item value="AcceptVerbs" priority="1" />
+      <Item value="HttpVerbs" priority="1" />
+      <Item value="NatureConservancy" priority="1" />
+      <Item value="Transect" priority="2" />
+      <Item value="ClassMap" priority="0" />
+      <Item value="TransectMapping" priority="2" />
+      <Item value="xVal" priority="0" />
+      <Item value="T" priority="0" />
+      <Item value="SetUpFixtureAttribute" priority="0" />
+      <Item value="new" priority="0" />
+      <Item value="DoSomething" priority="0" />
+      <Item value="where" priority="0" />
+      <Item value="IDisposable" priority="0" />
+      <Item value="void" priority="0" />
+      <Item value="MyType" priority="0" />
+      <Item value="IdentityGenerationStrategyBuilder" priority="0" />
+      <Item value="Id" priority="0" />
+      <Item value="x" priority="4" />
+      <Item value="class" priority="0" />
+      <Item value="int" priority="1" />
+      <Item value="Map" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@System.Web.Mvc.HttpVerbs">
+      <Item value="Post" priority="0" />
+      <Item value="Put" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:NatureConservatory.Transect">
+      <Item value="TransectNumber" priority="2" />
+      <Item value="TransectClass" priority="1" />
+      <Item value="Latitude" priority="1" />
+      <Item value="Longitude" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:IntegrationTests.Repositories.TransectRepositorySpecs+DoSomething`1">
+      <Item value="MyType" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:FluentNHibernate.Testing.PersistenceSpecification`1">
+      <Item value="CheckProperty" priority="1" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:System.String">
+      <Item value="Indexer" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
   <RecentFiles>
     <RecentFiles>
       <File id="B346D6DE-08EE-4440-8CCA-CC3199105952/f:Class1.cs" caret="0" fromTop="0" />
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Cover.cs" caret="0" fromTop="0" />
-      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="226" fromTop="6" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="1031" fromTop="17" />
-      <File id="d:&amp;/f:StringExtensions.cs/l:C!?code?trunk?NatureConservancy?Web?Extensions?StringExtensions.cs" caret="15" fromTop="1" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:StringExtensions.cs" caret="325" fromTop="11" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="372" fromTop="20" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/f:Web.config" caret="0" fromTop="0" />
+      <File id="d:&amp;/f:App.config/l:C!?code?trunk?NatureConservancy?IntegrationTests?App.config" caret="456" fromTop="8" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="1115" fromTop="10" />
+      <File id="d:&amp;/f:TransectMapping.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Mappings?TransectMapping.cs" caret="310" fromTop="11" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="802" fromTop="11" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="312" fromTop="0" />
     </RecentFiles>
     <RecentEdits>
-      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Cover.cs" caret="0" fromTop="0" />
-      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="281" fromTop="13" />
-      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1031" fromTop="38" />
       <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1050" fromTop="29" />
       <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1083" fromTop="40" />
       <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1115" fromTop="29" />
-      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1130" fromTop="29" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="42" fromTop="2" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="106" fromTop="4" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="111" fromTop="6" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="3647" fromTop="58" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="3262" fromTop="71" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="3294" fromTop="71" />
-      <File id="d:&amp;/f:NHibernateSessionManager.cs/l:C!?code?trunk?NatureConservancy?Web?Repository?NHibernateSessionManager.cs" caret="1031" fromTop="9" />
-      <File id="d:&amp;/f:StringExtensions.cs/l:C!?code?trunk?NatureConservancy?Web?Extensions?StringExtensions.cs" caret="398" fromTop="14" />
-      <File id="d:&amp;/f:StringExtensions.cs/l:C!?code?trunk?NatureConservancy?Web?Extensions?StringExtensions.cs" caret="15" fromTop="1" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="0" fromTop="0" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="344" fromTop="15" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="668" fromTop="18" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="2820" fromTop="1" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="3115" fromTop="28" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="0" fromTop="0" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Controllers/f:SurveyController.cs" caret="372" fromTop="20" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="244" fromTop="10" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1118" fromTop="22" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="937" fromTop="18" />
+      <File id="d:&amp;/f:App.config/l:C!?code?trunk?NatureConservancy?IntegrationTests?App.config" caret="348" fromTop="6" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="275" fromTop="0" />
+      <File id="d:&amp;/f:TransectMapping.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Mappings?TransectMapping.cs" caret="0" fromTop="0" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="675" fromTop="17" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="495" fromTop="7" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="803" fromTop="23" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="434" fromTop="5" />
+      <File id="d:&amp;/f:NHibernateSessionFactory.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Data?NHibernateSessionFactory.cs" caret="1115" fromTop="11" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="490" fromTop="17" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="706" fromTop="22" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="210" fromTop="3" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="718" fromTop="6" />
+      <File id="E83DFD17-A8FC-487E-A4CF-9556AF434594/d:Models/f:Transect.cs" caret="802" fromTop="11" />
+      <File id="d:&amp;/f:TransectRepositoryTest.cs/l:C!?code?trunk?NatureConservancy?IntegrationTests?Repositories?TransectRepositoryTest.cs" caret="1298" fromTop="4" />
+      <File id="d:&amp;/f:TransectMapping.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Mappings?TransectMapping.cs" caret="375" fromTop="12" />
+      <File id="d:&amp;/f:TransectMapping.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Mappings?TransectMapping.cs" caret="355" fromTop="13" />
+      <File id="d:&amp;/f:TransectMapping.cs/l:C!?code?trunk?NatureConservancy?Web?Models?Mappings?TransectMapping.cs" caret="310" fromTop="11" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
