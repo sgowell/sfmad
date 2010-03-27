@@ -36,11 +36,7 @@
     <uc1:AddSnags ID="AddSnags1" runat="server" />
 
 </div>
-<div>
 
-    <uc2:AddMicrotopography ID="AddMicrotopography1" runat="server" />
-
-</div>
    <% } %>
 
     <div>
