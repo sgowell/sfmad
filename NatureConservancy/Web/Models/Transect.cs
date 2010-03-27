@@ -11,18 +11,14 @@ namespace Web.Models
     public class Transect : Entity
     {
         public virtual string TransectClass { get; set; } //A-G
-        public virtual int TransectNumber { get; set; }
+        public virtual int Number { get; set; }
         public virtual IList<Survey> Surveys { get; set; }
 
-        public virtual Stand Stands
-        {
-            get; set;
-        }
+        public virtual Stand Stand
+        { get; set; }
 
         public virtual Double Latitude
-        {
-            get; set;
-        }
+        { get; set; }
 
         public virtual Double Longitude
         {

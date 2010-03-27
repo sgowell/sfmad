@@ -38,7 +38,13 @@ namespace Web.Data
 
             sessionFactory = Fluently.Configure()
                 .Database(config)
-                .Mappings(m => m.FluentMappings.Add(typeof(TransectMapping)))
+                .Mappings(m => {
+                                   m.FluentMappings.Add(typeof (TransectMapping));
+                                   m.FluentMappings.Add(typeof (StandMapping));
+                }
+
+
+                )
                 .ExposeConfiguration(OnFactoryCreation)
                 .BuildSessionFactory();
 

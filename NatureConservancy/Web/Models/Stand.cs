@@ -5,16 +5,16 @@ using System.Text;
 
 namespace Web.Models
 {
-    public class Stand
+    public class Stand : Entity
     {
-        public int StandNumber { get; set; } //Unique number
-        public string SiteNumber { get; set; } //The site this stand belongs to
+        public virtual int Number { get; set; } //Unique number
+        public virtual string SiteNumber { get; set; } //The site this stand belongs to
         
-        public string EcoSystem { get; set; } 
-        public string TreatmentType{get;set;} //Lookup
-        public IList<Transect> Transects { get; set; }
+        public virtual string EcoSystem { get; set; } 
+        public virtual string TreatmentType{get;set;} //Lookup
+        public virtual IList<Transect> Transects { get; set; }
 
-        public Site Site
+        public virtual Site Site
         {
             get
             {
