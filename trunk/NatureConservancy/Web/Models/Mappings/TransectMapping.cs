@@ -19,6 +19,7 @@ namespace Web.Models.Mappings
             Map(x => x.TransectClass);
             Map(x => x.Longitude);
             Map(x => x.Latitude);
+            HasOne(x => x.Stand);
             //Map(x => x.Stands, new Stand());
         }
     }
