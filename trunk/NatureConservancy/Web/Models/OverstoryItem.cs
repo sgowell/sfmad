@@ -16,7 +16,7 @@ namespace Web.Models
 
         [Required(ErrorMessage = "Please enter the {0} for this species.")]
         [DisplayName("DBH (Diameter Breast Height)")]
-        [DoubleAttribute(MinimumValue = 10.00, ErrorMessage = "Please enter a {0} greater than 10cm")]
+        [Range(10.00, double.MaxValue, ErrorMessage = "Please enter a {0} greater than 10cm")]
         public double DiameterBreastHeight
         {
             get;
@@ -29,33 +29,6 @@ namespace Web.Models
         {
             get;
             set;
-        }
-    }
-
-    public class DoubleAttribute : ValidationAttribute
-    {
-        public double MinimumValue { get; set; }
-        public double MaximumValue { get; set; }
-
-        public override bool IsValid(object value)
-        {
-            if (value == null)
-            {
-                return true;
-            }
-            var dval = (double)value;
-
-                if (dval < MinimumValue)
-                {
-                    return false;
-                }
-          
-                if (dval > MaximumValue)
-                {
-                    return false;
-                }    
-           
-            return true;
         }
     }
 }
