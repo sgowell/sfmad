@@ -1,6 +1,7 @@
 ﻿using IntegrationTests.Repositories;
 using Moq;
 using NUnit.Framework;
+using Web;
 using Web.Models;
 using Web.Services;
 
@@ -12,7 +13,7 @@ namespace UnitTests
         private Mock<ICsvWriter> csvWriter =new Mock<ICsvWriter>();
         public override void because()
         {
-            new Transect[] {transect}.WriteTo(csvWriter);
+            new Transect[] {transect}.WriteTo(csvWriter.Object);
         }
 
         [Test]

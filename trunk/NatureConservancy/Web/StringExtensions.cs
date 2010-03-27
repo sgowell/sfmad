@@ -32,7 +32,7 @@ namespace Web
 
     public static class TransectExtensions
     {
-        public static void ToCsv(this IEnumerable<Transect> transects, ICsvWriter writer)
+        public static void WriteTo(this IEnumerable<Transect> transects, ICsvWriter writer)
         {
             throw new NotImplementedException();
         }
