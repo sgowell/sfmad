@@ -50,7 +50,7 @@ namespace UnitTests
             writer.AddCell("he said \"the dude abides\"");
             writer.AddCell("world");
             writer.EndLine();
-            writer.Writer.ToString().ShouldEqual("\"he said \"\"the dude abides\"\"\",\"world\"\r\n");
+            writer.Writer.ToString().ShouldEqual("\"he said \\\"the dude abides\\\"\",\"world\"\r\n");
         }
     }
 }
