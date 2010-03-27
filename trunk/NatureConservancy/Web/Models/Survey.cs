@@ -81,7 +81,7 @@ namespace Web.Models
             set;
         }
 
-        public virtual IList<UnderstorySpecies> UnderStorySpecies
+        public virtual IList<Understory> Undertories
         {
             get;
             set;
