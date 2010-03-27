@@ -109,8 +109,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="Views\Survey\AddDeerHerbivory.ascx" />
+    <Content Include="Views\Survey\AddMicrotopography.ascx" />
+    <Content Include="Views\Survey\AddSnags.ascx" />
+    <Content Include="Views\Survey\AddUnderstoryItem.ascx" />
     <Content Include="Views\Survey\AddWoodyDebris.ascx" />
     <Content Include="Views\Survey\Create.aspx" />
+    <Content Include="Views\Survey\CreateOverStory.aspx" />
+    <Content Include="Views\Survey\CreateUnderstory.aspx" />
     <Content Include="Views\Survey\CreateWoodyDebris.aspx" />
     <Content Include="Views\Survey\Edit.aspx" />
     <Content Include="Views\Survey\Index.aspx" />

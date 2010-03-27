@@ -120,6 +120,17 @@ namespace Web.Controllers
                 return View();
             }
         }
+
+        public ActionResult AddUnderstory()
+        {
+            return View();
+        }
+
+        public ActionResult AddUnderstory(UnderstoryItem understoryItem)
+        {
+            return RedirectToAction("CreateUnderstory");
+        }
+
         public ActionResult CreateUnderstory() { return View(); }
         [HttpPost]
         public ActionResult CreateUnderstory(FormCollection collection)
