@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using Web.Models;
@@ -19,6 +20,7 @@ namespace Web.Models
             }
         }
 
+        [DisplayName("Species")]
         public Species Species
         {
             get
@@ -29,7 +31,7 @@ namespace Web.Models
             {
             }
         }
-
+        [DisplayName("DBH")]
         public double DBH
         {
             get
@@ -41,6 +43,7 @@ namespace Web.Models
             }
         }
 
+        [DisplayName("Height")]
         public double Height
         {
             get
@@ -52,6 +55,7 @@ namespace Web.Models
             }
         }
 
+        [DisplayName("Decay Class")]
         public SnagDecayClass SnagDecayClass
         {
             get
