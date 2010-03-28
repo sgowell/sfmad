@@ -1,11 +1,6 @@
 #summary Overstory trees per acre, per hecacre throughout the site
 
-= Introduction =
-
-Add your content here.
-
-
-= Details =
+= SQL Statement =
 
 Select count(OI.id)/(.03707*count(o.id)) "Acre",  count(OI.id)/(.0015*count(o.id)) "Acre", i.id
 from OverstoryItem OI, overstory o, survey s,  Transect t,  Stand d,  site i
