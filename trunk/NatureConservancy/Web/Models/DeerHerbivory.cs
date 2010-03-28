@@ -29,7 +29,7 @@ namespace Web.Models
         }
 
         [Required(ErrorMessage = "You must have a parent {0} record.")]
-        [DisplayName("Understory")]
-        public virtual Understory Understory { get; set; }
+        [DisplayName("Survey")]
+        public virtual Survey Survey { get; set; }
     }
 }

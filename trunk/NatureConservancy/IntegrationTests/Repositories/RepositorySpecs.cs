@@ -83,7 +83,7 @@ namespace IntegrationTests.Repositories
                 .CheckReference(x => x.Species, new Species())
                 .CheckProperty(x => x.Browsed, 12)
                 .CheckProperty(x => x.Unbrowsed, 8)
-                .CheckReference(x => x.Understory, new Understory())
+                .CheckReference(x => x.Survey, new Survey())
 
                 .VerifyTheMappings();
         }

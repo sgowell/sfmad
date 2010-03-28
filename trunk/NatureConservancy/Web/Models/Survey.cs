@@ -115,5 +115,12 @@ namespace Web.Models
             Understories.Add(understory);
             understory.Survey = this;
         }
+
+        public virtual void AddDeerHerbivory(DeerHerbivory herbivory)
+        {
+            if (DeerHerbivory == null) { DeerHerbivory = new List<DeerHerbivory>(); }
+            DeerHerbivory.Add(herbivory);
+            herbivory.Survey = this;
+        }
     }
 }

@@ -22,7 +22,8 @@ namespace Web.Controllers
         {
             DeerHerbivoryRepository.Save(deerHerbivory);
             var survey = surveyRepository.Load(surveyId);
-            survey.DeerHerbivory.Add(deerHerbivory);
+            survey.AddDeerHerbivory(deerHerbivory);
+            DeerHerbivoryRepository.Save(deerHerbivory);
             return NewDeerHerbivory(survey);
         }
     }
