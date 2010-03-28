@@ -3,7 +3,7 @@
 = Sql Code =
 
 {{{
-Select count(OI.id)/(.03707*count(o.id)) "Acre",  count(OI.id)/(.0015*count(o.id)) "Acre" , d.stand_id
+Select count(OI.id)/(.03707*count(o.id)) "Acre",  count(OI.id)/(.0015*count(o.id)) "Hectare" , d.stand_id
 from OverstoryItem OI, overstory o, survey s,  Transect t,  Stand d
 where OI.Overstory_id = o.id
 and   o.Survey_id = s.Id
