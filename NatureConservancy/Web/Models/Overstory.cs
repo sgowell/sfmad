@@ -14,7 +14,6 @@ namespace Web.Models
         [DisplayName("Overstory Item")]
         public virtual IList<OverstoryItem> OverstoryItems { get; set; }
 
-
         [Required(ErrorMessage = "You must have a parent {0} record.")]
         [DisplayName("Survey")]
         public virtual Survey Survey { get; set; }
