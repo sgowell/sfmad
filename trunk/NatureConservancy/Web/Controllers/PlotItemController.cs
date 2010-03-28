@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 using Web.Data;
 using Web.Models;
-using Web.Services;
 
 namespace Web.Controllers
 {
@@ -32,14 +28,5 @@ namespace Web.Controllers
             
             return NewPlotItem(survey);
         }
-
-        //
-        // GET: /PlotItem/
-
-        public ActionResult Index()
-        {
-            return View();
-        }
-
     }
 }
