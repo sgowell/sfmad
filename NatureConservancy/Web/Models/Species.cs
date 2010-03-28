@@ -22,7 +22,8 @@ namespace Web.Models
             AGrass,
             NGrass,
             ASedge,
-            NSedge
+            NSedge,
+            Unknown,
         }
 
         [Required(ErrorMessage = "Please select a {0}")]
