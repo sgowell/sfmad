@@ -41,15 +41,14 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-
                     return RedirectToAction("CreateWoodyDebris");
-                }                
+                }
+                return View(survey);
             }
             catch
             {
-                return View(survey);
+                return View();
             }
-            return View(survey);
         }
 
         public ActionResult AddWoodyDebris()
@@ -57,12 +56,12 @@ namespace Web.Controllers
             return View();
         }
 
-        
+
         public ActionResult CreateSpecies(Species species)
         {
             try
             {
-                if(ModelState.IsValid )
+                if (ModelState.IsValid)
                 {
                     return RedirectToAction("CreateSpecies");
 
@@ -75,7 +74,7 @@ namespace Web.Controllers
             }
             catch (Exception)
             {
-                
+
                 throw;
             }
         }
@@ -84,23 +83,20 @@ namespace Web.Controllers
         [HttpPost]
         public ActionResult AddWoodyDebris(WoodyDebris woodyDebris)
         {
-            
+
+            return RedirectToAction("CreateWoodyDebris");
             try
             {
-                if(ModelState.IsValid )
-                {
-                    return RedirectToAction("CreateWoodyDebris");    
-                }
-                else
-                {
-                    return View(woodyDebris);
-                }
-                
+                if (ModelState.IsValid)
+                { return RedirectToAction("CreateWoodyDebris"); }
+                return View(woodyDebris);
             }
             catch
             {
-                throw;
+
+                return View();
             }
+
         }
 
 
@@ -110,7 +106,11 @@ namespace Web.Controllers
         {
             try
             {
-                return RedirectToAction("CreateOverstory");
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("CreateOverstory");
+                }
+                return View(collection);
             }
             catch
             {
@@ -123,7 +123,11 @@ namespace Web.Controllers
         {
             try
             {
-                return RedirectToAction("CreateSnags");
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("CreateSnags");
+                }
+                return View(collection);
             }
             catch
             {
@@ -136,7 +140,11 @@ namespace Web.Controllers
         {
             try
             {
-                return RedirectToAction("CreateMicrotopography");
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("CreateMicrotopography");
+                }
+                return View(collection);
             }
             catch
             {
@@ -151,7 +159,7 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    return RedirectToAction("CreateUnderstory");    
+                    return RedirectToAction("CreateUnderstory");
                 }
                 return View(microtopography);
             }
@@ -168,7 +176,18 @@ namespace Web.Controllers
 
         public ActionResult AddUnderstory(UnderstoryItem understoryItem)
         {
-            return RedirectToAction("CreateUnderstory");
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("CreateUnderstory");
+                }
+                return View(understoryItem);
+            }
+            catch
+            {
+                return View();
+            }
         }
 
         public ActionResult CreateUnderstory() { return View(); }
@@ -177,7 +196,11 @@ namespace Web.Controllers
         {
             try
             {
-                return RedirectToAction("CreateDeerHerbivory");
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("CreateDeerHerbivory");
+                }
+                return View(collection);
             }
             catch
             {
@@ -190,7 +213,9 @@ namespace Web.Controllers
         {
             try
             {
-                return RedirectToAction("CreateGroundCoverSpeciesAbundance");
+                if (ModelState.IsValid)
+                { return RedirectToAction("CreateGroundCoverSpeciesAbundance"); }
+                return View(collection);
             }
             catch
             {
@@ -215,8 +240,11 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add update logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                {
+                    return RedirectToAction("Index");
+                }
+                return View(collection);
             }
             catch
             {
@@ -241,8 +269,9 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
+                if (ModelState.IsValid)
+                { return RedirectToAction("Index"); }
+                return View(collection);
             }
             catch
             {
