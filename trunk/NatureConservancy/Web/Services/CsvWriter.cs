@@ -106,6 +106,13 @@ namespace Web.Services
         {
             base.Writer = new StringWriter();
         }
+
+        public string GetContents()
+        {
+            var stringWriter = (StringWriter) base.Writer;
+
+            return stringWriter.GetStringBuilder().ToString();
+        }
     }
 
     public class StreamCsvWriter : BaseCsvWriter
