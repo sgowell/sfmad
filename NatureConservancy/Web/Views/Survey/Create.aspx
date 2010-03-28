@@ -19,7 +19,7 @@
                  <%= Html.ActionLink("New", "CreateEcoRegion") %>
             </div>
             <div class="editor-field">
-                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.EcoRegion.Name, new List<SelectListItem>())%>
+                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.EcoRegion.Name, Web.Controll )%>
                 <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.EcoRegion.Name )%>
             </div>
              <div class="editor-label">

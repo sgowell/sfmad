@@ -23,8 +23,8 @@ namespace Web.Data
         void SaveOrUpdate(T entity);
         T GetFirst();
         T Load(object ID);
-        IList<T> GetAll();
-        IList<T> GetAll(int pageNumber, int pageSize);
+        IList<T> FindAll();
+        IList<T> FindAll(int pageNumber, int pageSize);
         T GetBy(string propertyName, object value);
         IList<T> FindAll(IDictionary<string, object> propertyValuePairs);
         T FindOne(IDictionary<string, object> propertyValuePairs);
@@ -50,6 +50,18 @@ namespace Web.Data
     public interface ISurveyRepository : IRepository<Survey>
     {
         
+    }
+
+    public interface ISpeciesRepository : IRepository<Species>
+    {
+
+    }
+
+    public class SpeciesRepository : RepositoryBase<Species>
+    {
+        public SpeciesRepository(ISession session) : base(session)
+        {
+        }
     }
 
     public class SurveyRepository : RepositoryBase<Survey>, ISurveyRepository
@@ -139,12 +151,12 @@ namespace Web.Data
             return session.Get<T>(ID);
         }
 
-        public IList<T> GetAll()
+        public IList<T> FindAll()
         {
             return getCriteria().List<T>();
         }
 
-        public IList<T> GetAll(int pageNumber, int pageSize)
+        public IList<T> FindAll(int pageNumber, int pageSize)
         {
             var criteria = getCriteria();
             criteria.SetMaxResults(pageSize);
