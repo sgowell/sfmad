@@ -10,4 +10,4 @@ and   s.Transect_id   = t.Stand_id
 and   t.stand_id = d.stand_id
 and   d.site_id = i.site_id
 group by site_id
-}}
+}}}
