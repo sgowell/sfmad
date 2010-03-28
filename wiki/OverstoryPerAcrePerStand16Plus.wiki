@@ -1,6 +1,6 @@
 #summary Overstory trees > 16" per acre, per hecacre throughout the Stand
 
--- SQL Code --
+== SQL Code ==
 
 {{{ 
 Select count(OI.id)/(.03707*count(o.id)) "Acre",  count(OI.id)/(.0015*count(o.id)) "Hectare" , d.stand_id
