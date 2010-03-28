@@ -41,6 +41,14 @@ namespace Web.Controllers
             siteRepository.Save(site);
             return Json(new SuccessMessage(site, "complete"));
         }
+
+        [HttpPost]
+        public ActionResult All()
+        {
+            var sites = siteRepository.FindAll().OrderBy(s => s.Name);
+            
+            return Json(sites);
+        }
     }
 
 }
