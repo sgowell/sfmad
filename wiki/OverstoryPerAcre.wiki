@@ -1,4 +1,4 @@
-#summary Overstory trees per acre, per hecacre throughout the site
+#summary Overstory trees per acre, per hectare throughout the site
 
 = SQL Statement =
 
