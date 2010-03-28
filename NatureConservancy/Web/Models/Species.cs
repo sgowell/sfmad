@@ -27,36 +27,43 @@ namespace Web.Models
 
         [Required(ErrorMessage = "Please select a {0}")]
         [DisplayName("Physiognomy")]
-        public SpeciesType Physiognomy { get; set; }
+        public virtual SpeciesType Physiognomy { get; set; }
 
         [Required(ErrorMessage = "Please enter an {0}")]
         [DisplayName("Acronym")]
-        public string SpeciesAcronym { get; set; }
+        public virtual string SpeciesAcronym { get; set; }
 
         [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Scientific Name")]
-        public string ScientificName { get; set; }
+        public virtual string ScientificName { get; set; }
 
         [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Common Name")]
-        public string CommonName { get; set; }
-        public List<Species> AllSpecies = new List<Species>();
+        public virtual string CommonName { get; set; }
+
+        private List<Species> allSpecies = new List<Species>();
 
         public virtual List<Species> OverstorySpecies
         {
-            get { return AllSpecies.FindAll(Or(_overstorySpeciesFilter)); }
+            get { return allSpecies.FindAll(Or(_overstorySpeciesFilter)); }
         }
         public virtual List<Species> SnagSpecies
         {
-            get { return AllSpecies.FindAll(Or(_snagsSpeciesFilter)); }
+            get { return allSpecies.FindAll(Or(_snagsSpeciesFilter)); }
         }
         public virtual List<Species> UnderstorySpecies
         {
-            get { return AllSpecies.FindAll(Or(_understorySpeciesFilter)); }
+            get { return allSpecies.FindAll(Or(_understorySpeciesFilter)); }
         }
         public virtual List<Species> DeerHerbevorySpecies
         {
-            get { return AllSpecies.FindAll(Or(_deerHerbevorySpeciesFilter)); }
+            get { return allSpecies.FindAll(Or(_deerHerbevorySpeciesFilter)); }
+        }
+
+        public virtual List<Species> AllSpecies
+        {
+            get { return allSpecies; }
+            set { allSpecies = value; }
         }
 
 

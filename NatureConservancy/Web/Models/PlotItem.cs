@@ -7,7 +7,7 @@ namespace Web.Models
     {
         [Required(ErrorMessage="You must have a parent {0} record")]
         [DisplayName("Plot")]
-        public Plot Plot
+        public virtual Plot Plot
         {
             get;
             set;
@@ -15,7 +15,7 @@ namespace Web.Models
 
         [Required(ErrorMessage = "You must select a {0}")]
         [DisplayName("Species")]
-        public Species Species
+        public virtual Species Species
         {
             get;
             set;
@@ -23,7 +23,7 @@ namespace Web.Models
 
         [Required(ErrorMessage = "You must select a {0}")]
         [DisplayName("Cover Class")]
-        public PlotCover CoverClass { get; set; }
+        public virtual PlotCover CoverClass { get; set; }
 
         public enum PlotCover
         {

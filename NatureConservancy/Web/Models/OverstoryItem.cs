@@ -7,7 +7,7 @@ namespace Web.Models
     {
         [DisplayName("Species")]
         [Required(ErrorMessage = "Please select a {0}")]
-        public Species Species
+        public virtual Species Species
         {
             get;
             set;
@@ -16,7 +16,7 @@ namespace Web.Models
         [Required(ErrorMessage = "Please enter the {0} for this species.")]
         [DisplayName("DBH (Diameter Breast Height)")]
         [Range(10.00, double.MaxValue, ErrorMessage = "Please enter a {0} greater than 10cm")]
-        public double DiameterBreastHeight
+        public virtual double DiameterBreastHeight
         {
             get;
             set;
@@ -24,7 +24,7 @@ namespace Web.Models
 
         [Required(ErrorMessage = "You must have an {0} parent record.")]
         [DisplayName("Overstory")]
-        public Overstory Overstory 
+        public virtual Overstory Overstory 
         {
             get;
             set;

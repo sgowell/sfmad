@@ -38,13 +38,18 @@ namespace Web.Data
                 .MsSql2005.ConnectionString(c => c.Is("ConnectionString".AppSetting()));
 
             config.ShowSql();
-            var allEntityTypes = Assembly.GetExecutingAssembly().GetTypes().ToList().FindAll(t => t.GetInterface("IClassMap") !=null);
-            allEntityTypes.Each(Console.WriteLine);
+
+            var allEntityMappings = Assembly.GetExecutingAssembly().GetTypes().ToList().FindAll(t => t.GetInterface("IClassMap") !=null);
+            var allEntitiesTypes = Assembly.GetExecutingAssembly().GetTypes().ToList().FindAll(t => t.IsSubclassOf(typeof(Entity)));
+            allEntitiesTypes.FindAll(a => !allEntityMappings.Any(b => b.Name.Contains(a.Name.Replace("Web.Models", ""))))
+                .Each(Console.WriteLine);
+            Console.WriteLine("*************");
+            
             sessionFactory = Fluently.Configure()
                 .Database(config)
                 .Mappings(m =>
                               {
-                                allEntityTypes.Each(t => m.FluentMappings.Add(t));
+                                allEntityMappings.Each(t => m.FluentMappings.Add(t));
                               }
                 )
                 .ExposeConfiguration(OnFactoryCreation)

@@ -8,7 +8,7 @@ namespace Web.Models
         [Required(ErrorMessage="Please enter a value for {0} in meters.")]
         [DisplayName("Total Length")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a valid {0} ")]
-        public double TotalLength
+        public virtual double TotalLength
         {
             get; set;
         }
@@ -16,7 +16,7 @@ namespace Web.Models
         [Required(ErrorMessage = "Please enter a value for {0} in centimeters.")]
         [DisplayName("Intersect Diameter")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a valid {0} ")]
-        public double IntersectDiameter
+        public virtual double IntersectDiameter
         {
             get;
             set;
@@ -25,7 +25,7 @@ namespace Web.Models
         [Required(ErrorMessage = "Please enter a value for {0} in centimeters.")]
         [DisplayName("Large End Diameter")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a valid {0} ")]
-        public double LargeEndDiameter
+        public virtual double LargeEndDiameter
         {
             get;
             set;
@@ -34,14 +34,14 @@ namespace Web.Models
         [Required(ErrorMessage = "Please enter a value for {0} in centimeters.")]
         [DisplayName("Small End Diameter")]
         [Range(0.01, double.MaxValue, ErrorMessage = "Please enter a valid {0} ")]
-        public double SmallEndDiameter
+        public virtual double SmallEndDiameter
         {
             get;
             set;
         }
         [Required(ErrorMessage = "Please select a {0}")]
         [DisplayName("Decay Class")]
-        public WoodyDebrisDecayClass DecayClass
+        public virtual WoodyDebrisDecayClass DecayClass
         {
             get;
             set;
@@ -49,7 +49,7 @@ namespace Web.Models
 
         [DisplayName("Species")]
         [Required(ErrorMessage = "Please select a {0}")]
-        public Species Species
+        public virtual Species Species
         {
             get;
             set;
@@ -57,7 +57,7 @@ namespace Web.Models
 
         [Required(ErrorMessage = "You must have a parent {0} record.")]
         [DisplayName("Survey")]
-        public Survey Survey
+        public virtual Survey Survey
         {
             get;
             set;
