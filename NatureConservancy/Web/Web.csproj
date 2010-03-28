@@ -79,8 +79,11 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\DeerHerbivoryController.cs" />
+    <Compile Include="Controllers\GroundCoverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OverstoryController.cs" />
+    <Compile Include="Controllers\PlotController.cs" />
+    <Compile Include="Controllers\PlotItemController.cs" />
     <Compile Include="Controllers\RequiresAuthentication.cs" />
     <Compile Include="Controllers\StandController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
