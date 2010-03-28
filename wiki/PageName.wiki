@@ -1,15 +1,7 @@
-#summary Overstory trees > 19" per acre, per hectare throughout the site
+#summary Empty Wiki Page
 
 = SQL Code =
 
 {{{ 
-Select count(OI.id)/(.03707*count(o.id)) "Acre",  count(OI.id)/(.0015*count(o.id)) "Hectare" , i.id
-from OverstoryItem OI, overstory o, survey s,  Transect t,  Stand d,  site i
-where OI.Overstory_id = o.id
-and   o.Survey_id = s.Id
-and   s.Transect_id   = t.Stand_id
-and   t.stand_id = d.stand_id
-and   d.site_id = i.site_id
-and   OI.DiameterBreastHeight*2.54 > 19
-group by i.id 
+Select * from tblUsers where clue > 0
 }}}
