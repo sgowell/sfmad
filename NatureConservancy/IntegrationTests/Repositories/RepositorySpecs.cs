@@ -45,8 +45,6 @@ namespace IntegrationTests.Repositories
                 .VerifyTheMappings();
         }
 
-       
-
         [Test]
         public void can_persist_stand()
         {

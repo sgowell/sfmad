@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using Web.Models;
 
 namespace IntegrationTests.Repositories
@@ -15,7 +15,7 @@ namespace IntegrationTests.Repositories
     {
         public static Survey Create()
         {
-            return new Survey {SurveyStartTime = DateTime.Now, SurveyEndTime = DateTime.Now};
+            return new Survey {Date = DateTime.Now};
         }
     }
 
