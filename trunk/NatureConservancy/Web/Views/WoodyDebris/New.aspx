@@ -1,7 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Web.Models.WoodyDebris>>" %>
 <%@ Import Namespace="Web.Models"%>
 
-<%@ Register src="AddWoodyDebris.ascx" tagname="AddWoodyDebris" tagprefix="uc1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	CreateWoodyDebris
@@ -56,7 +55,8 @@
     </table>
 
     <p>
-        <uc1:AddWoodyDebris ID="AddWoodyDebris1" runat="server" />
+    <%=Html.Partial("AddWoodyDebris", Model.FirstOrDefault()) %>
+       
     </p>
     <%= Html.ActionLink("Proceed to Next Section", "CreateOverstory") %>
 </asp:Content>
