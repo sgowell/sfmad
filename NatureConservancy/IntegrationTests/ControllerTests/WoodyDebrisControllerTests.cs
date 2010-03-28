@@ -25,8 +25,7 @@ namespace IntegrationTests.ControllerTests
             var debris = WoodyDebrisFixture.Create();
             controller.New(survey.Id, debris);
             repo.Flush();
-            var allDebris = (controller.New(survey.Id) as ViewResult).ViewData.Model as IEnumerable<WoodyDebris>;
-            
+            var allDebris = (controller.New(survey.Id) as ViewResult).ViewData.Model as IEnumerable<WoodyDebris>;            
             allDebris.Count().ShouldEqual(1);
             allDebris.First().ShouldEqual(debris);
         }

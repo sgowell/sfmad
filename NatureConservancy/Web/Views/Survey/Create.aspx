@@ -24,7 +24,7 @@
             </div>
              <div class="editor-label">
                 <%= Html.LabelFor(model => model.Transect.Stand.Site ) %>
-                 <%= Html.ActionLink("New", "CreateSite") %>
+                <a href="" class="lookupLink" title="Add New Site" name="Site">New</a>
             </div>
             <div class="editor-field">
                 <%= Html.DropDownListFor(model => model.Transect.Stand.Site.Name, new List<SelectListItem>())%>
