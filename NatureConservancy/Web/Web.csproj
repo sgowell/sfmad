@@ -123,12 +123,14 @@
     <Content Include="Views\Survey\CreateMicrotopography.aspx" />
     <Content Include="Views\Survey\CreateOverStory.aspx" />
     <Content Include="Views\Survey\CreateSite.aspx" />
+    <Content Include="Views\Survey\CreateSpecies.aspx" />
     <Content Include="Views\Survey\CreateStand.aspx" />
     <Content Include="Views\Survey\CreateUnderstory.aspx" />
     <Content Include="Views\Survey\CreateWoodyDebris.aspx" />
     <Content Include="Views\Survey\Edit.aspx" />
     <Content Include="Views\Survey\Index.aspx" />
     <Content Include="Views\Survey\ListSnags.ascx" />
+    <Content Include="Views\Survey\ListSpecies.ascx" />
     <Content Include="Web.config" />
     <Content Include="Content\Site.css" />
     <Content Include="Scripts\jquery-1.4.1.js" />
