@@ -1,6 +1,6 @@
 #summary Distinct Species per Stand
 
-== Distinct Species per Stand ==
+== Sql Code ==
 
 {{{
 Select sum(distinct(species)), d.Stand_id
