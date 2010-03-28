@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Web.Mvc;
 using Web.Data;
 using Web.Models;
@@ -14,7 +15,11 @@ namespace Web.Controllers
 
         public ViewResult New(int surveyId)
         {
-            return View(surveyRepository.Load(surveyId).WoodyDebris);
+            var survey = surveyRepository.Load(surveyId);
+            IList<WoodyDebris> debrises = new List<WoodyDebris>();
+            if (survey != null)
+                debrises  = survey.WoodyDebris;
+            return View(debrises);
         }
 
         [HttpPost]

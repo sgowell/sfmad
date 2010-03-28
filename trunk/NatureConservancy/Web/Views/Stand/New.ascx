@@ -1,12 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Web.Models.Stand>" %>
 
 
-<asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	Create Stand
-</asp:Content>
-
-<asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
     <form id="create_stand_form" runat="server">
 
     <h2>Create Stand</h2>
@@ -40,5 +34,3 @@
 
     <% } %>
     </form>
-
-</asp:Content>

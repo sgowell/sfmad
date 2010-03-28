@@ -16,34 +16,24 @@
             <legend>General Info</legend>
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Transect.Stand.Site.EcoRegion ) %>
-                 <%= Html.ActionLink("New", "CreateEcoRegion") %>
+                 <a href="" class="ecoregionLink" title="Add New EcoRegion" name="ecoregion">New</a>
             </div>
             <div class="editor-field">
-                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.EcoRegion.Name, 
-                    new List<SelectListItem>() )%>
+                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.EcoRegion.Name,
+                                        new List<SelectListItem>(), new Dictionary<string, object> { { "class", "ecoregion-dropdown" } })%>
                 <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.EcoRegion.Name )%>
             </div>
              <div class="editor-label">
                 <%= Html.LabelFor(model => model.Transect.Stand.Site ) %>
-                <a href="" class="lookupLink" title="Add New Site" name="site">New</a>
+                <a href="" class="siteLink" title="Add New Site" name="site">New</a>
             </div>
             <div class="editor-field">
-            <%
-                var options = new Dictionary<string, object>();
-                options.Add("class", "site-dropdown"); 
-           %>
+   
                 <%= Html.DropDownListFor(model => model.Transect.Stand.Site.Name, 
-                    new List<SelectListItem>(), options)%>
+                    new List<SelectListItem>(), new Dictionary<string, object> {{"class", "site-dropdown"}})%>
                 <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.Name)%>
             </div>
-             <div class="editor-label">
-                <%= Html.LabelFor(model => model.Transect.Stand ) %>
-                 <%= Html.ActionLink("New", "CreateStand") %>
-            </div>
-            <div class="editor-field">
-                <%= Html.DropDownListFor(model => model.Transect.Stand.Name,new List<SelectListItem>() )%>
-                <%= Html.ValidationMessageFor(model => model.Transect.Stand.Name )%>
-            </div>
+  
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Bearing) %>
             </div>

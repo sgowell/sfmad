@@ -1,6 +1,8 @@
 ﻿var sf = {};
 sf.init = function() {
-    $('.lookupLink').handleLookup();
+    $('.siteLink').handleLookup();
+    $('.ecoregionLink').handleLookup();
+    //$('.standLink').handleLookup();
     $('#Date').datepicker();
 };
 
@@ -12,7 +14,7 @@ $.fn.appendSelect = function(selectItems) {
     if (!isArray(selectItems)) selectItems = [selectItems];
     var optionHtml = "";
     $.each(selectItems, function() {
-        optionHtml = optionHtml + '<option value="' + this.Id + '>' + this.Name + '</option>';
+        optionHtml = optionHtml + '<option value="' + this.Id + '">' + this.Name + '</option>';
     });
     $(this).append(optionHtml);
 }
@@ -26,7 +28,7 @@ $.fn.reset = function() {
 
 }
 $.fn.handleLookup = function() {
-
+  
     var title = $(this).attr("title");
     var name = $(this).attr("name");
     var path = "/" + name + "/new";

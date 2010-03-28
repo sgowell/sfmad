@@ -19,7 +19,7 @@
             // todo: check equality taking into account 
             // nhibernate proxies
             //if (obj.GetType() != GetType()) return false;
-
+            if(obj as Entity == null) return false;
             return (obj as Entity).Id.Equals(this.Id);
         }
     }
