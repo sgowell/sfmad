@@ -33,6 +33,10 @@ namespace Web.Controllers
             return RedirectToAction("New", "Overstory", new { surveyId = survey.Id });
         }
 
+        protected ActionResult NewOverstoryItem(Survey survey)
+        {
+            return RedirectToAction("New", "OverstoryItem", new { surveyId = survey.Id });
+        }
         protected ActionResult NewPlot(Survey survey)
         {
             return RedirectToAction("New", "Plot", new { surveyId = survey.Id });

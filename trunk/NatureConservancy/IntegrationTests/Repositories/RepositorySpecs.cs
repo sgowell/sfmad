@@ -4,6 +4,7 @@ using FluentNHibernate.Testing;
 using NHibernate;
 using NHibernate.Tool.hbm2ddl;
 using NUnit.Framework;
+using System.Xml.Linq;
 using Web.Data;
 using Web.Models;
 using Web.Services;
@@ -133,7 +134,80 @@ namespace IntegrationTests.Repositories
             transect.Id.ShouldEqual(transectId);
             
         }
-        
+
+        [Test]
+        public void CanAddNewPlotItem()
+        {
+            //Instantiate a new Survey
+            var survey = SurveyFixture.Create();
+            var surveyrepository = Container.Resolve<ISurveyRepository>();
+
+            //Set Test Values for Survey Properties
+            survey.Bearing = 1;
+            survey.EndTime = DateTime.Now.AddHours(75).ToShortTimeString();
+            survey.StartTime = DateTime.Now.ToShortTimeString();
+            survey.Surveyors = "Lorem Ipsum";
+
+            //Save Survey Object
+            surveyrepository.Save(survey);
+
+            //Instantiate a new GroundCover
+            var groundcover = GroundCoverFixture.Create();
+            var groundcoverRepository = Container.Resolve<IRepository<GroundCover>>();
+            
+            //Save GroundCover Object
+            groundcoverRepository.Save(groundcover);
+
+            //Instantiate a new Plot
+            var plot = PlotFixture.Create();
+            var plotRepository = Container.Resolve<IRepository<Plot>>();
+
+
+            //Set Test Values for Plot Properties
+            plot.Name = "Test Plot";
+
+            //Save Plot Object
+            plotRepository.Save(plot);
+
+            //Instantiate a New PlotItem
+            var plotItem = PlotItemFixture.Create();
+            var plotItemRepository = Container.Resolve<IRepository<PlotItem>>();
+
+            //Set Test Values for Plot Item Properties
+            plotItem.CoverClass = PlotItem.PlotCover.Class1;
+            plotItemRepository.Save(plotItem);
+
+            //Add Plot Item to Plot.PlotItems List
+            plot.Add(plotItem);
+
+            //Save Both Parent and Child.
+            plotItemRepository.Save(plotItem);
+            plotRepository.Save(plot);
+
+            //Add Plot Item to GroundCover.Plots List
+            groundcover.Add(plot);
+
+            //Save Both Parent and Child.
+            plotRepository.Save(plot);
+            groundcoverRepository.Save(groundcover);
+            
+            //Associate GroundCover to Survey
+            survey.AddGroundCover(groundcover);
+
+            //Save Both Parent and Child
+            groundcoverRepository.Save(groundcover);
+            surveyrepository.Save(survey);
+            
+            //Get New Instance of PlotItem we generated.
+            var plotToCheck = plotItemRepository.Load(plotItem.Id);
+
+            //Test that data persisted to db
+            Assert.IsNotNull(plotToCheck);
+
+            //Test that Parent Child Associations Proceed all the way up to the top.
+            Assert.IsTrue(plotToCheck.Plot.GroundCover.Survey == survey);
+        }
+
         [Test]        
         public void LoadData()
         {

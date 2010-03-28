@@ -20,5 +20,15 @@ namespace Web.Models
         [Required(ErrorMessage = "You must have at least one {0} record")]
         [DisplayName("Plot Item")]
         public virtual IList<PlotItem> PlotItems { get; set; }
+
+        public virtual void Add(PlotItem pItem)
+        {
+            if (PlotItems == null)
+            {
+                PlotItems = new List<PlotItem>();
+            }
+            PlotItems.Add(pItem);
+            pItem.Plot = this;
+        }
     }
 }

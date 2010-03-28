@@ -26,4 +26,42 @@ namespace IntegrationTests.Repositories
             return new WoodyDebris();
         }
     }
+    public static class UnderstoryFixture
+    {
+        public static Understory Create()
+        {
+            return new Understory();
+        }
+    }
+    public static class UnderstoryItemFixture
+    {
+        public static UnderstoryItem Create()
+        {
+            return new UnderstoryItem();
+        }
+    }
+
+    public static class PlotFixture
+    {
+        public static Plot Create()
+        {
+            return new Plot();
+        }
+    }
+
+    public static class PlotItemFixture
+    {
+        public static PlotItem Create()
+        {
+            return new PlotItem();
+        }
+    }
+
+    public static class GroundCoverFixture
+    {
+        public static GroundCover Create()
+        {
+            return new GroundCover();
+        }
+    }
 }

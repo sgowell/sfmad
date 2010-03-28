@@ -52,6 +52,11 @@ namespace Web.Models
             set;
         }
 
+        public virtual void  AddGroundCover(GroundCover groundCover)
+        {
+            GroundCover = groundCover;
+            groundCover.Survey = this;
+        }
 
         public virtual GroundCover GroundCover
         {

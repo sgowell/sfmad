@@ -82,10 +82,10 @@
     <Compile Include="Controllers\GroundCoverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OverstoryController.cs" />
+    <Compile Include="Controllers\OverstoryItemController.cs" />
     <Compile Include="Controllers\PlotController.cs" />
     <Compile Include="Controllers\PlotItemController.cs" />
     <Compile Include="Controllers\RequiresAuthentication.cs" />
-    <Compile Include="Controllers\StandController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\WoodyDebrisController.cs" />
     <Compile Include="Global.asax.cs">
