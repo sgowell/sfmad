@@ -29,54 +29,28 @@ namespace Web.Data
         void Evict(object item);
     }
 
-    
-    
-
+    public interface IStandRepository : IRepository<Stand> { }    
     public class StandRepository : RepositoryBase<Stand>, IStandRepository
     {
-        public StandRepository(ISession session) : base(session)
-        {
-        }
+        public StandRepository(ISession session) : base(session) { }        
     }
 
-    public interface IStandRepository : IRepository<Stand>
-    {
-    }
-
-    public interface ISurveyRepository : IRepository<Survey>
-    {
-        
-    }
-    
-    public interface IecoSystemRepository : IRepository<EcoSystem>
-    {
-        
-    }
-
-    public interface ISpeciesRepository : IRepository<Species>
-    {
-
-    }    
-
+    public interface ISpeciesRepository : IRepository<Species> { }    
     public class SpeciesRepository : RepositoryBase<Species>, ISpeciesRepository
     {
-        public SpeciesRepository(ISession session) : base(session)
-        {
-        }
-    }
-    
-    public class EcoSystemRepository : RepositoryBase<EcoSystem>, IecoSystemRepository
-    {
-        public EcoSystemRepository(ISession session) : base(session)
-        {
-        }
+        public SpeciesRepository(ISession session) : base(session) { }        
     }
 
+    public interface IecoSystemRepository : IRepository<EcoSystem> { }
+    public class EcoSystemRepository : RepositoryBase<EcoSystem>, IecoSystemRepository
+    {
+        public EcoSystemRepository(ISession session) : base(session) { }        
+    }
+
+    public interface ISurveyRepository : IRepository<Survey> { }
     public class SurveyRepository : RepositoryBase<Survey>, ISurveyRepository
     {
-        public SurveyRepository(ISession session) : base(session)
-        {
-        }
+        public SurveyRepository(ISession session) : base(session) { }        
     }
 
     public interface ITransectRepository : IRepository<Transect> { }
@@ -137,6 +111,18 @@ namespace Web.Data
     public class EcoRegionRepository : RepositoryBase<EcoRegion>, IEcoRegionRepository, IRepository
     {
         public EcoRegionRepository(ISession session) : base(session) { }
+    }
+
+    public interface IGroundCoverRepository : IRepository<GroundCover> { }
+    public class GroundCoverRepository : RepositoryBase<GroundCover>, IGroundCoverRepository, IRepository
+    {
+        public GroundCoverRepository(ISession session) : base(session) { }
+    }
+
+    public interface ISiteRepository : IRepository<Site> { }
+    public class SiteRepository : RepositoryBase<Site>, ISiteRepository, IRepository
+    {
+        public SiteRepository(ISession session) : base(session) { }
     }
 
     public class RepositoryBase<T> : IRepository<T>
