@@ -25,9 +25,10 @@ namespace Web.Controllers
             PlotItemRepository.Save(plotItem);
             var survey = surveyRepository.Load(surveyId);
             Plot parent = survey.GroundCover.Plots.Single(p => p.Id == plotItem.Plot.Id);
-            parent.PlotItems.Add(plotItem);
-            var parContainer = Container.Resolve<IRepository<Plot>>();
-            parContainer.Save(parent);
+            parent.Add(plotItem);
+            PlotItemRepository.Save(plotItem);
+            var parentRepo = Container.Resolve<IRepository<Plot>>();
+            parentRepo.Save(parent);
 
             return NewPlotItem(survey);
         }

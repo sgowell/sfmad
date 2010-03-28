@@ -1,6 +1,7 @@
 ﻿using System.Web.Mvc;
 using Web.Data;
 using Web.Models;
+using Web.Services;
 
 namespace Web.Controllers
 {
@@ -23,7 +24,11 @@ namespace Web.Controllers
         {
             plotRepository.Save(plot);
             var survey = surveyRepository.Load(surveyId);
-            survey.GroundCover.Plots.Add(plot);
+            var parent = survey.GroundCover;
+            parent.Add(plot);
+            plotRepository.Save(plot);
+            var parentRepo = Container.Resolve<IRepository<GroundCover>>();
+            parentRepo.Save(parent);
             return NewPlot(survey);
         }
     }

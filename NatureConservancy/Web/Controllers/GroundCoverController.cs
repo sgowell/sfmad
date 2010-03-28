@@ -23,7 +23,8 @@ namespace Web.Controllers
         {
             GroundCoverRepository.Save(cover);
             var survey = surveyRepository.Load(surveyId);
-            survey.GroundCover = cover;
+            survey.AddGroundCover(cover);
+            GroundCoverRepository.Save(cover);
             return NewGroundCover(survey);
         }
     }
