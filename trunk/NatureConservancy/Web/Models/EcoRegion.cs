@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace Web.Models
 {
@@ -17,6 +18,16 @@ namespace Web.Models
         [Required(ErrorMessage = "You must have at least one {0} record")]
         [DisplayName("Site")]
         public virtual IList<Site> Sites { get; set; }
+
+        
+        private static List<EcoRegion >  allEcoRegions = new List<EcoRegion >();
+
+        public static List<EcoRegion> AllEcoRegions
+        {
+            get { return allEcoRegions; }
+            set { allEcoRegions = value; }
+        }
+
 
     }
 }
