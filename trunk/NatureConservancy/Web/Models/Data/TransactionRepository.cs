@@ -29,10 +29,8 @@ namespace Web.Data
         void Evict(object item);
     }
 
-    public interface ITransectRepository : IRepository<Transect>
-    {
-
-    }
+    
+    
 
     public class StandRepository : RepositoryBase<Stand>, IStandRepository
     {
@@ -58,7 +56,7 @@ namespace Web.Data
     public interface ISpeciesRepository : IRepository<Species>
     {
 
-    }
+    }    
 
     public class SpeciesRepository : RepositoryBase<Species>, ISpeciesRepository
     {
@@ -81,11 +79,64 @@ namespace Web.Data
         }
     }
 
+    public interface ITransectRepository : IRepository<Transect> { }
     public class TransactionRepository : RepositoryBase<Transect>, ITransectRepository, IRepository
     {
-        public TransactionRepository(ISession session) : base(session)
-        {
-        }
+        public TransactionRepository(ISession session) : base(session) { }        
+    }
+
+    public interface ISnagRepository : IRepository<Snag> { }
+    public class SnapRepository : RepositoryBase<Snag>, ISnagRepository, IRepository
+    {
+        public SnapRepository(ISession session) : base(session) { }
+    }
+
+    public interface IPlotRepository : IRepository<Plot> { }
+    public class PlotRepository : RepositoryBase<Plot>, IPlotRepository, IRepository
+    {
+        public PlotRepository(ISession session) : base(session) { }
+    }
+
+    public interface IOverstoryRepository : IRepository<Overstory> { }
+    public class OverstoryRepository : RepositoryBase<Overstory>, IOverstoryRepository, IRepository
+    {
+        public OverstoryRepository(ISession session) : base(session) { }
+    }
+
+    public interface IOverstoryItemRepository : IRepository<OverstoryItem> { }
+    public class OverstoryItemRepository : RepositoryBase<OverstoryItem>, IOverstoryItemRepository, IRepository
+    {
+        public OverstoryItemRepository(ISession session) : base(session) { }
+    }
+
+    public interface IMicrotopographyRepository : IRepository<Microtopography> { }
+    public class MicrotopographyRepository : RepositoryBase<Microtopography>, IMicrotopographyRepository, IRepository
+    {
+        public MicrotopographyRepository(ISession session) : base(session) { }
+    }
+
+    public interface IDeerHerbivoryRepository : IRepository<DeerHerbivory> { }
+    public class DeerHerbivoryRepository : RepositoryBase<DeerHerbivory>, IDeerHerbivoryRepository, IRepository
+    {
+        public DeerHerbivoryRepository(ISession session) : base(session) { }
+    }
+
+    public interface IUnderstoryRepository : IRepository<Understory> { }
+    public class UnderstoryRepository : RepositoryBase<Understory>, IUnderstoryRepository, IRepository
+    {
+        public UnderstoryRepository(ISession session) : base(session) { }
+    }
+
+    public interface IUnderstoryItemRepository : IRepository<UnderstoryItem> { }
+    public class UnderstoryItemRepository : RepositoryBase<UnderstoryItem>, IUnderstoryRepository, IRepository
+    {
+        public UnderstoryItemRepository(ISession session) : base(session) { }
+    }
+
+    public interface IEcoRegionRepository : IRepository<EcoRegion> { }
+    public class EcoRegionRepository : RepositoryBase<EcoRegion>, IEcoRegionRepository, IRepository
+    {
+        public EcoRegionRepository(ISession session) : base(session) { }
     }
 
     public class RepositoryBase<T> : IRepository<T>
