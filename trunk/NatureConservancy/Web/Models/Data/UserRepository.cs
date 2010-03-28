@@ -9,12 +9,12 @@ using Web.Data;
 
 namespace Web.Models.Data
 {
-    public interface IUserRepository : IRepository<User>
+    public interface IUserRepository : IRepository<LogOnModel>
     {
         bool ValidateUser(string userName, string password);
     }
 
-    public class UserRepository : RepositoryBase<User>,IUserRepository 
+    public class UserRepository : RepositoryBase<LogOnModel>, IUserRepository 
     {
         public UserRepository(ISession  session  ) : base(session )
         {
