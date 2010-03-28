@@ -8,7 +8,7 @@ namespace Web.Models.Mappings
         public SpeciesMapping()
         {
             Id(x => x.Id);
-            Map(x => x.SpeciesAcronym);
+            Map(x => x.Acronym);
             Map(x => x.ScientificName);
             Map(x => x.CommonName);
             //todo consider AllSpecies

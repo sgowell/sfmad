@@ -46,12 +46,6 @@ namespace Web.Services
                     .TheDefaultIsConcreteType<StandRepository>();
                 i.ForRequestedType<ISurveyRepository>()
                     .TheDefaultIsConcreteType<SurveyRepository>();
-                i.ForRequestedType<IecoSystemRepository>()
-                    .TheDefaultIsConcreteType<EcoSystemRepository>();      
-                i.ForRequestedType<ISpeciesRepository>()
-                    .TheDefaultIsConcreteType<SpeciesRepository>(); 
-                i.ForRequestedType(typeof (IRepository<>))
-                    .TheDefaultIsConcreteType(typeof (RepositoryBase<>));
 //                i.Scan(x =>
 //                {
 //                    x.Assembly("Web");
