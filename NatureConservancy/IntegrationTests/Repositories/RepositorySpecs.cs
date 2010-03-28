@@ -1288,7 +1288,7 @@ namespace IntegrationTests.Repositories
 			speciesRepository.Save(new Species {Acronym = "ELYVIR", Physiognomy = Species.SpeciesType.NGrass, ScientificName = "Elymus virginicus", CommonName = "VIRGINIA WILD-RYE"});
 			speciesRepository.Save(new Species {Acronym = "ELYWIE", Physiognomy = Species.SpeciesType.NGrass, ScientificName = "Elymus wiegandii", CommonName = "WILD-RYE"});
 			speciesRepository.Save(new Species {Acronym = "EMPNIG", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Empetrum nigrum  <T>", CommonName = "BLACK CROWBERRY"});
-			speciesRepository.Save(new Species {Acronym = "EMPTY",  ScientificName = "EMPTY QUADRAT", CommonName = ""});
+			speciesRepository.Save(new Species {Acronym = "EMPTY",  Physiognomy = Species.SpeciesType.Unknown ,ScientificName = "EMPTY QUADRAT", CommonName = ""});
 			speciesRepository.Save(new Species {Acronym = "EPIANG", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Epilobium angustifolium", CommonName = "FIREWEED; GREAT WILLOW-HERB"});
 			speciesRepository.Save(new Species {Acronym = "EPICIL", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Epilobium ciliatum", CommonName = "WILLOW-HERB"});
 			speciesRepository.Save(new Species {Acronym = "EPICOL", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Epilobium coloratum", CommonName = "CINNAMON WILLOW-HERB"});
@@ -2623,7 +2623,7 @@ namespace IntegrationTests.Repositories
 			speciesRepository.Save(new Species {Acronym = "SMISTE", Physiognomy = Species.SpeciesType.NForb, ScientificName = "SmilacinAStellata", CommonName = "STARRY FALSE SOLOMON-SEAL"});
 			speciesRepository.Save(new Species {Acronym = "SMITAM", Physiognomy = Species.SpeciesType.NVine, ScientificName = "Smilax tamnoides", CommonName = "BRISTLY GREEN-BRIER"});
 			speciesRepository.Save(new Species {Acronym = "SMITRI", Physiognomy = Species.SpeciesType.NForb, ScientificName = "SmilacinATrifolia", CommonName = "FALSE MAYFLOWER"});
-			speciesRepository.Save(new Species {Acronym = "SOIL",   ScientificName = "SOIL", CommonName = ""});
+			speciesRepository.Save(new Species {Acronym = "SOIL", Physiognomy = Species.SpeciesType.Unknown,   ScientificName = "SOIL", CommonName = ""});
 			speciesRepository.Save(new Species {Acronym = "SOLALT", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Solidago altissima", CommonName = "TALL GOLDENROD"});
 			speciesRepository.Save(new Species {Acronym = "SOLBIC", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Solidago bicolor", CommonName = "SILVER ROD"});
 			speciesRepository.Save(new Species {Acronym = "SOLCAE", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Solidago caesia", CommonName = "BLUE-STEMMED GOLDENROD"});
@@ -2947,7 +2947,7 @@ namespace IntegrationTests.Repositories
 			speciesRepository.Save(new Species {Acronym = "VITRIP", Physiognomy = Species.SpeciesType.NVine, ScientificName = "Vitis riparia", CommonName = "RIVERBANK GRAPE"});
 			speciesRepository.Save(new Species {Acronym = "VITVUL", Physiognomy = Species.SpeciesType.NVine, ScientificName = "Vitis vulpina  <SC>", CommonName = "FROST GRAPE"});
 			speciesRepository.Save(new Species {Acronym = "WALFRA", Physiognomy = Species.SpeciesType.NForb, ScientificName = "WaldsteiniAFragarioides", CommonName = "BARREN-STRAWBERRY"});
-			speciesRepository.Save(new Species {Acronym = "WATER",  ScientificName = "WATER", CommonName = ""});
+			speciesRepository.Save(new Species {Acronym = "WATER", Physiognomy = Species.SpeciesType.Unknown,  ScientificName = "WATER", CommonName = ""});
 			speciesRepository.Save(new Species {Acronym = "WISFRU", Physiognomy = Species.SpeciesType.NVine, ScientificName = "WisteriAFrutescens  <T>", CommonName = "WISTERIA"});
 			speciesRepository.Save(new Species {Acronym = "WISSIN", Physiognomy = Species.SpeciesType.AVine, ScientificName = "WISTERIASINENSIS", CommonName = "CHINESE WISTERIA"});
 			speciesRepository.Save(new Species {Acronym = "WOLCOL", Physiognomy = Species.SpeciesType.NForb, ScientificName = "Wolffia columbiana", CommonName = "COMMON WATER MEAL"});
