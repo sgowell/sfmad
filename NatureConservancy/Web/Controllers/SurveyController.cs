@@ -34,9 +34,10 @@ namespace Web.Controllers
                 if (ModelState.IsValid)
                 {
                     surveyRepository.Save(survey);
+                    surveyRepository.Flush();
                     return NewWoodyDebris(survey);
                 }
-                return base.NewWoodyDebris(survey);
+                return View();
             }
             catch
             {
