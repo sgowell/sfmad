@@ -91,7 +91,7 @@ namespace Web.Models.Mappings
             Id(x => x.Id);
             Map(x => x.Number);
             Map(x => x.Longitude);
-            Map(x => x.Latitude);
+            Map(x => x.Latitude);            
             HasOne(x => x.Stand);
             HasMany(x => x.Surveys);
         }

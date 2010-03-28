@@ -18,7 +18,7 @@ namespace IntegrationTests.Repositories
             return new SessionFactoryFactory().GetSessionFactory().OpenSession();
         }
 
-        [SetUp]
+        [TestFixtureSetUp]
         public void CreateSchema()
         {
 
@@ -27,10 +27,11 @@ namespace IntegrationTests.Repositories
                                             {
                                                 var exporter = new SchemaExport(configuration);
                                                 exporter.Create(true, true);
-                                                exporter.Execute(false, true, false, true);
+                                                exporter.Execute(false, true, false);
                                                 Console.WriteLine("done");
                                             };
             var sessionFactory = factory.GetSessionFactory();
+           
         }
 
         public void can_persist_transect()

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
-using System.Web.Mvc;
 
 namespace Web.Models
 {
@@ -44,49 +43,49 @@ namespace Web.Models
 
         private static List<Species> allSpecies = new List<Species>();
 
-        public static  List<Species> OverstorySpecies
+        public static List<Species> OverstorySpecies
         {
             get { return allSpecies.FindAll(Or(_overstorySpeciesFilter)); }
         }
-        public  static  List<Species> SnagSpecies
+        public static List<Species> SnagSpecies
         {
             get { return allSpecies.FindAll(Or(_snagsSpeciesFilter)); }
         }
-        public static  List<Species> UnderstorySpecies
+        public static List<Species> UnderstorySpecies
         {
             get { return allSpecies.FindAll(Or(_understorySpeciesFilter)); }
         }
-        public static  List<Species> DeerHerbevorySpecies
+        public static List<Species> DeerHerbevorySpecies
         {
             get { return allSpecies.FindAll(Or(_deerHerbevorySpeciesFilter)); }
         }
 
-        public static  List<Species> AllSpecies
+        public static List<Species> AllSpecies
         {
             get { return allSpecies; }
             set { allSpecies = value; }
         }
 
 
-        private static readonly Predicate<Species>[] _overstorySpeciesFilter = new []
+        private static Predicate<Species>[] _overstorySpeciesFilter = new []
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        new Predicate<Species>(s => s.Physiognomy == SpeciesType.NTree)
                                                                    };
 
-        private static readonly Predicate<Species>[] _snagsSpeciesFilter = new []
+        private static Predicate<Species>[] _snagsSpeciesFilter = new []
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        new Predicate<Species>(s => s.Physiognomy == SpeciesType.NTree)
                                                                    };
-        private static readonly Predicate<Species>[] _understorySpeciesFilter = new []
+        private static Predicate<Species>[] _understorySpeciesFilter = new []
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        s => s.Physiognomy == SpeciesType.NTree,
                                                                        s => s.Physiognomy == SpeciesType.AShrub,
                                                                        new Predicate<Species>(s => s.Physiognomy == SpeciesType.NShrub)
                                                                    };
-        private static readonly Predicate<Species>[] _deerHerbevorySpeciesFilter = new[]
+        private static Predicate<Species>[] _deerHerbevorySpeciesFilter = new []
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        s => s.Physiognomy == SpeciesType.NTree,

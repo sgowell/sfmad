@@ -3,19 +3,15 @@ using System.Linq;
 using System.Reflection;
 using System.Threading;
 using System.Web;
+using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
-using FluentNHibernate.Mapping;
 using NHibernate;
 using NHibernate.Cfg;
 using Web.Models;
-using Web.Models.Mappings;
 
 namespace Web.Data
 {
-
-
-
     public interface ISessionFactoryFactory
     {
         ISessionFactory GetSessionFactory();
@@ -37,21 +33,20 @@ namespace Web.Data
             var config = MsSqlConfiguration
                 .MsSql2005.ConnectionString(c => c.Is("ConnectionString".AppSetting()));
 
-            config.ShowSql();
 
-            var allEntityMappings = Assembly.GetExecutingAssembly().GetTypes().ToList().FindAll(t => t.GetInterface("IClassMap") !=null);
-            var allEntitiesTypes = Assembly.GetExecutingAssembly().GetTypes().ToList().FindAll(t => t.IsSubclassOf(typeof(Entity)));
-            allEntitiesTypes.FindAll(a => !allEntityMappings.Any(b => b.Name.Contains(a.Name.Replace("Web.Models", ""))))
-                .Each(Console.WriteLine);
-            Console.WriteLine("*************");
+            var mappings = AutoMap.
+                AssemblyOf<Species>()
+                .IgnoreBase<Entity>()
+                .Where(t => t.IsSubclassOf(typeof (Entity)));
+                
+    
+                
+            if (!typeof(WoodyDebris).IsSubclassOf(typeof(Entity))) throw new ArgumentException("fuc");
             
             sessionFactory = Fluently.Configure()
                 .Database(config)
-                .Mappings(m =>
-                              {
-                                allEntityMappings.Each(t => m.FluentMappings.Add(t));
-                              }
-                )
+                .Mappings(m=> m.AutoMappings
+                    .Add(mappings))
                 .ExposeConfiguration(OnFactoryCreation)
                 .BuildSessionFactory();
 
