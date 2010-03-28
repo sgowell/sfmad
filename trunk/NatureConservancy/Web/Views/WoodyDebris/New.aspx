@@ -3,7 +3,7 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
-	CreateWoodyDebris
+	Enter Woody Debris Details
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
@@ -12,21 +12,7 @@
     <h2>CreateWoodyDebris</h2>
 
     <table>
-        <tr>
-            <th></th>
-            <th>
-                Total Length
-            </th>
-            <th>
-                Intersect Diameter
-            </th>
-            <th>
-                Large End Diameter
-            </th>
-            <th>
-                Small End Diameter
-            </th>
-        </tr>
+
 
     <% foreach (var item in new List<WoodyDebris>()) { %>
     
