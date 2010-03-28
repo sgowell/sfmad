@@ -38,6 +38,14 @@ namespace Web.Models
             set;
         }
 
+        [DefaultValue(false)]
+        public virtual bool Completed
+        {
+            get;
+            set;
+        }
+
+
         public virtual GroundCover GroundCover
         {
             get;
