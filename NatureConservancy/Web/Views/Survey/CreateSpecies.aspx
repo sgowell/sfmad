@@ -27,11 +27,11 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.SpeciesAcronym) %>
+                <%= Html.LabelFor(model => model.Acronym) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.SpeciesAcronym) %>
-                <%= Html.ValidationMessageFor(model => model.SpeciesAcronym) %>
+                <%= Html.TextBoxFor(model => model.Acronym) %>
+                <%= Html.ValidationMessageFor(model => model.Acronym) %>
             </div>
             
             <div class="editor-label">
