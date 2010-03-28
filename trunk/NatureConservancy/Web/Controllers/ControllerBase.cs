@@ -32,5 +32,19 @@ namespace Web.Controllers
         {
             return RedirectToAction("New", "Overstory", new { surveyId = survey.Id });
         }
+
+        protected ActionResult NewPlot(Survey survey)
+        {
+            return RedirectToAction("New", "Plot", new { surveyId = survey.Id });
+        }
+        protected ActionResult NewPlotItem(Survey survey)
+        {
+            return RedirectToAction("New", "PlotItem", new { surveyId = survey.Id });
+        }
+
+        protected ActionResult NewGroundCover(Survey survey)
+        {
+            return RedirectToAction("New", "GroundCover", new { surveyId = survey.Id });
+        }
     }
 }
