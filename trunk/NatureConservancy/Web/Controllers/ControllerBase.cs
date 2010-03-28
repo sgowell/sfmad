@@ -23,5 +23,14 @@ namespace Web.Controllers
         {
             return RedirectToAction("New", "WoodyDebris", new {surveyId = survey.Id});
         }
+
+        protected ActionResult NewDeerHerbivory(Survey survey)
+        {
+            return RedirectToAction("New", "DeerHerbivory", new { surveyId = survey.Id });
+        }
+        protected ActionResult NewOverstory(Survey survey)
+        {
+            return RedirectToAction("New", "Overstory", new { surveyId = survey.Id });
+        }
     }
 }
