@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Web.Mvc;
 using IntegrationTests.Repositories;
 using NUnit.Framework;
 using Web.Controllers;
@@ -23,9 +24,11 @@ namespace IntegrationTests.ControllerTests
             repo.Save(survey);
             var debris = WoodyDebrisFixture.Create();
             controller.New(survey.Id, debris);
-            survey = repo.Load(survey.Id);
-            survey.WoodyDebris.Count().ShouldEqual(1);
-            survey.WoodyDebris.First().ShouldEqual(debris);
+            repo.Flush();
+            var allDebris = (controller.New(survey.Id) as ViewResult).ViewData.Model as IEnumerable<WoodyDebris>;
+            
+            allDebris.Count().ShouldEqual(1);
+            allDebris.First().ShouldEqual(debris);
         }
     }
 }
