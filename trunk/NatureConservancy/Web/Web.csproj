@@ -89,8 +89,7 @@
     <Compile Include="Controllers\RequiresAuthentication.cs" />
     <Compile Include="Controllers\SiteController.cs">
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Controllers\StandController.cs" />
+    </Compile>
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\UnderstoryController.cs" />
     <Compile Include="Controllers\UnderstoryItemController.cs" />
@@ -133,6 +132,9 @@
   <ItemGroup>
     <Content Include="Content\jquery-ui-1.8.custom.css" />
     <Content Include="Global.asax" />
+    <Content Include="images\artist-line.gif" />
+    <Content Include="images\The Nature Conservancy - Protecting nature, Preserving Life.jpeg" />
+    <Content Include="images\The-Nature-Conservancy---Protecting-nature,-Preserving-Life.png" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.custom.min.js" />
     <Content Include="Views\EcoRegion\New.ascx" />

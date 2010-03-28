@@ -13,8 +13,6 @@ namespace Web.Models
         public virtual int Number { get; set; }
 
         public virtual IList<Survey> Surveys { get; set; }
-
-        [Required(ErrorMessage = "You must have a parent {0} record")]
         [DisplayName("Stand")]
         public virtual Stand Stand { get; set; }
 

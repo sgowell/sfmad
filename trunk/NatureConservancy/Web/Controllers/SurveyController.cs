@@ -31,7 +31,7 @@ namespace Web.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
+                if (true) //ModelState.IsValid)
                 {
                     surveyRepository.Save(survey);
                     surveyRepository.Flush();

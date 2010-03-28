@@ -11,36 +11,26 @@
     <script type="text/javascript" src="/Scripts/jquery-ui-1.8.custom.min.js"></script>
     <script type="text/javascript" src="/Scripts/site.js"></script>
         
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
 </head>
-
 <body>
+    
     <div class="page">
-
-        <div id="header">
-            <div id="title">
-                <h1>Sustainable Forest Monitoring and Assessment</h1>
-            </div>
-              
-            <div id="logindisplay">
-                <% Html.RenderPartial("LogOnUserControl"); %>
+        <div id="DarkerColor"></div>
+        <div id="apDiv1">
+            <div id="Logo"><img src="/../../images/The-Nature-Conservancy---Protecting-nature,-Preserving-Life.png" width="245" height="96" alt="logo"/></div>
+            <div id="HomeBttn">Home</div>
+            <div id="About">About Us</div>
+            <div id="colorchange"></div>
+            <div id="ContentForms"></div>
+        </div>
+        <div id="apDiv2">
+            <div id="main">
+                <asp:ContentPlaceHolder ID="MainContent" runat="server" />
+                <div id="footer"></div>
             </div> 
-            
-            <div id="menucontainer">
-            
-                <ul id="menu">              
-                    <li><%= Html.ActionLink("Home", "Index", "Home")%></li>
-                    <li><%= Html.ActionLink("About", "About", "Home")%></li>
-                </ul>
-            
-            </div>
         </div>
-
-        <div id="main">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server" />
-
-            <div id="footer">
-            </div>
-        </div>
-    </div>
+    </div>       
 </body>
 </html>
