@@ -3,6 +3,7 @@ using NHibernate;
 using StructureMap;
 using Web.Data;
 using Web.Models;
+using Web.Models.Data;
 
 namespace Web.Services
 {
@@ -46,6 +47,8 @@ namespace Web.Services
                     .TheDefaultIsConcreteType<StandRepository>();
                 i.ForRequestedType<ISurveyRepository>()
                     .TheDefaultIsConcreteType<SurveyRepository>();
+                i.ForRequestedType<IUserRepository>()
+                   .TheDefaultIsConcreteType<UserRepository>();
                 i.ForRequestedType<IecoSystemRepository>()
                     .TheDefaultIsConcreteType<EcoSystemRepository>();      
                 i.ForRequestedType<ISpeciesRepository>()
