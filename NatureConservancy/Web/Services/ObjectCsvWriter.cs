@@ -18,12 +18,23 @@ namespace Web.Services
 
             using (ICsvWriter csvWriter = new StreamCsvWriter(outputStream))
             {
-                csvWriter.UseQuotes = useQuotes;
+                WriteToCSV(collection, csvWriter, useQuotes);
+            }
+        }
 
-                foreach (var item in collection)
-                {
-                    _WriteItem(csvWriter, item);
-                }
+        public void WriteToCSV(IEnumerable collection, ICsvWriter csvWriter, bool useQuotes)
+        {
+            if (collection == null)
+                throw new ArgumentNullException("collection");
+
+            if (csvWriter == null)
+                throw new ArgumentNullException("csvWriter");
+
+            csvWriter.UseQuotes = useQuotes;
+
+            foreach (var item in collection)
+            {
+                _WriteItem(csvWriter, item);
             }
         }
 

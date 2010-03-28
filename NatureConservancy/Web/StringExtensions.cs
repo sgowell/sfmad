@@ -34,7 +34,8 @@ namespace Web
     {
         public static void WriteTo(this IEnumerable<Transect> transects, ICsvWriter writer)
         {
-            throw new NotImplementedException();
+            var objectCsvWriter = new ObjectCsvWriter();
+            objectCsvWriter.WriteToCSV(transects, writer, true);
         }
     }
 
