@@ -31,7 +31,7 @@ namespace Web.Models
 
         [Required(ErrorMessage = "Please enter an {0}")]
         [DisplayName("Acronym")]
-        public virtual string SpeciesAcronym { get; set; }
+        public virtual string Acronym { get; set; }
 
         [Required(ErrorMessage = "Please enter a {0}")]
         [DisplayName("Scientific Name")]
