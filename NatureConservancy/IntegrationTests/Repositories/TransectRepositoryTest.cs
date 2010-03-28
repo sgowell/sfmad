@@ -1,4 +1,5 @@
-﻿using Web.Models;
+﻿using System;
+using Web.Models;
 
 namespace IntegrationTests.Repositories
 {
@@ -7,6 +8,22 @@ namespace IntegrationTests.Repositories
         public static Transect Create()
         {
             return new Transect();
+        }
+    }
+
+    public static class SurveyFixture
+    {
+        public static Survey Create()
+        {
+            return new Survey {SurveyStartTime = DateTime.Now, SurveyEndTime = DateTime.Now};
+        }
+    }
+
+    public static class WoodyDebrisFixture
+    {
+        public static WoodyDebris Create()
+        {
+            return new WoodyDebris();
         }
     }
 }

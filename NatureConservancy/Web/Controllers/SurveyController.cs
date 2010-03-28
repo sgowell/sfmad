@@ -1,38 +1,31 @@
 ﻿
 using System;
 using System.Web.Mvc;
+using Web.Data;
 using Web.Models;
 
 namespace Web.Controllers
 {
-    public class SurveyController : Controller
+    public class SurveyController : ControllerBase
     {
-        //
-        // GET: /Survey/
+        public SurveyController(ISurveyRepository surveyRepository) : base(surveyRepository)
+        {
+        }
 
         public ActionResult Index()
         {
             return View();
         }
 
-        //
-        // GET: /Survey/Details/5
-
         public ActionResult Details(int id)
         {
             return View();
         }
 
-        //
-        // GET: /Survey/Create
-
         public ActionResult Create()
         {
             return View();
         }
-
-        //
-        // POST: /Survey/Create
 
         [HttpPost]
         public ActionResult Create(Survey survey)
@@ -41,7 +34,8 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    return RedirectToAction("CreateWoodyDebris");
+                    surveyRepository.Save(survey);
+                    return NewWoodyDebris(survey);
                 }
                 return View(survey);
             }
@@ -50,12 +44,6 @@ namespace Web.Controllers
                 return View();
             }
         }
-
-        public ActionResult AddWoodyDebris()
-        {
-            return View();
-        }
-
 
         public ActionResult CreateSpecies(Species species)
         {
@@ -72,35 +60,12 @@ namespace Web.Controllers
                 }
 
             }
-            catch (Exception)
-            {
-
-                throw;
-            }
-        }
-
-
-        [HttpPost]
-        public ActionResult AddWoodyDebris(WoodyDebris woodyDebris)
-        {
-
-            return RedirectToAction("CreateWoodyDebris");
-            try
-            {
-                if (ModelState.IsValid)
-                { return RedirectToAction("CreateWoodyDebris"); }
-                return View(woodyDebris);
-            }
             catch
             {
-
-                return View();
+                return View(species);
             }
-
         }
 
-
-        public ActionResult CreateWoodyDebris() { return View(); }
         [HttpPost]
         public ActionResult CreateWoodyDebris(FormCollection collection)
         {

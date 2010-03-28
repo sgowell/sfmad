@@ -52,10 +52,12 @@ namespace Web.Models
             set;
         }
 
+        private IList<WoodyDebris> woodyDebris = new List<WoodyDebris>();
+
         public virtual IList<WoodyDebris> WoodyDebris
         {
-            get;
-            set;
+            get { return woodyDebris; }
+            set { woodyDebris = value; }
         }
 
         public virtual Microtopography Microtopography

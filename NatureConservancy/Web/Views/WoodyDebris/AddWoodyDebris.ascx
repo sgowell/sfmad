@@ -1,6 +1,6 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Web.Models.WoodyDebris>" %>
 
-    <% using (Html.BeginForm("AddWoodyDebris", "Survey")) {%>
+    <% using (Html.BeginForm("New", "WoodyDebris", new {surveyId = ViewData["SurveyId"]})) {%>
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
