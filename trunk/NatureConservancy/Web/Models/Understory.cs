@@ -16,13 +16,13 @@ namespace Web.Models
 
         [Required(ErrorMessage = "You must have at least one {0} record.")]
         [DisplayName("UnderstoryItem")]
-        public IList<UnderstoryItem> UnderstoryItems
+        public virtual IList<UnderstoryItem> UnderstoryItems
         {
             get; set;
         }
         
         [DisplayName("Notes")]
-        public string Note
+        public virtual string Note
         {
             get; set;
         }

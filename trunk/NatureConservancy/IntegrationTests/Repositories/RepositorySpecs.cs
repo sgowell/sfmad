@@ -59,6 +59,8 @@ namespace IntegrationTests.Repositories
         {
             new PersistenceSpecification<Survey>(GetSession())
                 .CheckProperty(x => x.Bearing, 234)
+                .CheckProperty(x=>x.SurveyStartTime, DateTime.Today)
+                .CheckProperty(x=>x.SurveyEndTime, DateTime.Today)
                 .VerifyTheMappings();
         }
 
@@ -79,8 +81,6 @@ namespace IntegrationTests.Repositories
                 .CheckReference(x => x.Species, new Species())
                 .CheckProperty(x => x.Browsed, 12)
                 .CheckProperty(x => x.Unbrowsed, 8)
-                //.CheckProperty(x => x.Id, "SPEC1")
-                .CheckProperty(x => x.Browsed, true)
                 .CheckReference(x => x.Understory, new Understory())
 
                 .VerifyTheMappings();
@@ -101,11 +101,10 @@ namespace IntegrationTests.Repositories
         public void can_persist_Microtopography()
         {
             new PersistenceSpecification<Microtopography>(GetSession())
-                .CheckProperty(x => x.Id, 13)
-                .CheckProperty(x => x.Comments, "Micro generates few comments")
+               .CheckProperty(x => x.Comments, "Micro generates few comments")
                 //.CheckReference(x => x.DevelopmentIntensity, new MicrotopographyAmount())
-                .CheckReference(x => x.DevelopmentIntensity, new Microtopography.MicrotopographyAmount())
-                .CheckReference(x => x.Survey, new Survey())
+                .CheckProperty(x => x.DevelopmentIntensity, new Microtopography.MicrotopographyAmount())
+                
                 .VerifyTheMappings();
         }
 
@@ -114,10 +113,10 @@ namespace IntegrationTests.Repositories
         {
             new PersistenceSpecification<Overstory>(GetSession())
 
-                .CheckReference(x => x.OverstoryItems, new List<OverstoryItem>())
-                .CheckReference(x => x.Survey, new Survey())
-                .CheckReference(x => x.Notes, string.Empty)
-                .CheckReference(x => x.Snags, new List<Snag>())
+                //.CheckList(x => x.OverstoryItems, new List<OverstoryItem>())
+                
+                .CheckProperty(x => x.Notes, "asda")
+                //.CheckReference(x => x.Snags, new List<Snag>())
                 .VerifyTheMappings();
         }
 

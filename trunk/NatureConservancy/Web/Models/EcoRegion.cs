@@ -16,7 +16,7 @@ namespace Web.Models
 
         [Required(ErrorMessage = "You must have at least one {0} record")]
         [DisplayName("Site")]
-        public IList<Site> Sites { get; set; }
+        public virtual IList<Site> Sites { get; set; }
 
     }
 }

@@ -6,7 +6,7 @@ namespace Web.Models
 {
     public class Microtopography : Entity
     {
-        public String Comments
+        public virtual String Comments
         {
             get; set;
         }
