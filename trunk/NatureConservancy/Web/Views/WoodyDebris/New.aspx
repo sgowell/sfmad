@@ -55,7 +55,7 @@
     </table>
 
     <p>
-    <%=Html.Partial("AddWoodyDebris", Model.FirstOrDefault()) %>
+    <%=Html.Partial("AddWoodyDebris", new WoodyDebris()) %>
        
     </p>
     <%= Html.ActionLink("Proceed to Next Section", "CreateOverstory") %>
