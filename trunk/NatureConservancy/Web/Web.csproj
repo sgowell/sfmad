@@ -79,6 +79,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RequiresAuthentication.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\WoodyDebrisController.cs" />
     <Compile Include="Global.asax.cs">
@@ -87,6 +88,7 @@
     <Compile Include="Models\AccountModels.cs" />
     <Compile Include="Models\Data\NHibernateSessionFactory.cs" />
     <Compile Include="Models\Data\TransactionRepository.cs" />
+    <Compile Include="Models\Data\UserRepository.cs" />
     <Compile Include="Models\DecayClass.cs" />
     <Compile Include="Models\DeerHerbivory.cs" />
     <Compile Include="Models\EcoRegion.cs" />
@@ -95,6 +97,7 @@
     <Compile Include="Models\GroundCover.cs" />
     <Compile Include="Models\Mappings\DeerHerbivoryMapping.cs" />
     <Compile Include="Models\Mappings\EcoRegionMapping.cs" />
+    <Compile Include="Models\Mappings\EcoSystemMapping.cs" />
     <Compile Include="Models\Mappings\MicrotopographyMapping.cs" />
     <Compile Include="Models\Mappings\OverstoryMapping.cs" />
     <Compile Include="Models\Mappings\PlotMapping.cs" />
@@ -115,6 +118,7 @@
     <Compile Include="Models\UnderstoryItem.cs" />
     <Compile Include="Models\WoodyDebris.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\NHibernateSessionManager.cs" />
     <Compile Include="Services\Container.cs" />
     <Compile Include="Services\CsvWriter.cs" />
     <Compile Include="Services\ObjectConverter.cs" />

@@ -7,7 +7,6 @@ namespace Web.Models.Mappings
         public EcoSystemMapping()
         {
             Id(x => x.Id);
-            Map(x => x.EcoSystemId);
             Map(x => x.EcoSystemName);
         }
     }
