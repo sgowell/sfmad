@@ -1,32 +1,37 @@
 ﻿
-using System;
 using System.Web.Mvc;
-using Web.Data;
 using Web.Models;
 
 namespace Web.Controllers
 {
-    public class SurveyController : ControllerBase
+    public class SurveyController : Controller
     {
-    	
-        public SurveyController(ISurveyRepository surveyRepository) : base(surveyRepository)
-        {
-        }
+        //
+        // GET: /Survey/
 
         public ActionResult Index()
         {
             return View();
         }
 
+        //
+        // GET: /Survey/Details/5
+
         public ActionResult Details(int id)
         {
             return View();
         }
 
+        //
+        // GET: /Survey/Create
+
         public ActionResult Create()
         {
             return View();
         }
+
+        //
+        // POST: /Survey/Create
 
         [HttpPost]
         public ActionResult Create(Survey survey)
@@ -35,48 +40,37 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    surveyRepository.Save(survey);
-                    return NewWoodyDebris(survey);
-                }
+
+                    return RedirectToAction("CreateWoodyDebris");
+                }                
+            }
+            catch
+            {
                 return View(survey);
             }
-            catch
-            {
-                return View();
-            }
+            return View(survey);
         }
 
-        public ActionResult CreateSpecies(Species species)
+        public ActionResult AddWoodyDebris()
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    return RedirectToAction("CreateSpecies");
-
-                }
-                else
-                {
-                    return View(species);
-                }
-
-            }
-            catch
-            {
-                return View(species);
-            }
+            return View();
         }
 
+        [HttpPost]
+        public ActionResult AddWoodyDebris(WoodyDebris woodyDebris)
+        {
+            
+            return RedirectToAction("CreateWoodyDebris");
+        }
+
+
+        public ActionResult CreateWoodyDebris() { return View(); }
         [HttpPost]
         public ActionResult CreateWoodyDebris(FormCollection collection)
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    return RedirectToAction("CreateOverstory");
-                }
-                return View(collection);
+                return RedirectToAction("CreateOverstory");
             }
             catch
             {
@@ -89,11 +83,7 @@ namespace Web.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    return RedirectToAction("CreateSnags");
-                }
-                return View(collection);
+                return RedirectToAction("CreateSnags");
             }
             catch
             {
@@ -106,11 +96,7 @@ namespace Web.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    return RedirectToAction("CreateMicrotopography");
-                }
-                return View(collection);
+                return RedirectToAction("CreateMicrotopography");
             }
             catch
             {
@@ -125,7 +111,7 @@ namespace Web.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    return RedirectToAction("CreateUnderstory");
+                    return RedirectToAction("CreateUnderstory");    
                 }
                 return View(microtopography);
             }
@@ -142,18 +128,7 @@ namespace Web.Controllers
 
         public ActionResult AddUnderstory(UnderstoryItem understoryItem)
         {
-            try
-            {
-                if (ModelState.IsValid)
-                {
-                    return RedirectToAction("CreateUnderstory");
-                }
-                return View(understoryItem);
-            }
-            catch
-            {
-                return View();
-            }
+            return RedirectToAction("CreateUnderstory");
         }
 
         public ActionResult CreateUnderstory() { return View(); }
@@ -162,11 +137,7 @@ namespace Web.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                {
-                    return RedirectToAction("CreateDeerHerbivory");
-                }
-                return View(collection);
+                return RedirectToAction("CreateDeerHerbivory");
             }
             catch
             {
@@ -179,9 +150,7 @@ namespace Web.Controllers
         {
             try
             {
-                if (ModelState.IsValid)
-                { return RedirectToAction("CreateGroundCoverSpeciesAbundance"); }
-                return View(collection);
+                return RedirectToAction("CreateGroundCoverSpeciesAbundance");
             }
             catch
             {
@@ -206,11 +175,8 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add update logic here
-                if (ModelState.IsValid)
-                {
-                    return RedirectToAction("Index");
-                }
-                return View(collection);
+
+                return RedirectToAction("Index");
             }
             catch
             {
@@ -235,36 +201,13 @@ namespace Web.Controllers
             try
             {
                 // TODO: Add delete logic here
-                if (ModelState.IsValid)
-                { return RedirectToAction("Index"); }
-                return View(collection);
+
+                return RedirectToAction("Index");
             }
             catch
             {
                 return View();
             }
-        }
-
-        
-        /// <summary>
-        /// /Survey/$Id/Complete
-        /// </summary>
-        /// <param name="id">Survey ID to be Updated</param>
-        /// <returns>ActionResult based on Validation and Exception Handling</returns>
-        [HttpPost]
-        public ActionResult Complete(int id)
-        {
-            try
-            {
-                if(ModelState.IsValid)
-                {
-                    //Flip Complete Bit in Repository for Survey (id)
-                    return RedirectToAction("Index");
-                }
-                return View();
-            }
-            catch {
-                return View(); }
         }
     }
 }
