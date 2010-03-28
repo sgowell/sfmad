@@ -86,8 +86,10 @@
     <Compile Include="Controllers\PlotController.cs" />
     <Compile Include="Controllers\PlotItemController.cs" />
     <Compile Include="Controllers\RequiresAuthentication.cs" />
+    <Compile Include="Controllers\SiteController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\WoodyDebrisController.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -123,7 +125,9 @@
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\jquery-ui-1.8.custom.css" />
     <Content Include="Global.asax" />
+    <Content Include="Views\Site\New.ascx" />
     <Content Include="Views\Survey\CreateEcoRegion.aspx" />
     <Content Include="Views\Survey\AddDeerHerbivory.ascx" />
     <Content Include="Views\Survey\AddSnags.ascx" />
