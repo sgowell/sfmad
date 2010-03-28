@@ -278,5 +278,26 @@ namespace Web.Controllers
                 return View();
             }
         }
+
+        /// <summary>
+        /// /Survey/$Id/Complete
+        /// </summary>
+        /// <param name="id">Survey ID to be Updated</param>
+        /// <returns>ActionResult based on Validation and Exception Handling</returns>
+        [HttpPost]
+        public ActionResult Complete(int id)
+        {
+            try
+            {
+                if(ModelState.IsValid)
+                {
+                    //Flip Complete Bit in Repository for Survey (id)
+                    return RedirectToAction("Index");
+                }
+                return View();
+            }
+            catch {
+                return View(); }
+        }
     }
 }
