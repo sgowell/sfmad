@@ -108,5 +108,12 @@ namespace Web.Models
             get;
             set;
         }
+
+        public virtual void AddUnderstory(Understory understory)
+        {
+            if (Understories == null) { Understories = new List<Understory>(); }
+            Understories.Add(understory);
+            understory.Survey = this;
+        }
     }
 }

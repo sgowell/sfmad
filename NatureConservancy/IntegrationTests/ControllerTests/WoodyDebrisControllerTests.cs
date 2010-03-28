@@ -9,7 +9,6 @@ using Web.Controllers;
 using Web.Data;
 using Web.Models;
 using Web.Services;
-using ControllerBase=Web.Controllers.ControllerBase;
 
 namespace IntegrationTests.ControllerTests
 {

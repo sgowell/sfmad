@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 
@@ -25,6 +26,16 @@ namespace Web.Models
         public virtual string Note
         {
             get; set;
+        }
+
+        public virtual void Add(UnderstoryItem item)
+        {
+            if (UnderstoryItems == null)
+            {
+                UnderstoryItems = new List<UnderstoryItem>();
+            }
+            UnderstoryItems.Add(item);
+            item.Understory = this;
         }
     }
 }

@@ -60,5 +60,15 @@ namespace Web.Controllers
         {
             return RedirectToAction("New", "GroundCover", new { surveyId = survey.Id });
         }
+
+        protected ActionResult NewUnderstory(Survey survey)
+        {
+            return RedirectToAction("New", "Understory", new { surveyId = survey.Id });
+        }
+
+        protected ActionResult NewUnderstoryItem(Survey survey)
+        {
+            return RedirectToAction("New", "UnderstoryItem", new { surveyId = survey.Id });
+        }
     }
 }
