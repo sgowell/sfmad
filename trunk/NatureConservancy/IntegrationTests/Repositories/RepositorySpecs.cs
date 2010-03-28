@@ -50,12 +50,8 @@ namespace IntegrationTests.Repositories
         [Test]
         public void can_persist_stand()
         {
-            new PersistenceSpecification<Stand>(GetSession())
-<<<<<<< .mine
-               // .CheckProperty(x => x.Number, 234)
-=======
+        	new PersistenceSpecification<Stand>(GetSession())
                 .CheckProperty(x => x.Name, "A")
->>>>>>> .r126
                 .VerifyTheMappings();
         }
 
@@ -97,7 +93,7 @@ namespace IntegrationTests.Repositories
         public void can_persist_Species()
         {
             new PersistenceSpecification<Species>(GetSession())
-                .CheckProperty(x => x.SpeciesAcronym, "ABBABB")
+                .CheckProperty(x => x.Acronym, "ABBABB")
                 .CheckProperty(x => x.ScientificName, "SPEC1")
                 .CheckProperty(x => x.CommonName, "White Pine")
                 .VerifyTheMappings();
@@ -143,8 +139,8 @@ namespace IntegrationTests.Repositories
         [Test]        
         public void LoadData()
         {
-//            load_species();
-//            load_ecoSystem();
+            load_species();
+            load_ecoSystem();
         }        
         
         [Test]
