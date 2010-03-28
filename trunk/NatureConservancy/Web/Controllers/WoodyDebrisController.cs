@@ -12,9 +12,9 @@ namespace Web.Controllers
             this.woodyDebrisRepository = woodyRepo;
         }
 
-        public ActionResult New(int surveyId)
+        public ViewResult New(int surveyId)
         {
-            return View();
+            return View(surveyRepository.Load(surveyId).WoodyDebris);
         }
 
         [HttpPost]
