@@ -1,4 +1,4 @@
-#SUBJECT Overstory trees > 19" per acre, per hectare throughout the Stand
+#summary Overstory trees > 19" per acre, per hectare throughout the Stand
 
 
 == SQL Code ==
