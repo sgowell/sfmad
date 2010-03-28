@@ -79,6 +79,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ControllerBase.cs" />
     <Compile Include="Controllers\DeerHerbivoryController.cs" />
+    <Compile Include="Controllers\EcoRegionController.cs" />
     <Compile Include="Controllers\GroundCoverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OverstoryController.cs" />
@@ -134,6 +135,7 @@
     <Content Include="Global.asax" />
     <Content Include="Scripts\jquery-1.4.2.min.js" />
     <Content Include="Scripts\jquery-ui-1.8.custom.min.js" />
+    <Content Include="Views\EcoRegion\New.ascx" />
     <Content Include="Views\Snag\AddSnags.ascx" />
     <Content Include="Views\Snag\New.aspx" />
     <Content Include="Views\Site\New.ascx" />

@@ -36,7 +36,7 @@ namespace Web.Controllers
                     surveyRepository.Save(survey);
                     return NewWoodyDebris(survey);
                 }
-                return View(survey);
+                return base.NewWoodyDebris(survey);
             }
             catch
             {
