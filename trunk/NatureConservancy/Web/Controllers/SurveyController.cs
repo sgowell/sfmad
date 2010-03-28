@@ -229,9 +229,7 @@ namespace Web.Controllers
         {
             try
             {
-                // TODO: Add delete logic here
                 if (ModelState.IsValid)
-
                 {
                     var surveyToDelete = surveyRepository.Load(id);
                     surveyRepository.Delete(surveyToDelete);
