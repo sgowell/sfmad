@@ -78,6 +78,13 @@ namespace Web.Models
             set;
         }
 
+        public virtual void AddOverstory(Overstory overstory)
+        {
+            if (Overstories == null){Overstories = new List<Overstory>();}
+            Overstories.Add(overstory);
+            overstory.Survey = this;
+        }
+
         public virtual IList<Overstory> Overstories
         {
             get;

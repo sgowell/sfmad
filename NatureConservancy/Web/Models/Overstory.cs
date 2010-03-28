@@ -10,6 +10,16 @@ namespace Web.Models
         [UIHint("TextArea")]
         public virtual string Notes{ get; set;}
 
+        public virtual void Add(OverstoryItem oItem)
+        {
+            if (OverstoryItems == null)
+            {
+                OverstoryItems = new List<OverstoryItem>();
+            }
+            OverstoryItems.Add(oItem);
+            oItem.Overstory = this;
+        }
+
         [Required(ErrorMessage = "You must have at least one {0} record.")]
         [DisplayName("Overstory Item")]
         public virtual IList<OverstoryItem> OverstoryItems { get; set; }
