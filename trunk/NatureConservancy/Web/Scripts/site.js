@@ -1,7 +1,10 @@
 ﻿var sf = {};
 sf.init = function() {
-    $('.siteLink').handleLookup();
-    $('.ecoregionLink').handleLookup();
+    if ($('.siteLink').length) {
+        $('.siteLink').handleLookup();
+
+        $('.ecoregionLink').handleLookup();
+    }
     //$('.standLink').handleLookup();
     $('#Date').datepicker();
 };
