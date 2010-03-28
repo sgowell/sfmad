@@ -1,5 +1,4 @@
-﻿using System;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Web.Data;
 using Web.Models;
 
@@ -250,7 +249,7 @@ namespace Web.Controllers
         /// <summary>
         /// /Survey/$Id/Complete
         /// </summary>
-        /// <param name="id">Survey ID to be Updated</param>
+        /// <param name="surveyId">Survey ID to be Updated</param>
         /// <returns>ActionResult based on Validation and Exception Handling</returns>
         [HttpPost]
         public ActionResult Complete(int surveyId)
