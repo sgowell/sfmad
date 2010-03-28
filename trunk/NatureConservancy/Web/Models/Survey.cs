@@ -13,15 +13,22 @@ namespace Web.Models
         public virtual int Bearing { get; set; } //Degrees zero to 360
 
         [Required(ErrorMessage = "Please enter a {0}")]
-        [DisplayName("Survey Start Time")]
-        public virtual DateTime SurveyStartTime
+        [DisplayName("Survey Date")]
+        public virtual DateTime Date
         {
             get; set;
         }
 
         [Required(ErrorMessage = "Please enter a {0}")]
-        [DisplayName("Survey End Time")]
-        public virtual DateTime SurveyEndTime
+        [DisplayName("Start Time")]
+        public virtual string StartTime
+        {
+            get; set;
+        }
+
+        [Required(ErrorMessage = "Please enter a {0}")]
+        [DisplayName("End Time")]
+        public virtual string EndTime
         {
             get;
             set;

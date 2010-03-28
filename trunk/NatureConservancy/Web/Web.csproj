@@ -82,6 +82,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OverstoryController.cs" />
     <Compile Include="Controllers\RequiresAuthentication.cs" />
+    <Compile Include="Controllers\StandController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\WoodyDebrisController.cs" />
     <Compile Include="Global.asax.cs">

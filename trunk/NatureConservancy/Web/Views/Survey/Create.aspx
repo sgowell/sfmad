@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Survey>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Survey>" %>
 <%@ Import Namespace="Web.Models"%>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
@@ -45,21 +45,27 @@
                 <%= Html.TextBoxFor(model => model.Bearing) %>
                 <%= Html.ValidationMessageFor(model => model.Bearing) %>
             </div>
-            
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.SurveyStartTime) %>
+                <%= Html.LabelFor(model => model.Date) %>
+            </div>
+            <div class="editor-field datepicker">
+                <%= Html.TextBoxFor(model => model.Date) %>
+                <%= Html.ValidationMessageFor(model => model.Date) %>
+            </div>            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.StartTime) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.SurveyStartTime) %>
-                <%= Html.ValidationMessageFor(model => model.SurveyStartTime) %>
+                <%= Html.TextBoxFor(model => model.StartTime) %>
+                <%= Html.ValidationMessageFor(model => model.StartTime) %>
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.SurveyEndTime) %>
+                <%= Html.LabelFor(model => model.EndTime) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.SurveyEndTime) %>
-                <%= Html.ValidationMessageFor(model => model.SurveyEndTime) %>
+                <%= Html.TextBoxFor(model => model.EndTime) %>
+                <%= Html.ValidationMessageFor(model => model.EndTime) %>
             </div>
             
             <div class="editor-label">

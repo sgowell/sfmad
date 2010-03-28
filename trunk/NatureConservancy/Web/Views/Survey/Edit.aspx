@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Survey>" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<Web.Models.Survey>" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Edit
@@ -39,19 +39,19 @@
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.SurveyStartTime) %>
+                <%= Html.LabelFor(model => model.StartTime) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.SurveyStartTime, String.Format("{0:g}", Model.SurveyStartTime)) %>
-                <%= Html.ValidationMessageFor(model => model.SurveyStartTime) %>
+                <%= Html.TextBoxFor(model => model.StartTime, String.Format("{0:g}", Model.StartTime)) %>
+                <%= Html.ValidationMessageFor(model => model.StartTime) %>
             </div>
             
             <div class="editor-label">
-                <%= Html.LabelFor(model => model.SurveyEndTime) %>
+                <%= Html.LabelFor(model => model.EndTime) %>
             </div>
             <div class="editor-field">
-                <%= Html.TextBoxFor(model => model.SurveyEndTime, String.Format("{0:g}", Model.SurveyEndTime)) %>
-                <%= Html.ValidationMessageFor(model => model.SurveyEndTime) %>
+                <%= Html.TextBoxFor(model => model.EndTime, String.Format("{0:g}", Model.EndTime)) %>
+                <%= Html.ValidationMessageFor(model => model.EndTime) %>
             </div>
             
             <div class="editor-label">
