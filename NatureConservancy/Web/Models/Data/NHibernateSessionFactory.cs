@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Linq;
-using System.Reflection;
 using System.Threading;
 using System.Web;
 using FluentNHibernate.Automapping;
 using FluentNHibernate.Cfg;
 using FluentNHibernate.Cfg.Db;
+using FluentNHibernate.Conventions.Helpers;
 using NHibernate;
 using NHibernate.Cfg;
 using Web.Models;
@@ -37,9 +36,8 @@ namespace Web.Data
             var mappings = AutoMap.
                 AssemblyOf<Species>()
                 .IgnoreBase<Entity>()
-                .Where(t => t.IsSubclassOf(typeof (Entity)));
-                
-    
+                .Where(t => t.IsSubclassOf(typeof (Entity)))
+                .Conventions.Add(DefaultCascade.All());
                 
             if (!typeof(WoodyDebris).IsSubclassOf(typeof(Entity))) throw new ArgumentException("fuc");
             

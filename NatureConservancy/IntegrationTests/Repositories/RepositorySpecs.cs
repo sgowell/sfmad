@@ -151,6 +151,34 @@ namespace IntegrationTests.Repositories
                 .VerifyTheMappings();
         }
         
+        [Test]
+        public void can_cascade_delete()
+        {
+            var survey = SurveyFixture.Create();
+            var surveyrepository = Container.Resolve<ISurveyRepository>();
+
+            var woodydebris = WoodyDebrisFixture.Create();
+            var woodyDebrisRepository = Container.Resolve<IRepository<WoodyDebris>>();
+
+            woodydebris.DecayClass = WoodyDebrisDecayClass.Class1;
+            woodydebris.Species = new Species {CommonName = "", Acronym = "", Id = 0, Physiognomy = Species.SpeciesType.AForb, ScientificName = ""};
+            woodydebris.IntersectDiameter = 40;
+            woodydebris.LargeEndDiameter = 50;
+            woodydebris.SmallEndDiameter = 30;
+            woodydebris.TotalLength = -687;
+            woodyDebrisRepository.Save(woodydebris);
+            survey.WoodyDebris.Add(woodydebris);
+            surveyrepository.Save(survey);
+            
+            surveyrepository.Flush();
+
+            surveyrepository.Delete(survey);
+            surveyrepository.Flush();
+            woodydebris = woodyDebrisRepository.Load(woodydebris.Id);
+            Assert.IsNull(woodydebris);
+            
+        }
+
         public void load_ecoSystem()
         {
         	var ecoSystemRepository = Container.Resolve<IecoSystemRepository>();
