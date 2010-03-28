@@ -1,7 +1,0 @@
-#summary Empty Wiki Page
-
-= SQL Code =
-
-{{{ 
-Select * from tblUsers where clue > 0
-}}}
