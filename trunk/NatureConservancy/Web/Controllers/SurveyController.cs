@@ -1,4 +1,5 @@
 ﻿
+using System;
 using System.Web.Mvc;
 using Web.Models;
 
@@ -56,11 +57,50 @@ namespace Web.Controllers
             return View();
         }
 
+        
+        public ActionResult CreateSpecies(Species species)
+        {
+            try
+            {
+                if(ModelState.IsValid )
+                {
+                    return RedirectToAction("CreateSpecies");
+
+                }
+                else
+                {
+                    return View(species);
+                }
+
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
+
         [HttpPost]
         public ActionResult AddWoodyDebris(WoodyDebris woodyDebris)
         {
             
-            return RedirectToAction("CreateWoodyDebris");
+            try
+            {
+                if(ModelState.IsValid )
+                {
+                    return RedirectToAction("CreateWoodyDebris");    
+                }
+                else
+                {
+                    return View(woodyDebris);
+                }
+                
+            }
+            catch
+            {
+                throw;
+            }
         }
 
 
