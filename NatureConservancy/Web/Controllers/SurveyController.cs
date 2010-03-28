@@ -252,13 +252,15 @@ namespace Web.Controllers
         /// <param name="id">Survey ID to be Updated</param>
         /// <returns>ActionResult based on Validation and Exception Handling</returns>
         [HttpPost]
-        public ActionResult Complete(int id)
+        public ActionResult Complete(int surveyId)
         {
             try
             {
                 if(ModelState.IsValid)
                 {
-                    //Flip Complete Bit in Repository for Survey (id)
+                    var surveyToComplete = surveyRepository.Load(surveyId);
+                    surveyToComplete.Completed = true;
+                    surveyRepository.Save(surveyToComplete);
                     return RedirectToAction("Index");
                 }
                 return View();
