@@ -51,15 +51,27 @@ namespace Web.Data
     {
         
     }
+    
+    public interface IecoSystemRepository : IRepository<EcoSystem>
+    {
+        
+    }
 
     public interface ISpeciesRepository : IRepository<Species>
     {
 
     }
 
-    public class SpeciesRepository : RepositoryBase<Species>
+    public class SpeciesRepository : RepositoryBase<Species>, ISpeciesRepository
     {
         public SpeciesRepository(ISession session) : base(session)
+        {
+        }
+    }
+    
+    public class EcoSystemRepository : RepositoryBase<EcoSystem>, IecoSystemRepository
+    {
+        public EcoSystemRepository(ISession session) : base(session)
         {
         }
     }
