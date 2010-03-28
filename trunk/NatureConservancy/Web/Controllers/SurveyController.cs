@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Web.Mvc;
 using Web.Data;
 using Web.Models;
@@ -55,11 +54,7 @@ namespace Web.Controllers
                     return RedirectToAction("CreateSpecies");
 
                 }
-                else
-                {
-                    return View(species);
-                }
-
+                return View(species);
             }
             catch
             {
@@ -201,16 +196,17 @@ namespace Web.Controllers
         // POST: /Survey/Edit/5
 
         [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
+        public ActionResult Edit(Survey editedSurvey)
         {
             try
             {
                 // TODO: Add update logic here
                 if (ModelState.IsValid)
                 {
+                    surveyRepository.SaveOrUpdate(editedSurvey);
                     return RedirectToAction("Index");
                 }
-                return View(collection);
+                return View(editedSurvey);
             }
             catch
             {
@@ -236,7 +232,12 @@ namespace Web.Controllers
             {
                 // TODO: Add delete logic here
                 if (ModelState.IsValid)
-                { return RedirectToAction("Index"); }
+
+                {
+                    var surveyToDelete = surveyRepository.Load(id);
+                    surveyRepository.Delete(surveyToDelete);
+                    return RedirectToAction("Index");
+                }
                 return View(collection);
             }
             catch
