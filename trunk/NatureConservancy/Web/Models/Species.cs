@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.Web.Mvc;
 
 namespace Web.Models
 {
@@ -41,51 +42,51 @@ namespace Web.Models
         [DisplayName("Common Name")]
         public virtual string CommonName { get; set; }
 
-        private List<Species> allSpecies = new List<Species>();
+        private static List<Species> allSpecies = new List<Species>();
 
-        public virtual List<Species> OverstorySpecies
+        public static  List<Species> OverstorySpecies
         {
             get { return allSpecies.FindAll(Or(_overstorySpeciesFilter)); }
         }
-        public virtual List<Species> SnagSpecies
+        public  static  List<Species> SnagSpecies
         {
             get { return allSpecies.FindAll(Or(_snagsSpeciesFilter)); }
         }
-        public virtual List<Species> UnderstorySpecies
+        public static  List<Species> UnderstorySpecies
         {
             get { return allSpecies.FindAll(Or(_understorySpeciesFilter)); }
         }
-        public virtual List<Species> DeerHerbevorySpecies
+        public static  List<Species> DeerHerbevorySpecies
         {
             get { return allSpecies.FindAll(Or(_deerHerbevorySpeciesFilter)); }
         }
 
-        public virtual List<Species> AllSpecies
+        public static  List<Species> AllSpecies
         {
             get { return allSpecies; }
             set { allSpecies = value; }
         }
 
 
-        private readonly Predicate<Species>[] _overstorySpeciesFilter = new []
+        private static readonly Predicate<Species>[] _overstorySpeciesFilter = new []
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        new Predicate<Species>(s => s.Physiognomy == SpeciesType.NTree)
                                                                    };
 
-        private readonly Predicate<Species>[] _snagsSpeciesFilter = new []
+        private static readonly Predicate<Species>[] _snagsSpeciesFilter = new []
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        new Predicate<Species>(s => s.Physiognomy == SpeciesType.NTree)
                                                                    };
-        private readonly Predicate<Species>[] _understorySpeciesFilter = new []
+        private static readonly Predicate<Species>[] _understorySpeciesFilter = new []
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        s => s.Physiognomy == SpeciesType.NTree,
                                                                        s => s.Physiognomy == SpeciesType.AShrub,
                                                                        new Predicate<Species>(s => s.Physiognomy == SpeciesType.NShrub)
                                                                    };
-        private readonly Predicate<Species>[] _deerHerbevorySpeciesFilter = new []
+        private static readonly Predicate<Species>[] _deerHerbevorySpeciesFilter = new[]
                                                                    {
                                                                        s => s.Physiognomy == SpeciesType.ATree,
                                                                        s => s.Physiognomy == SpeciesType.NTree,
