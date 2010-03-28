@@ -23,8 +23,8 @@ namespace Web.Controllers
         {
             OverstoryRepository.Save(overstory);
             var survey = surveyRepository.Load(surveyId);
-            survey.Overstories.Add(overstory);
-            
+            survey.AddOverstory(overstory);
+            OverstoryRepository.Save(overstory);
             return NewOverstory(survey);
         }
 
