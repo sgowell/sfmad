@@ -95,14 +95,6 @@
     <Compile Include="Models\EcoSystem.cs" />
     <Compile Include="Models\Entity.cs" />
     <Compile Include="Models\GroundCover.cs" />
-    <Compile Include="Models\Mappings\DeerHerbivoryMapping.cs" />
-    <Compile Include="Models\Mappings\EcoRegionMapping.cs" />
-    <Compile Include="Models\Mappings\EcoSystemMapping.cs" />
-    <Compile Include="Models\Mappings\MicrotopographyMapping.cs" />
-    <Compile Include="Models\Mappings\OverstoryMapping.cs" />
-    <Compile Include="Models\Mappings\PlotMapping.cs" />
-    <Compile Include="Models\Mappings\SpeciesMapping.cs" />
-    <Compile Include="Models\Mappings\TransectMapping.cs" />
     <Compile Include="Models\Microtopography.cs" />
     <Compile Include="Models\Overstory.cs" />
     <Compile Include="Models\OverstoryItem.cs" />
