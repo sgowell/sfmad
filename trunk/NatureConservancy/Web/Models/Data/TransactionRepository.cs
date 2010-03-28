@@ -128,7 +128,7 @@ namespace Web.Data
     }
 
     public interface IUnderstoryItemRepository : IRepository<UnderstoryItem> { }
-    public class UnderstoryItemRepository : RepositoryBase<UnderstoryItem>, IUnderstoryRepository, IRepository
+    public class UnderstoryItemRepository : RepositoryBase<UnderstoryItem>, IUnderstoryItemRepository, IRepository
     {
         public UnderstoryItemRepository(ISession session) : base(session) { }
     }
