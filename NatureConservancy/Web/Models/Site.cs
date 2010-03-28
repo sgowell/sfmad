@@ -14,7 +14,7 @@ namespace Web.Models
         [Required(ErrorMessage = "Please enter at least one {0}")]
         public virtual IList<Stand> Stands { get; set; }
         public virtual int SiteNumber { get; set; }
-        public virtual string SiteName { get; set; }
+        
         public virtual int RegionNumber { get; set; }
 
         [Required(ErrorMessage="You must have a parent {0} record")]

@@ -9,9 +9,23 @@ using Web.Controllers;
 using Web.Data;
 using Web.Models;
 using Web.Services;
+using ControllerBase=Web.Controllers.ControllerBase;
 
 namespace IntegrationTests.ControllerTests
 {
+    [TestFixture]
+    public class SiteControllerTests
+    {
+        [Test]
+        public void can_update_site()
+        {
+            var site = new Site {Name = "hi"};
+            var controller = Container.Resolve<SiteController>();
+            controller.New(site);
+            site.Id.ShouldBeGreaterThan(0);
+        }
+    }
+
     [TestFixture]
     public class WoodyDebrisControllerTests 
     {

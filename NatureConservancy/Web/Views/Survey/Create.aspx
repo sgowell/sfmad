@@ -7,27 +7,33 @@
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h2>Create</h2>
+    <h2>Enter your Survey Details</h2>
 
     <% using (Html.BeginForm()) {%>
         <%= Html.ValidationSummary(true) %>
 
         <fieldset>
-            <legend>Fields</legend>
+            <legend>General Info</legend>
             <div class="editor-label">
                 <%= Html.LabelFor(model => model.Transect.Stand.Site.EcoRegion ) %>
                  <%= Html.ActionLink("New", "CreateEcoRegion") %>
             </div>
             <div class="editor-field">
-                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.EcoRegion.Name, new List<SelectListItem>() )%>
+                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.EcoRegion.Name, 
+                    new List<SelectListItem>() )%>
                 <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.EcoRegion.Name )%>
             </div>
              <div class="editor-label">
                 <%= Html.LabelFor(model => model.Transect.Stand.Site ) %>
-                <a href="" class="lookupLink" title="Add New Site" name="Site">New</a>
+                <a href="" class="lookupLink" title="Add New Site" name="site">New</a>
             </div>
             <div class="editor-field">
-                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.Name, new List<SelectListItem>())%>
+            <%
+                var options = new Dictionary<string, object>();
+                options.Add("class", "site-dropdown"); 
+           %>
+                <%= Html.DropDownListFor(model => model.Transect.Stand.Site.Name, 
+                    new List<SelectListItem>(), options)%>
                 <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.Name)%>
             </div>
              <div class="editor-label">
