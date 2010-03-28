@@ -4,7 +4,7 @@
         <tr>
             <th></th>
             <th>
-                SpeciesAcronym
+                Acronym
             </th>
             <th>
                 ScientificName
@@ -26,7 +26,7 @@
                 <%= Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })%>
             </td>
             <td>
-                <%= Html.Encode(item.SpeciesAcronym) %>
+                <%= Html.Encode(item.Acronym) %>
             </td>
             <td>
                 <%= Html.Encode(item.ScientificName) %>
