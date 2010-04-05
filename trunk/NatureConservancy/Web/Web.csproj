@@ -82,19 +82,19 @@
     <Compile Include="Controllers\EcoRegionController.cs" />
     <Compile Include="Controllers\GroundCoverController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MicrotopographyController.cs" />
     <Compile Include="Controllers\OverstoryController.cs" />
-    <Compile Include="Controllers\OverstoryItemController.cs" />
     <Compile Include="Controllers\PlotController.cs" />
     <Compile Include="Controllers\PlotItemController.cs" />
     <Compile Include="Controllers\RequiresAuthentication.cs" />
     <Compile Include="Controllers\SiteController.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Controllers\SnagController.cs" />
     <Compile Include="Controllers\SurveyController.cs" />
     <Compile Include="Controllers\UnderstoryController.cs" />
     <Compile Include="Controllers\UnderstoryItemController.cs" />
     <Compile Include="Controllers\WoodyDebrisController.cs" />
-    <Compile Include="Extensions\StringExtensions.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -130,7 +130,6 @@
     <Compile Include="StringExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\jquery-ui-1.8.custom.css" />
     <Content Include="Global.asax" />
     <Content Include="images\artist-line.gif" />
     <Content Include="images\The Nature Conservancy - Protecting nature, Preserving Life.jpeg" />
@@ -140,7 +139,6 @@
     <Content Include="Views\EcoRegion\New.ascx" />
     <Content Include="Views\Snag\AddSnags.ascx" />
     <Content Include="Views\Snag\New.aspx" />
-    <Content Include="Views\Site\New.ascx" />
     <Content Include="Views\Stand\New.ascx" />
     <Content Include="Views\Survey\CreateEcoRegion.aspx" />
     <Content Include="Views\Survey\AddDeerHerbivory.ascx" />
