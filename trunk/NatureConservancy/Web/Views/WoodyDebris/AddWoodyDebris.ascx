@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" Inherits="System.Web.Mvc.ViewUserControl<Web.Models.WoodyDebris>" %>
-
+<%@ Import Namespace="Web" %>
     <% using (Html.BeginForm("New", "WoodyDebris", new {surveyId = ViewData["SurveyId"]})) {%>
         <%= Html.ValidationSummary(true) %>
 
@@ -38,10 +38,16 @@
                 <%= Html.ValidationMessageFor(model => model.SmallEndDiameter) %>
             </div>
             
-            <p>
-            
+            <div class="editor-label">
+                <%= Html.LabelFor(model => model.DecayClass)%>                 
+            </div>
+            <div class="editor-field">
+                <%= Html.DropDownListFor(model => model.DecayClass, Model.DecayClass.ToSelectList())%>
+                <%= Html.ValidationMessageFor(model => model.DecayClass )%>
+            </div>
                 
-              <input name="Add" type="submit" value="Add" />
+            <p>                           
+                <input name="Add" type="submit" value="Add" />
             </p>
         </fieldset>
 
