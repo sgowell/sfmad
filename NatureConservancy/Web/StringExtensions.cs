@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using FluentNHibernate.Mapping;
+using System.ComponentModel;
+using System.Linq;
+using System.Reflection;
+using System.Web.Mvc;
 using Web.Models;
 using Web.Services;
 
@@ -27,6 +30,23 @@ namespace Web
             {
                 action(item);
             }
+        }
+    }
+
+    public static class EnumExtensions
+    {
+        public static SelectList ToSelectList<T>(this T enumeration)
+        {
+            var source = Enum.GetValues(typeof(T));
+            var items = new Dictionary<object, string>();
+
+            foreach (var value in source)
+            {
+                FieldInfo field = value.GetType().GetField(value.ToString());                
+                items.Add(value, value.ToString());
+            }
+
+            return new SelectList(items, "Key", "Value", enumeration);
         }
     }
 

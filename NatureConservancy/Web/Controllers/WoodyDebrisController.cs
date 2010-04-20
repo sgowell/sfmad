@@ -30,5 +30,11 @@ namespace Web.Controllers
             survey.WoodyDebris.Add(woodyDebris);
             return NewWoodyDebris(survey);
         }
+
+        public ActionResult CreateOverstory(int surveyId)
+        {
+            var survey = surveyRepository.Load(surveyId);
+            return NewOverstory(survey);
+        }
     }
 }

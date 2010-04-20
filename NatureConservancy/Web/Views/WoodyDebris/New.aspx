@@ -1,18 +1,14 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Views/Shared/Site.Master" Inherits="System.Web.Mvc.ViewPage<IEnumerable<Web.Models.WoodyDebris>>" %>
 <%@ Import Namespace="Web.Models"%>
 
-
 <asp:Content ID="Content1" ContentPlaceHolderID="TitleContent" runat="server">
 	Enter Woody Debris Details
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-
-
     <h2>CreateWoodyDebris</h2>
 
     <table>
-
 
     <% foreach (var item in new List<WoodyDebris>()) { %>
     

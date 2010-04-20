@@ -24,11 +24,10 @@
                 <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.EcoRegion.Name )%>
             </div>
              <div class="editor-label">
-                <%= Html.LabelFor(model => model.Transect.Stand.Site ) %>
+                <%= Html.LabelFor(model => model.Transect.Stand.Site) %>
                 <a href="" class="siteLink" title="Add New Site" name="site">New</a>
             </div>
             <div class="editor-field">
-   
                 <%= Html.DropDownListFor(model => model.Transect.Stand.Site.Name, 
                     new List<SelectListItem>(), new Dictionary<string, object> {{"class", "site-dropdown"}})%>
                 <%= Html.ValidationMessageFor(model => model.Transect.Stand.Site.Name)%>
