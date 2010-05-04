@@ -13,3 +13,12 @@ CreateHerbivory
 CreateGroundCover
 >AddPlot
 >AddPlotItems
+
+
+Create Survey
+After Survey is created then go to the next page which is
+woody debris
+Add any woody debris info
+Click the Proceed to next step link
+This will take you to the Overstory section
+

@@ -9,15 +9,16 @@
     <h2>CreateWoodyDebris</h2>
 
     <table>
-
-    <% foreach (var item in new List<WoodyDebris>()) { %>
+        <thead>
+            <th>Total Length</th>
+            <th>Intersect Diameter</th>
+            <th>Large End Diameter</th>
+            <th>Small End Diameter</th>
+            <th>Actions</th>
+        </thead>
+    <% foreach (var item in Model) { %>
     
-        <tr>
-            <td>
-                <%= Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
-                <%= Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })%> |
-                <%= Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })%>
-            </td>
+        <tr>            
             <td>
                 <%= Html.Encode(String.Format("{0:F}", item.TotalLength)) %>
             </td>
@@ -29,6 +30,11 @@
             </td>
             <td>
                 <%= Html.Encode(String.Format("{0:F}", item.SmallEndDiameter)) %>
+            </td>
+            <td>
+                <%= Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) %> |
+                <%= Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })%> |
+                <%= Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })%>
             </td>
         </tr>
     
