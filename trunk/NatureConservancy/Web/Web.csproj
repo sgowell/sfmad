@@ -140,6 +140,7 @@
     <Content Include="Scripts\jquery-ui-1.8.custom.min.js" />
     <Content Include="Scripts\site.js" />
     <Content Include="Views\EcoRegion\New.ascx" />
+    <Content Include="Views\New.aspx" />
     <Content Include="Views\Snag\AddSnags.ascx" />
     <Content Include="Views\Snag\New.aspx" />
     <Content Include="Views\Stand\New.ascx" />
@@ -192,6 +193,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\NewFolder1\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
